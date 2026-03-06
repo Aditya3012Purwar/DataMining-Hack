@@ -1,0 +1,271 @@
+It looks like this is a **lecture or project description** about predicting what customers will buy in the future (likely for a **B2B e-commerce or procurement system**). I’ll rewrite and structure the key ideas so it’s easier to understand.
+
+---
+
+## Core Goal
+
+The system wants to **predict future purchases of a customer** so the company can:
+
+* estimate **future shopping carts**
+* calculate **savings or discounts**
+* recommend or automatically prepare orders
+
+This is essentially a **demand prediction / recommendation problem**.
+
+---
+
+# Main Challenges
+
+## 1. Predict what the customer will buy
+
+To estimate savings or prepare orders, the system must predict:
+
+* **what products the customer will purchase**
+* **how often**
+* **how many**
+
+Without this prediction, the system cannot know:
+
+* what items will be in the cart
+* how much money could be saved.
+
+However, purchase behavior is difficult because:
+
+* Some products are bought **rarely but in large quantities** (e.g., once per year).
+* Some products are bought **frequently but in small amounts**.
+
+So simple metrics like “number of purchases” are not always enough.
+
+---
+
+# Product Abstraction Problem
+
+Customers don't always need **one exact product**.
+
+Example:
+
+A customer wants a **notebook (laptop)**.
+
+But they might accept:
+
+* different suppliers
+* different models
+* different brands
+
+So demand should not be predicted only at **product level**, but at **different abstraction levels**.
+
+This leads to **hierarchical product representation**.
+
+Example hierarchy:
+
+```
+Electronics
+   └── Notebooks
+         └── Lenovo
+               └── Specific Model
+```
+
+This hierarchy can be built with **hierarchical clustering or taxonomy**.
+
+---
+
+# Project Milestones (Prediction Levels)
+
+The lecturer describes **three prediction levels**.
+
+---
+
+## Milestone 1 — Category Prediction
+
+Predict **how often a customer buys from a category**.
+
+Example:
+
+> Customer A will buy **10 products from the "Notebooks" category next year.**
+
+Prediction target:
+
+* **Product category (E-class)**
+* **Purchase frequency**
+
+This is the **simplest prediction level**.
+
+---
+
+## Milestone 2 — Category + Manufacturer
+
+Add another feature:
+
+* **Manufacturer / brand**
+
+Example prediction:
+
+> Customer A will buy **5 Lenovo notebooks next year.**
+
+Now prediction includes:
+
+* Category (notebook)
+* Manufacturer (Lenovo)
+
+This gives a **more realistic demand representation**.
+
+---
+
+## Milestone 3 — Feature-Based Product Description (Hardest)
+
+Instead of predicting specific products, predict **product requirements**.
+
+Example features:
+
+* CPU: Ryzen 7
+* Screen size: 15"
+* Weight: 1.3 kg
+* USB ports: 4
+
+Then the system finds **products that satisfy these features**.
+
+This approach is more realistic in **B2B procurement**, because companies specify **requirements**, not exact items.
+
+Example:
+
+> Milk with these requirements:
+
+* low-fat
+* long-life (UHT)
+* paper packaging
+
+Then the system searches suppliers that meet the specs.
+
+---
+
+# Cold Start Problem
+
+Another challenge mentioned:
+
+Some customers have **no historical purchase data**.
+
+Solution:
+
+Use **similar customers**.
+
+Similarity can be based on:
+
+* industry classification (e.g., **NACE code / industry taxonomy**)
+* company size
+* company type
+
+Idea:
+
+> Customers from the same industry tend to buy similar products.
+
+Example:
+
+```
+Healthcare companies → medical supplies
+Chemical companies → lab equipment
+```
+
+---
+
+# Data Types Available
+
+For each customer, the system might use:
+
+**Customer features**
+
+* industry (NACE code)
+* company size
+* company type
+
+**Historical purchase data**
+
+* product categories
+* manufacturers
+* quantities
+* time of purchase
+
+**Product features**
+
+* category
+* manufacturer
+* technical specifications
+
+---
+
+# What the ML Task Likely Is
+
+Possible machine learning tasks:
+
+### 1. Purchase Frequency Prediction
+
+Predict:
+
+```
+(customer, category) → number of purchases next year
+```
+
+Regression / time-series.
+
+---
+
+### 2. Recommendation
+
+Predict:
+
+```
+(customer) → products likely to buy
+```
+
+Recommender systems.
+
+---
+
+### 3. Feature-Based Demand Prediction
+
+Predict:
+
+```
+(customer) → desired product features
+```
+
+More complex representation learning.
+
+---
+
+# Likely Methods
+
+Some typical approaches for this kind of project:
+
+### For milestone 1
+
+* Poisson regression
+* time-series forecasting
+* gradient boosting
+
+---
+
+### For cold-start customers
+
+* clustering customers
+* k-nearest neighbors
+* embedding similarity
+
+---
+
+### For feature-level prediction
+
+* recommender systems
+* matrix factorization
+* deep learning embeddings
+
+---
+
+# One-Sentence Summary
+
+The project is about:
+
+**Predicting future customer demand at different levels of abstraction (category → brand → product features) using historical purchasing data and customer similarity.**
+
+---
+
+If you want, I can also explain **what machine learning models would actually work best for this kind of problem**, which is something professors often expect in **Pattern Analysis / ML project discussions**.
