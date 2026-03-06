@@ -58,6 +58,8 @@ nace = pd.read_csv(
 
 plis['orderdate'] = pd.to_datetime(plis['orderdate'])
 plis['eclass'] = plis['eclass'].astype(str).str.strip()
+# Filter to valid 8-digit eclass codes (removes NaN/invalid → eliminates wasted predictions)
+plis = plis[plis['eclass'].str.match(r'^\d{8}$', na=False)].copy()
 
 print(f"Training data: {len(plis):,} rows, {plis['legal_entity_id'].nunique():,} buyers")
 print(f"Test buyers: {len(customers)} ({(customers['task']=='cold start').sum()} cold, {(customers['task']=='predict future').sum()} warm)")
@@ -312,6 +314,10 @@ for idx, row in customers.iterrows():
 # OUTPUT
 # ============================================================
 submission = pd.DataFrame(results)
+# Ensure eclass is clean string (no .0 float suffix)
+submission['eclass'] = submission['eclass'].astype(str).str.strip()
+# Remove any remaining invalid/NaN predictions
+submission = submission[submission['eclass'].str.match(r'^\d{8}$', na=False)].copy()
 output_path = OUTPUT_DIR / "submission.csv"
 submission.to_csv(output_path, index=False)
 
