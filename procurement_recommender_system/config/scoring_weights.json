@@ -1,0 +1,6 @@
+{
+  "alpha_frequency": 0.6,
+  "beta_price_advantage": 0.4,
+  "final_score_formula": "p_buy * (1 + price_advantage)",
+  "price_advantage_formula": "max((reference_price - candidate_price) / reference_price, 0)"
+}

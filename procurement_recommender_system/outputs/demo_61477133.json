@@ -1,0 +1,739 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "102-2106324-BP",
+    "set_id": "20240502211517-4381361",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9166,
+    "reference_price_eur": 97.9122,
+    "price_advantage_pct": 96.0,
+    "global_popularity": 1.0,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "collab_score": 0.5,
+    "p_buy": 0.9718,
+    "final_score": 1.9047,
+    "features_summary": "\u2014",
+    "features_detail": {},
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "29120102"
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "4588-WGB10",
+    "set_id": "20240502211517-35582189",
+    "eclass": "22529090",
+    "manufacturer": "Conmetall Meister",
+    "candidate_price_eur": 6.2693,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 97.82,
+    "global_popularity": 0.0041,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7006,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9565,
+    "final_score": 1.8922,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1200",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14"
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "1393-1196",
+    "set_id": "1393-1196",
+    "eclass": "22529090",
+    "manufacturer": "effix",
+    "candidate_price_eur": 6.24,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 97.83,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7003,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.956,
+    "final_score": 1.8912,
+    "features_summary": "L(e4)nge-laenge mm\u2026: 1200",
+    "features_detail": {
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14"
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "874SW-SK-315523",
+    "set_id": "20240627210126-34628",
+    "eclass": "22529090",
+    "manufacturer": "Schake",
+    "candidate_price_eur": 7.415,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 97.42,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7009,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9565,
+    "final_score": 1.8884,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1200 | Verpackungseinheit-\u2026: 10",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ],
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er_blatt": [
+        "10"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14"
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "260I-475243",
+    "set_id": "20240502211517-22855949",
+    "eclass": "37010201",
+    "manufacturer": "Riegler",
+    "candidate_price_eur": 3.9859,
+    "reference_price_eur": 510.1311,
+    "price_advantage_pct": 99.22,
+    "global_popularity": 0.0023,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3247,
+    "feature_richness": 0.375,
+    "feature_count": 12,
+    "collab_score": 0.5,
+    "p_buy": 0.9442,
+    "final_score": 1.881,
+    "features_summary": "Material-material\u2026: Messing | Material-material\u2026: Kunststoff | Nenndruck-druck bar\u2026: 10",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Messing"
+      ],
+      "Nenndruck-druck_bar___indikatorvor_ohneindikator_nenndruck": [
+        "10",
+        "15"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Bauform-_bauform_druckluft": [
+        "X-Form"
+      ],
+      "Betriebsdruck(20)max(2e)-betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Durchmesser-durchmesser_mm___nur_indikatorvor": [
+        "8"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Betriebsdruck(20)bis-druck_bar_max___druck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck": [
+        "10",
+        "15"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck_min10": [
+        "10",
+        "15"
+      ],
+      "Betriebsdruck(20)max(2e)-Betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Material-Material___nur_allgemein": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Messing, Nenndruck-druck bar   indikatorvor ohneindikator nenndruck: 10, Ursprungsland: China, Bauform: X-Form, Betriebsdruck(20)max(2e)-betriebsdruck maximal   allgemein: 15"
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "2478B-179000491033",
+    "set_id": "20240502211517-25136403",
+    "eclass": "29120102",
+    "manufacturer": "SULO",
+    "candidate_price_eur": 3.4175,
+    "reference_price_eur": 97.9122,
+    "price_advantage_pct": 96.51,
+    "global_popularity": 0.0038,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7003,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9553,
+    "final_score": 1.8772,
+    "features_summary": "Ausf(fc)hrung: dreikant",
+    "features_detail": {
+      "Ausf(fc)hrung-_main_abfallsammler_schluessel": [
+        "dreikant"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "Ausf(fc)hrung: dreikant"
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "8498-3842551583-1",
+    "set_id": "20240502211517-31444902",
+    "eclass": "21109102",
+    "manufacturer": "Bosch\u00a0Rexroth",
+    "candidate_price_eur": 2.15,
+    "reference_price_eur": 272.233,
+    "price_advantage_pct": 99.21,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3739,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9417,
+    "final_score": 1.8759,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stoff": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Farbe-farbe   standard: schwarz, Material-material   kunststoffexakt metallallgemein stoff: PP (Polypropylen)"
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "8685-5602003122",
+    "set_id": "20240502211517-7739989",
+    "eclass": "37010201",
+    "manufacturer": "Riegler",
+    "candidate_price_eur": 5.0767,
+    "reference_price_eur": 510.1311,
+    "price_advantage_pct": 99.0,
+    "global_popularity": 0.0009,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2913,
+    "feature_richness": 0.375,
+    "feature_count": 12,
+    "collab_score": 0.5,
+    "p_buy": 0.9421,
+    "final_score": 1.8749,
+    "features_summary": "Material-material\u2026: Messing | Material-material\u2026: Kunststoff | Nenndruck-druck bar\u2026: 10",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Messing"
+      ],
+      "Nenndruck-druck_bar___indikatorvor_ohneindikator_nenndruck": [
+        "10",
+        "15"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Bauform-_bauform_druckluft": [
+        "X-Form"
+      ],
+      "Betriebsdruck(20)max(2e)-betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Durchmesser-durchmesser_mm___nur_indikatorvor": [
+        "10"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Betriebsdruck(20)bis-druck_bar_max___druck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck": [
+        "10",
+        "15"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck_min10": [
+        "15"
+      ],
+      "Betriebsdruck(20)max(2e)-Betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Material-Material___nur_allgemein": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Messing, Nenndruck-druck bar   indikatorvor ohneindikator nenndruck: 10, Ursprungsland: China, Bauform: X-Form, Betriebsdruck(20)max(2e)-betriebsdruck maximal   allgemein: 15"
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "8498-3842548752-1",
+    "set_id": "20240502211517-5644341",
+    "eclass": "21109102",
+    "manufacturer": "Bosch\u00a0Rexroth",
+    "candidate_price_eur": 2.58,
+    "reference_price_eur": 272.233,
+    "price_advantage_pct": 99.05,
+    "global_popularity": 0.0014,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3739,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9416,
+    "final_score": 1.8743,
+    "features_summary": "Farbe-farbe standard: grau | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "grau"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stoff": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "Farbe-farbe   standard: grau, Material-material   kunststoffexakt metallallgemein stoff: PP (Polypropylen)"
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "8498-3842548817-1",
+    "set_id": "20240502211517-31991822",
+    "eclass": "21109102",
+    "manufacturer": "Bosch\u00a0Rexroth",
+    "candidate_price_eur": 2.765,
+    "reference_price_eur": 272.233,
+    "price_advantage_pct": 98.98,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3739,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9415,
+    "final_score": 1.8734,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stoff": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Farbe-farbe   standard: schwarz, Material-material   kunststoffexakt metallallgemein stoff: PP (Polypropylen)"
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "8498-3842548753-1",
+    "set_id": "20240502211517-10482683",
+    "eclass": "21109102",
+    "manufacturer": "Bosch\u00a0Rexroth",
+    "candidate_price_eur": 3.18,
+    "reference_price_eur": 272.233,
+    "price_advantage_pct": 98.83,
+    "global_popularity": 0.0014,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3739,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9414,
+    "final_score": 1.8718,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stoff": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Farbe-farbe   standard: schwarz, Material-material   kunststoffexakt metallallgemein stoff: PP (Polypropylen)"
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "2172-3229",
+    "set_id": "20240502211517-33478557",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.09,
+    "reference_price_eur": 314.2293,
+    "price_advantage_pct": 99.33,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.281,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9386,
+    "final_score": 1.871,
+    "features_summary": "Material-material\u2026: Kunststoff | Nennweite-nennweite\u2026: 40 | Winkel-winkel grad\u2026: 67",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "40"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "67"
+      ],
+      "Nennweite(20)Abzweig-_main_ht_abzweig": [
+        "40"
+      ],
+      "Nennweite(20)Rohr-_main_ht_abzweig": [
+        "40"
+      ],
+      "Winkel-_main_ht_abzweig": [
+        "67"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 40, Winkel-winkel grad   winkel: 67, Nennweite(20)Abzweig: 40, Nennweite(20)Rohr: 40"
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "114-18135",
+    "set_id": "20240502211517-19052360",
+    "eclass": "22529090",
+    "manufacturer": "Wemas",
+    "candidate_price_eur": 12.2475,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 95.74,
+    "global_popularity": 0.0012,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7006,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9551,
+    "final_score": 1.8695,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1200",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14"
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "102-2298529-BP",
+    "set_id": "20240502211517-28254068",
+    "eclass": "21100416",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 2.732,
+    "reference_price_eur": 345.6691,
+    "price_advantage_pct": 99.21,
+    "global_popularity": 0.0014,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2414,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9379,
+    "final_score": 1.8685,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau | Korpusfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "50"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Ausf(fc)hrung-_main_wandverteiler": [
+        "19 Zoll"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "20"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "30"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "50"
+      ]
+    },
+    "feature_cluster_id": 7,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 7035 Lichtgrau, Warenzustand: Neu, Frontfarbe: RAL 7035 Lichtgrau, Gesamttiefe-tiefe mm   indikatorvor tende tendemisch tmitte tmittemisch indikatornach indikatoranchmd gesamttiefe: 50, Korpusfarbe: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "214G-4317784040525",
+    "set_id": "20240502211517-46088006",
+    "eclass": "22529090",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 3.895,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 98.65,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3506,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9399,
+    "final_score": 1.8671,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1250",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1250"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1250"
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "1085-103428",
+    "set_id": "20240502211517-36432523",
+    "eclass": "27180201",
+    "manufacturer": "ALLNET",
+    "candidate_price_eur": 3.71,
+    "reference_price_eur": 169.8955,
+    "price_advantage_pct": 97.82,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4206,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.943,
+    "final_score": 1.8655,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 9,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu"
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "8685-5602003120",
+    "set_id": "20240502211517-26782429",
+    "eclass": "37010201",
+    "manufacturer": "Riegler",
+    "candidate_price_eur": 3.7744,
+    "reference_price_eur": 510.1311,
+    "price_advantage_pct": 99.26,
+    "global_popularity": 0.0026,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1992,
+    "feature_richness": 0.3125,
+    "feature_count": 10,
+    "collab_score": 0.5,
+    "p_buy": 0.9361,
+    "final_score": 1.8653,
+    "features_summary": "Material-material\u2026: Messing | Material-material\u2026: Kunststoff | Nenndruck-druck bar\u2026: 10",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Messing"
+      ],
+      "Nenndruck-druck_bar___indikatorvor_ohneindikator_nenndruck": [
+        "10"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Bauform-_bauform_druckluft": [
+        "X-Form"
+      ],
+      "Betriebsdruck(20)max(2e)-betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Durchmesser-durchmesser_mm___nur_indikatorvor": [
+        "6"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Betriebsdruck(20)bis-druck_bar_max___druck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck_min10": [
+        "15"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Messing, Nenndruck-druck bar   indikatorvor ohneindikator nenndruck: 10, Ursprungsland: China, Bauform: X-Form, Betriebsdruck(20)max(2e)-betriebsdruck maximal   allgemein: 15"
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "2172-35209",
+    "set_id": "20240502211517-41614470",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 314.2293,
+    "price_advantage_pct": 99.32,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.242,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9358,
+    "final_score": 1.8653,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 87",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "87",
+        "87.5"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "87"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Winkel-winkel grad   winkel: 87, Winkel-winkel grad   winkel: 87.5, Nennweite-nennweite dn   standard: 90, Winkel: 87"
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "164-54547",
+    "set_id": "20240502211517-20166871",
+    "eclass": "22529090",
+    "manufacturer": "Schake",
+    "candidate_price_eur": 6.4989,
+    "reference_price_eur": 287.7521,
+    "price_advantage_pct": 97.74,
+    "global_popularity": 0.0209,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3658,
+    "feature_richness": 0.125,
+    "feature_count": 4,
+    "collab_score": 0.5,
+    "p_buy": 0.9424,
+    "final_score": 1.8635,
+    "features_summary": "Farbe-farbe\u2026: rot | Durchmesser-\u2026: 12 | L(e4)nge-laenge mm\u2026: 1200",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "12"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ],
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er_blatt": [
+        "10"
+      ],
+      "Farbe-farbe___standard_ral_dbfarben_materialien": [
+        "rot"
+      ]
+    },
+    "feature_cluster_id": 11,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 12, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er blatt: 10, Farbe-farbe   standard ral dbfarben materialien: rot"
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "2172-35206",
+    "set_id": "20240502211517-34040474",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 314.2293,
+    "price_advantage_pct": 99.32,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2245,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9347,
+    "final_score": 1.8631,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 30",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "30"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "30"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 12,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Winkel-winkel grad   winkel: 30, Nennweite-nennweite dn   standard: 90, Winkel: 30, Material-material   kunststoffexakt metallallgemein stahlallgemein stahloberflaeche: PP (Polypropylen)"
+  }
+]

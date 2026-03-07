@@ -1,0 +1,12 @@
+{
+  "project_name": "procurement_recommender",
+  "stages": [
+    "aggregate_transactions",
+    "candidate_generation",
+    "ranking",
+    "price_adjusted_scoring"
+  ],
+  "top_k_candidates": 500,
+  "top_n_recommendations": 20,
+  "output_path": "outputs/recommendations.json"
+}

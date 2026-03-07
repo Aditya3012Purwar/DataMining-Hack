@@ -1,0 +1,22 @@
+[
+  {
+    "customer_id": "C1",
+    "candidate_sku": "PAINT_C",
+    "eclass": "PAINT",
+    "manufacturer": "M4",
+    "candidate_price": 14.0,
+    "reference_price": 18.0,
+    "global_popularity": 0.72,
+    "manufacturer_familiarity": 0.15
+  },
+  {
+    "customer_id": "C1",
+    "candidate_sku": "BRUSH_B",
+    "eclass": "BRUSH",
+    "manufacturer": "M2",
+    "candidate_price": 7.0,
+    "reference_price": 10.0,
+    "global_popularity": 0.65,
+    "manufacturer_familiarity": 0.45
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "customer_id": "C1",
+    "sku": "PAINT_A",
+    "manufacturer": "M1",
+    "eclass": "PAINT",
+    "price": 18.0,
+    "quantity": 1,
+    "date": "2026-01-05"
+  },
+  {
+    "customer_id": "C1",
+    "sku": "PAINT_B",
+    "manufacturer": "M2",
+    "eclass": "PAINT",
+    "price": 20.0,
+    "quantity": 1,
+    "date": "2026-02-10"
+  },
+  {
+    "customer_id": "C1",
+    "sku": "BRUSH_A",
+    "manufacturer": "M3",
+    "eclass": "BRUSH",
+    "price": 10.0,
+    "quantity": 2,
+    "date": "2026-02-12"
+  },
+  {
+    "customer_id": "C2",
+    "sku": "PAINT_A",
+    "manufacturer": "M1",
+    "eclass": "PAINT",
+    "price": 18.0,
+    "quantity": 1,
+    "date": "2026-02-15"
+  },
+  {
+    "customer_id": "C2",
+    "sku": "BRUSH_B",
+    "manufacturer": "M2",
+    "eclass": "BRUSH",
+    "price": 7.0,
+    "quantity": 1,
+    "date": "2026-02-20"
+  }
+]

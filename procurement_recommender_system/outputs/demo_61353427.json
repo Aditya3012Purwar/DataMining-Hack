@@ -1,0 +1,790 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "820-1752333",
+    "set_id": "20240502211517-17998782",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 4.53,
+    "reference_price_eur": 459.7606,
+    "price_advantage_pct": 99.01,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4388,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9291,
+    "final_score": 1.849,
+    "features_summary": "Farbe: wei\u00df | Breite-breite mm\u2026: 71 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "71"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "4"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ],
+      "Farbe-_pc_gehaeuse_farbe": [
+        "wei\u00df"
+      ]
+    }
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "4502-67F5646",
+    "set_id": "20241031154401-101212",
+    "eclass": "27250203",
+    "manufacturer": "Binder",
+    "candidate_price_eur": 6.5667,
+    "reference_price_eur": 400.6341,
+    "price_advantage_pct": 98.36,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4029,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9261,
+    "final_score": 1.8369,
+    "features_summary": "Ausf(fc)hrung: gerade | Bauform: Buchse | Polanzahl: 3",
+    "features_detail": {
+      "Ausf(fc)hrung-_rundsteck_ausfuehrung": [
+        "gerade"
+      ],
+      "Bauform-_rundsteck_bauform": [
+        "Buchse"
+      ],
+      "Polanzahl-_rundsteck_pole": [
+        "3"
+      ],
+      "Geh(e4)useausrichtung-_main_steckverbinder_sonstige": [
+        "Gerade"
+      ],
+      "Polzahl-polzahl___standard": [
+        "3"
+      ]
+    }
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "8685-5602003121",
+    "set_id": "20240502211517-22855949",
+    "eclass": "37010201",
+    "manufacturer": "Riegler",
+    "candidate_price_eur": 3.9991,
+    "reference_price_eur": 292.4732,
+    "price_advantage_pct": 98.63,
+    "global_popularity": 0.0029,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3004,
+    "feature_richness": 0.3871,
+    "feature_count": 12,
+    "p_buy": 0.9241,
+    "final_score": 1.8356,
+    "features_summary": "Material-material\u2026: Messing | Material-material\u2026: Kunststoff | Nenndruck-druck bar\u2026: 10",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Messing"
+      ],
+      "Nenndruck-druck_bar___indikatorvor_ohneindikator_nenndruck": [
+        "10",
+        "15"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Bauform-_bauform_druckluft": [
+        "X-Form"
+      ],
+      "Betriebsdruck(20)max(2e)-betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Durchmesser-durchmesser_mm___nur_indikatorvor": [
+        "8"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Betriebsdruck(20)bis-druck_bar_max___druck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck": [
+        "10",
+        "15"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck_min10": [
+        "10",
+        "15"
+      ],
+      "Betriebsdruck(20)max(2e)-Betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Material-Material___nur_allgemein": [
+        "Kunststoff"
+      ]
+    }
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "102-2298529-BP",
+    "set_id": "20240502211517-28254068",
+    "eclass": "21100416",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 2.732,
+    "reference_price_eur": 158.2235,
+    "price_advantage_pct": 98.27,
+    "global_popularity": 0.0013,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3335,
+    "feature_richness": 0.2903,
+    "feature_count": 9,
+    "p_buy": 0.9239,
+    "final_score": 1.8318,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau | Korpusfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "50"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Ausf(fc)hrung-_main_wandverteiler": [
+        "19 Zoll"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "20"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "30"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "50"
+      ]
+    }
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "128-5C20070",
+    "set_id": "20241207220140-276",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 6.93,
+    "reference_price_eur": 459.7606,
+    "price_advantage_pct": 98.49,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3147,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9199,
+    "final_score": 1.8259,
+    "features_summary": "Breite-breite mm\u2026: 73.5 | L(e4)nge-laenge mm\u2026: 100.6 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "2B"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ]
+    }
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "820-100038362",
+    "set_id": "20240502211517-18621360",
+    "eclass": "19010105",
+    "manufacturer": "Joy-It",
+    "candidate_price_eur": 7.83,
+    "reference_price_eur": 459.7606,
+    "price_advantage_pct": 98.3,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2403,
+    "feature_richness": 0.4194,
+    "feature_count": 13,
+    "p_buy": 0.9199,
+    "final_score": 1.8241,
+    "features_summary": "\u2014",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "5"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Netzteil"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Ausgangsstrom-strom_a___nur_ausgangsstrom": [
+        "5"
+      ],
+      "Leistung-_ladegeraet_usb_leistung": [
+        "27"
+      ],
+      "USB(2d)C(20)Anzahl-_main_ladegeraet_usb": [
+        "1"
+      ],
+      "Anschluss(20)1-_main_usb_kabel": [
+        "USB C"
+      ],
+      "Farbe-farbe___standard_transparent": [
+        "wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min0(2e)1_max90": [
+        "0.1"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "0.1"
+      ]
+    }
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "262A-30221383",
+    "set_id": "20240502211517-6451688",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.7075,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 98.82,
+    "global_popularity": 0.0021,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2529,
+    "feature_richness": 0.2258,
+    "feature_count": 7,
+    "p_buy": 0.9172,
+    "final_score": 1.8237,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: Kunststoff | Nennweite-nennweite\u2026: 75",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "75"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite(20)Abzweig-_main_ht_abzweig": [
+        "75"
+      ],
+      "Nennweite(20)Rohr-_main_ht_abzweig": [
+        "75"
+      ],
+      "Winkel-_main_ht_abzweig": [
+        "45"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_metallselten": [
+        "Kunststoff"
+      ]
+    }
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "P1801-26.99.0295",
+    "set_id": "20240502211517-25381172",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 2.06,
+    "reference_price_eur": 105.8688,
+    "price_advantage_pct": 98.05,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3224,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.92,
+    "final_score": 1.822,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "328-15588",
+    "set_id": "20250205100129-2218",
+    "eclass": "22529090",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 9.48,
+    "reference_price_eur": 442.896,
+    "price_advantage_pct": 97.86,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3506,
+    "feature_richness": 0.0645,
+    "feature_count": 2,
+    "p_buy": 0.9197,
+    "final_score": 1.8197,
+    "features_summary": "Durchmesser-\u2026: 270 | Form: Rundrohr",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_min30_max800": [
+        "270"
+      ],
+      "Form-_main_absperrpoller": [
+        "Rundrohr"
+      ]
+    }
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "8685-5602003120",
+    "set_id": "20240502211517-26782429",
+    "eclass": "37010201",
+    "manufacturer": "Riegler",
+    "candidate_price_eur": 3.7744,
+    "reference_price_eur": 292.4732,
+    "price_advantage_pct": 98.71,
+    "global_popularity": 0.0023,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1921,
+    "feature_richness": 0.3226,
+    "feature_count": 10,
+    "p_buy": 0.9147,
+    "final_score": 1.8176,
+    "features_summary": "Material-material\u2026: Messing | Material-material\u2026: Kunststoff | Nenndruck-druck bar\u2026: 10",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Messing"
+      ],
+      "Nenndruck-druck_bar___indikatorvor_ohneindikator_nenndruck": [
+        "10"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Bauform-_bauform_druckluft": [
+        "X-Form"
+      ],
+      "Betriebsdruck(20)max(2e)-betriebsdruck_maximal___allgemein": [
+        "15"
+      ],
+      "Durchmesser-durchmesser_mm___nur_indikatorvor": [
+        "6"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Betriebsdruck(20)bis-druck_bar_max___druck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck": [
+        "10"
+      ],
+      "Betriebsdruck-druck_bar___indikatorvor_ohneindikator_betriebsdruck_min10": [
+        "15"
+      ]
+    }
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "2172-35209",
+    "set_id": "20240502211517-41614470",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 99.07,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2155,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.913,
+    "final_score": 1.8175,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 87",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "87",
+        "87.5"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "87"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "832-377887",
+    "set_id": "20240502211517-25850095",
+    "eclass": "27050401",
+    "manufacturer": "Duracell",
+    "candidate_price_eur": 2.59,
+    "reference_price_eur": 56.1937,
+    "price_advantage_pct": 95.39,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.526,
+    "feature_richness": 0.0968,
+    "feature_count": 3,
+    "p_buy": 0.93,
+    "final_score": 1.8171,
+    "features_summary": "Technologie-\u2026: Alkaline | Stromversorgung: Batterie | Vernetzbarkeit: Funk",
+    "features_detail": {
+      "Technologie-batterien_akku_technologie___batterie": [
+        "Alkaline"
+      ],
+      "Stromversorgung-_main_kohlenmonoxidmelder": [
+        "Batterie"
+      ],
+      "Vernetzbarkeit-_main_kohlenmonoxidmelder": [
+        "Funk"
+      ]
+    }
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "262A-30221147",
+    "set_id": "20240502211517-40495471",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.165,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 99.06,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2126,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9128,
+    "final_score": 1.817,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 45",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "45"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "262A-30221161",
+    "set_id": "20240502211517-33622482",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.54,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 98.9,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2242,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9134,
+    "final_score": 1.8168,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 87.5",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "87",
+        "87.5"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "87"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "2172-35206",
+    "set_id": "20240502211517-34040474",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 99.07,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2038,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9121,
+    "final_score": 1.8157,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 30",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "30"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "30"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "2172-35208",
+    "set_id": "20240502211517-15871977",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 99.07,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2038,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.912,
+    "final_score": 1.8156,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 45",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "45"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "262A-30221048",
+    "set_id": "20240502211517-31108078",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.57,
+    "reference_price_eur": 230.0006,
+    "price_advantage_pct": 98.88,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2126,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9125,
+    "final_score": 1.8148,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 45",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "75"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "45"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    }
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "PG5A9-0993997033",
+    "set_id": "",
+    "eclass": "22529090",
+    "manufacturer": "W\u00fcrth",
+    "candidate_price_eur": 3.905,
+    "reference_price_eur": 442.896,
+    "price_advantage_pct": 99.12,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2337,
+    "feature_richness": 0.0323,
+    "feature_count": 1,
+    "p_buy": 0.9114,
+    "final_score": 1.8147,
+    "features_summary": "Verpackungseinheit-\u2026: 1",
+    "features_detail": {
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er_blatt": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "128-CJ07186",
+    "set_id": "20240502211517-19905673",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 13.405,
+    "reference_price_eur": 459.7606,
+    "price_advantage_pct": 97.08,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3064,
+    "feature_richness": 0.2903,
+    "feature_count": 9,
+    "p_buy": 0.9206,
+    "final_score": 1.8144,
+    "features_summary": "Breite-breite mm\u2026: 73.5 | L(e4)nge-laenge mm\u2026: 100.6 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "5"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Ausgangsstrom-strom_a___nur_ausgangsstrom": [
+        "5"
+      ],
+      "Leistung-_ladegeraet_usb_leistung": [
+        "27"
+      ],
+      "USB(2d)C(20)Anzahl-_main_ladegeraet_usb": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "P5Y6X-1193976-MU",
+    "set_id": "",
+    "eclass": "37010213",
+    "manufacturer": "Gardena",
+    "candidate_price_eur": 10.35,
+    "reference_price_eur": 563.997,
+    "price_advantage_pct": 98.16,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2518,
+    "feature_richness": 0.1613,
+    "feature_count": 5,
+    "p_buy": 0.9147,
+    "final_score": 1.8127,
+    "features_summary": "Material-material\u2026: Kunststoff | Anschlussart-\u2026: Gewinde | Durchmesser-zoll mm\u2026: 19,05 mm (3/4\")",
+    "features_detail": {
+      "Anschlussart-wegeventil_anschlussart___allgemein": [
+        "Gewinde"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Durchmesser-zoll_mm_2_nachkomma___durchmesser_bis_5": [
+        "19,05 mm (3/4\")"
+      ],
+      "Anschl(fc)sse-_wegeventil_anschluesse": [
+        "3/4\""
+      ],
+      "Durchflusswege-_wegeventil_durchflusswege": [
+        "2/2"
+      ]
+    }
+  }
+]
