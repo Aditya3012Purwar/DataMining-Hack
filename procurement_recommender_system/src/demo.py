@@ -620,7 +620,6 @@ def run_demo_data(
     top = pool.head(top_n).reset_index(drop=True)
     top["rank"] = top.index + 1
     top["features_summary"] = top["sku"].apply(lambda s: _summarise_features(s, feat_profiles))
-    # Use the best available feature profile (set_id-level preferred)
     top["features_detail"] = top["_cand_features"]
 
     out_records = _build_output_records(top)

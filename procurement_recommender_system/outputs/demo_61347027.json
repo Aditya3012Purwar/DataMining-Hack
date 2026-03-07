@@ -1,0 +1,860 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "1551-700.1206",
+    "set_id": "20240502211517-19091900",
+    "eclass": "21041501",
+    "manufacturer": "KS Tools",
+    "candidate_price_eur": 10.17,
+    "reference_price_eur": 346.475,
+    "price_advantage_pct": 97.06,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9555,
+    "final_score": 1.8829,
+    "features_summary": "Armanzahl: 3-armig",
+    "features_detail": {
+      "Armanzahl-_ausfuehrung_armanzahl": [
+        "3-armig"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "Armanzahl: 3-armig"
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "102-777398-BP",
+    "set_id": "20240502211517-30270527",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9374,
+    "reference_price_eur": 48.4591,
+    "price_advantage_pct": 91.87,
+    "global_popularity": 1.0,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2584,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9782,
+    "final_score": 1.8769,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Kunststoff"
+      ],
+      "Volumen-inhalt_l___standard_volumen": [
+        "18"
+      ],
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___nur_kunststoffexakt": [
+        "PP (Polypropylen)"
+      ],
+      "Durchmesser-durchmesser_cm___indikatorvor_indikatornach_danfang_min_20_max_50": [
+        "31"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_allgemein": [
+        "Kunststoff"
+      ],
+      "flammhemmende(20)Eigenschaften-_main_papierkorb": [
+        "nein"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Kunststoff, Volumen-inhalt l   standard volumen: 18, Farbe-farbe   standard: schwarz, Material-material   nur kunststoffexakt: PP (Polypropylen), Durchmesser-durchmesser cm   indikatorvor indikatornach danfang min 20 max 50: 31"
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "P2336-541658",
+    "set_id": "20240502211517-38259666",
+    "eclass": "22520102",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 12.3,
+    "reference_price_eur": 1272.96,
+    "price_advantage_pct": 99.03,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2346,
+    "feature_richness": 0.5938,
+    "feature_count": 19,
+    "collab_score": 0.5,
+    "p_buy": 0.9426,
+    "final_score": 1.8761,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau",
+    "features_detail": {
+      "Traglast-_main_19_zoll_fachboden": [
+        "15"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Tiefe-tiefe_ab_mm___tiefe10er_min100_max2000": [
+        "250"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "T\u00fcrkei"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)l(e4)nge(2d)ist(2d)breite(2c)(20)erste(2d)dimension(20)(28)200(2d)5000(29)": [
+        "483"
+      ],
+      "Material-material___allgemein_ohne_draht": [
+        "Metall"
+      ],
+      "Tiefe-tiefe_mm___sonderindikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_bt_zweitedimension": [
+        "250"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)50(2d)5000(29)": [
+        "482"
+      ],
+      "H(f6)heneinheit-_main_geraeteboden": [
+        "1"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "250"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)1(2d)8000(29)": [
+        "482"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Farbe-farbe___standard_transparent_exoteneindeutig_abkuerzungen": [
+        "grau"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "0.3"
+      ],
+      "Farbe-farbe___standard_transparent": [
+        "grau"
+      ],
+      "L(e4)nge-laenge_m___bmecat_oi_simpel_m_cm_max100": [
+        "0.25"
+      ],
+      "Breite-_main_serverschrank": [
+        "400"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Traglast: 15, Warenzustand: Neu, Farbe-farbe   standard ral: RAL 7035 Lichtgrau, Tiefe-tiefe ab mm   tiefe10er min100 max2000: 250"
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "615IT-R211311",
+    "set_id": "20240502211517-34633638",
+    "eclass": "22520102",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 5.8233,
+    "reference_price_eur": 1272.96,
+    "price_advantage_pct": 99.54,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2603,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9393,
+    "final_score": 1.8742,
+    "features_summary": "Farbe-farbe\u2026: RAL 9005 Tiefschwarz | Farbe-farbe ral: RAL 9005 Tiefschwarz | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Produktgewicht-_produktgewicht_g": [
+        "24"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Breite-_main_buerstenleiste": [
+        "483"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "400"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   standard ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, Breite: 400, Farbe-farbe   ral: RAL 9005 Tiefschwarz"
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "8498-3842551583-1",
+    "set_id": "20240502211517-31444902",
+    "eclass": "21109102",
+    "manufacturer": "Bosch\u00a0Rexroth",
+    "candidate_price_eur": 2.15,
+    "reference_price_eur": 199.8769,
+    "price_advantage_pct": 98.92,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3779,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9416,
+    "final_score": 1.8731,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stoff": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Farbe-farbe   standard: schwarz, Material-material   kunststoffexakt metallallgemein stoff: PP (Polypropylen)"
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "214G-4317784040525",
+    "set_id": "20240502211517-46088006",
+    "eclass": "22529090",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 3.895,
+    "reference_price_eur": 213.237,
+    "price_advantage_pct": 98.17,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.351,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9395,
+    "final_score": 1.8619,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1250",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1250"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1250"
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "986-3527936",
+    "set_id": "20240502211517-25337855",
+    "eclass": "27180201",
+    "manufacturer": "EFB-Elektronik",
+    "candidate_price_eur": 2.0,
+    "reference_price_eur": 175.393,
+    "price_advantage_pct": 98.86,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2682,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9358,
+    "final_score": 1.8609,
+    "features_summary": "H(f6)heneinheit: 5 | Schutzart-schutzart\u2026: 55",
+    "features_detail": {
+      "H(f6)heneinheit-_main_19(20)Zoll(20)Wandverteiler": [
+        "5"
+      ],
+      "Schutzart-schutzart_ip___ip_xx": [
+        "55"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_wandverteiler": [
+        "5"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "H(f6)heneinheit: 5, Schutzart-schutzart ip   ip xx: 55"
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "PXCMW-GC-RFZ001",
+    "set_id": "",
+    "eclass": "27180201",
+    "manufacturer": "Good Connections",
+    "candidate_price_eur": 3.17,
+    "reference_price_eur": 175.393,
+    "price_advantage_pct": 98.19,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3505,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9389,
+    "final_score": 1.8609,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ]
+    },
+    "feature_cluster_id": 7,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "PPW6Z-4000818341",
+    "set_id": "20240502211517-1461549",
+    "eclass": "22529090",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 3.0478,
+    "reference_price_eur": 213.237,
+    "price_advantage_pct": 98.57,
+    "global_popularity": 0.0018,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2932,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9371,
+    "final_score": 1.8609,
+    "features_summary": "Durchmesser-\u2026: 12 | L(e4)nge-laenge mm\u2026: 1250 | Verpackungseinheit-\u2026: 1",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "12"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1250"
+      ],
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er_blatt": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 12, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1250, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er blatt: 1, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er blatt: 10"
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "P1782-130296",
+    "set_id": "20240502211517-24628831",
+    "eclass": "19039190",
+    "manufacturer": "LogiLink",
+    "candidate_price_eur": 2.04,
+    "reference_price_eur": 59.6106,
+    "price_advantage_pct": 96.58,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4094,
+    "feature_richness": 0.375,
+    "feature_count": 12,
+    "collab_score": 0.5,
+    "p_buy": 0.9464,
+    "final_score": 1.8604,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: Kunststoff | \u2026: 1",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Festplattenkapazit(e4)t-_main_3_5_zoll_einbaurahmen": [
+        "1"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Festplattengr(f6)(df)e-_main_festplatten_einbaurahmen": [
+        "2.5"
+      ],
+      "Formfaktor-formfaktor___festplatte": [
+        "6,4 cm (2,5\")"
+      ],
+      "Kabell(e4)nge-laenge_m___kabellaenge_max20": [
+        "0.02"
+      ],
+      "Externe(20)Schnittstelle-_main_festplattengehaeuse": [
+        "USB"
+      ],
+      "Geeignet(20)f(fc)r-_main_festplattengehaeuse": [
+        "6,4 cm (2,5\")"
+      ],
+      "Interne(20)Schnittstelle-_main_festplattengehaeuse": [
+        "SATA 1.5 Gbit/s"
+      ],
+      "USB(2d)Version-usb_geschwindigkeit___abusb2": [
+        "USB 3.0"
+      ],
+      "Typ-_main_usb_festplatte": [
+        "HDD"
+      ]
+    },
+    "feature_cluster_id": 9,
+    "feature_cluster_label": "Farbe-farbe   standard: schwarz, Festplattenkapazit(e4)t: 1, Material-material   nur allgemein: Kunststoff, Warenzustand: Neu, Festplattengr(f6)(df)e: 2.5"
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "1085-103428",
+    "set_id": "20240502211517-36432523",
+    "eclass": "27180201",
+    "manufacturer": "ALLNET",
+    "candidate_price_eur": 3.71,
+    "reference_price_eur": 175.393,
+    "price_advantage_pct": 97.88,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.351,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9392,
+    "final_score": 1.8586,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, H(f6)heneinheit: 1, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz, H(f6)heneinheit: 2"
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "P1801-26.99.0295",
+    "set_id": "20240502211517-25381172",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 2.06,
+    "reference_price_eur": 175.393,
+    "price_advantage_pct": 98.83,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2172,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9338,
+    "final_score": 1.8566,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 11,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 7035 Lichtgrau, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: grau, Warenzustand: Neu, H(f6)heneinheit: 2"
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "1359-40-34-4648",
+    "set_id": "20240502211517-4556348",
+    "eclass": "22520102",
+    "manufacturer": "ASSMANN Electronic",
+    "candidate_price_eur": 21.54,
+    "reference_price_eur": 1272.96,
+    "price_advantage_pct": 98.31,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1879,
+    "feature_richness": 0.3438,
+    "feature_count": 11,
+    "collab_score": 0.5,
+    "p_buy": 0.935,
+    "final_score": 1.8541,
+    "features_summary": "Farbe-farbe\u2026: grau | Farbe-farbe ral: RAL 7035 Lichtgrau | Produktgewicht: 3200",
+    "features_detail": {
+      "Produktgewicht-_produktgewicht_g": [
+        "3200"
+      ],
+      "Traglast-_main_19_zoll_fachboden": [
+        "50"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "grau"
+      ],
+      "Tiefe-tiefe_ab_mm___tiefe10er_min100_max2000": [
+        "500"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)50(2d)5000(29)": [
+        "483"
+      ],
+      "H(f6)heneinheit-_main_geraeteboden": [
+        "1"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "500"
+      ],
+      "Breite-_main_serverschrank": [
+        "400"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 12,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Produktgewicht: 3200, Traglast: 50, Warenzustand: Neu, Farbe-farbe   standard ral: grau"
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "63VSM-649217000",
+    "set_id": "20240502211517-10276507",
+    "eclass": "37011101",
+    "manufacturer": "Georg Fischer",
+    "candidate_price_eur": 2.19,
+    "reference_price_eur": 91.5828,
+    "price_advantage_pct": 97.61,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3041,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9379,
+    "final_score": 1.8534,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: Kunststoff | Winkel-winkel grad\u2026: 90",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "90"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_metallselten": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel_min45": [
+        "90"
+      ],
+      "Ausf(fc)hrung-_ausfuehrung_fitting": [
+        "Winkel"
+      ]
+    },
+    "feature_cluster_id": 13,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Winkel-winkel grad   winkel: 90, Material-material   kunststoffallgemein metallallgemein metallselten: Kunststoff, Winkel-winkel grad   winkel min45: 90, Ausf(fc)hrung: Winkel"
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "615IT-V944421",
+    "set_id": "20240502211517-36591545",
+    "eclass": "27180201",
+    "manufacturer": "LogiLink",
+    "candidate_price_eur": 5.53,
+    "reference_price_eur": 175.393,
+    "price_advantage_pct": 96.85,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3439,
+    "feature_richness": 0.25,
+    "feature_count": 8,
+    "collab_score": 0.5,
+    "p_buy": 0.9411,
+    "final_score": 1.8526,
+    "features_summary": "Farbe-farbe\u2026: schwarz | Farbe-farbe ral: RAL 9005 Tiefschwarz | Produktgewicht: 600",
+    "features_detail": {
+      "Produktgewicht-_produktgewicht_g": [
+        "600"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "schwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "200"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ],
+      "H(f6)heneinheit-_main_19(20)Zoll(20)Rangierpanel": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 14,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Warenzustand: Neu, Breite: 200, Farbe-farbe   ral: RAL 9005 Tiefschwarz, Produktgewicht: 600"
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "1955B-39976702095",
+    "set_id": "1955B-39976702095",
+    "eclass": "22529090",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 5.478,
+    "reference_price_eur": 213.237,
+    "price_advantage_pct": 97.43,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3505,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9383,
+    "final_score": 1.8526,
+    "features_summary": "Durchmesser-\u2026: 12",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "12"
+      ]
+    },
+    "feature_cluster_id": 15,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 12, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200"
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "4588-WGB10",
+    "set_id": "20240502211517-35582189",
+    "eclass": "22529090",
+    "manufacturer": "Conmetall Meister",
+    "candidate_price_eur": 6.2693,
+    "reference_price_eur": 213.237,
+    "price_advantage_pct": 97.06,
+    "global_popularity": 0.0028,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.351,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9387,
+    "final_score": 1.8498,
+    "features_summary": "Durchmesser-\u2026: 14 | L(e4)nge-laenge mm\u2026: 1200",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "14"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1200"
+      ]
+    },
+    "feature_cluster_id": 16,
+    "feature_cluster_label": "L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1200, Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 14, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er blatt: 10"
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "2805-NSYTBS775",
+    "set_id": "20240502211517-43671154",
+    "eclass": "21100416",
+    "manufacturer": "Schneider Electric",
+    "candidate_price_eur": 5.99,
+    "reference_price_eur": 218.6188,
+    "price_advantage_pct": 97.26,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1539,
+    "feature_richness": 0.6562,
+    "feature_count": 21,
+    "collab_score": 0.5,
+    "p_buy": 0.9376,
+    "final_score": 1.8496,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe standard: grau | Frontfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "74"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "74"
+      ],
+      "Schutzart-schutzart_ip___ip_xx": [
+        "66"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)10(2d)1500(29)": [
+        "74"
+      ],
+      "H(f6)he-hoehe_mm___sonderindikatorvor_hende_hendemisch_indikatornach_indikatornachmehrd": [
+        "74"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_bt": [
+        "54"
+      ],
+      "H(f6)he-hoehe_mm___nur_indikatorvor": [
+        "74"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "54"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "74"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "74"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "54"
+      ],
+      "Breite-breite_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "70"
+      ],
+      "Farbe-farbe___standard": [
+        "grau"
+      ],
+      "H(f6)he-hoehe_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "70"
+      ],
+      "Tiefe-tiefe_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "50"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "54"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "74"
+      ]
+    },
+    "feature_cluster_id": 17,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 7035 Lichtgrau, Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 74, L(e4)nge-laenge mm   sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29): 74, Schutzart-schutzart ip   ip xx: 66, Breite-breite mm   indikator(2d)vor(2d)wert(20)(28)10(2d)1500(29): 74"
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "832-71267",
+    "set_id": "20240502211517-36352690",
+    "eclass": "22520102",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 18.89,
+    "reference_price_eur": 1272.96,
+    "price_advantage_pct": 98.52,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1503,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9317,
+    "final_score": 1.8495,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau | Farbe-farbe\u2026: grau",
+    "features_detail": {
+      "Traglast-_main_19(20)Zoll(20)Fachboden": [
+        "25"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Tiefe-tiefe_ab_mm___tiefe10er_min100_max2000": [
+        "350"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Traglast-_main_19_zoll_fachboden": [
+        "25"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___standard_transparent_exoteneindeutig_abkuerzungen": [
+        "grau"
+      ],
+      "Farbe-farbe___standard_transparent": [
+        "grau"
+      ],
+      "L(e4)nge-laenge_m___bmecat_oi_simpel_m_cm_max100": [
+        "0.26"
+      ]
+    },
+    "feature_cluster_id": 18,
+    "feature_cluster_label": "Traglast: 25, Farbe-farbe   standard ral: RAL 7035 Lichtgrau, Tiefe-tiefe ab mm   tiefe10er min100 max2000: 350, Ursprungsland: China, Warenzustand: Neu"
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "4012-653130",
+    "set_id": "20251104220140-3781",
+    "eclass": "30010301",
+    "manufacturer": "Emtez",
+    "candidate_price_eur": 3.89,
+    "reference_price_eur": 90.9233,
+    "price_advantage_pct": 95.72,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4682,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9444,
+    "final_score": 1.8484,
+    "features_summary": "Durchmesser-\u2026: 8 | L(e4)nge-laenge cm\u2026: 120 | \u2026: 125",
+    "features_detail": {
+      "Aufnahmekapazit(e4)t-bindemittel_aufnahmekapazitaet___aufnahmekapazitaet": [
+        "125"
+      ],
+      "Durchmesser-durchmesser_cm___indikatorvor_danfang_danfangmisch_erstedimension_letztedimension_max25": [
+        "8"
+      ],
+      "L(e4)nge-laenge_cm___zweite_dimension_st_bmecat_min40": [
+        "120"
+      ]
+    },
+    "feature_cluster_id": 19,
+    "feature_cluster_label": "Aufnahmekapazit(e4)t-bindemittel aufnahmekapazitaet   aufnahmekapazitaet: 125, Durchmesser-durchmesser cm   indikatorvor danfang danfangmisch erstedimension letztedimension max25: 8, L(e4)nge-laenge cm   zweite dimension st bmecat min40: 120"
+  }
+]
