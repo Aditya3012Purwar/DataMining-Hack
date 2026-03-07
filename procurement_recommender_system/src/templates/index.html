@@ -61,6 +61,18 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .q-tag{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2px 9px;font-size:.75rem;color:var(--muted);margin:2px 3px 2px 0}
 .q-tag b{color:var(--text);font-weight:600}
 
+.cold-banner{background:rgba(227,179,65,.07);border:1px solid rgba(227,179,65,.25);border-radius:8px;padding:12px 14px;margin-bottom:1.1rem}
+.cold-banner .cb-title{font-size:.72rem;color:var(--yellow);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.cold-banner .cb-row{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:6px}
+.cold-banner .cb-col{min-width:180px}
+.cold-banner .cb-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cold-banner .cb-val{font-size:.88rem;font-weight:600;color:var(--text)}
+.cold-banner .cb-desc{font-size:.76rem;color:var(--muted);font-style:italic}
+.cold-banner .match-list{margin-top:6px;padding:0;list-style:none}
+.cold-banner .match-list li{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;margin:2px 4px 2px 0;font-size:.75rem;color:var(--muted)}
+.cold-banner .match-list li b{color:var(--text)}
+.cold-banner .match-list li .sim-pct{color:var(--green);font-weight:600}
+
 .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
 .kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
 .kpi-ico{font-size:1.3rem}
@@ -212,6 +224,7 @@ table.rec-tbl tr:hover td{background:rgba(88,166,255,.035)}
 
   <!-- RESULTS STATE -->
   <div id="state-results" style="display:none">
+    <div id="cold-start-banner"></div>
     <div id="query-banner"></div>
     <div class="kpi-row" id="kpi-row"></div>
     <div class="chart-grid-2">
@@ -483,6 +496,7 @@ function markDone(n) {
 function renderResults(result) {
   lastResult = result;
   showState('results');
+  renderColdStartBanner(result);
   renderQueryBanner(result);
   renderKPIs(result);
   renderBarChart(result.recommendations);
@@ -492,17 +506,69 @@ function renderResults(result) {
   renderTable(result.recommendations);
 }
 
+function renderColdStartBanner(result) {
+  var el = document.getElementById('cold-start-banner');
+  var cs = result.cold_start_info;
+  if (!cs || !cs.is_cold_start) {
+    el.innerHTML = '';
+    return;
+  }
+  var html = '<div class="cold-banner">';
+  html += '<div class="cb-title"><i class="bi bi-snow me-1"></i>Cold-Start Customer — No Purchase History</div>';
+  html += '<div class="cb-row">';
+  html += '<div class="cb-col"><div class="cb-label">Original Customer</div><div class="cb-val">' + cs.original_customer_id + '</div>';
+  if (cs.cold_nace_description) {
+    html += '<div class="cb-desc">' + cs.cold_nace_description + '</div>';
+  }
+  var cf = cs.cold_customer_features || {};
+  if (cf.nace_code) html += '<div style="font-size:.72rem;color:var(--muted)">NACE ' + cf.nace_code + (cf.secondary_nace_code ? ' / ' + cf.secondary_nace_code : '') + '</div>';
+  if (cf.estimated_number_employees) html += '<div style="font-size:.72rem;color:var(--muted)">' + Math.round(cf.estimated_number_employees).toLocaleString() + ' employees</div>';
+  html += '</div>';
+  html += '<div class="cb-col"><div class="cb-label">Proxy Customer (best match)</div><div class="cb-val" style="color:var(--green)">' + cs.proxy_customer_id + '</div>';
+  if (cs.proxy_nace_description) {
+    html += '<div class="cb-desc">' + cs.proxy_nace_description + '</div>';
+  }
+  html += '<div style="font-size:.72rem;color:var(--green);font-weight:600">' + Math.round(cs.similarity_score * 100) + '% similarity</div>';
+  html += '</div>';
+  html += '</div>';
+  // Top matches list
+  if (cs.top_matches && cs.top_matches.length > 1) {
+    html += '<div style="font-size:.7rem;color:var(--muted);margin-bottom:3px">Top similar customers:</div>';
+    html += '<ul class="match-list">';
+    for (var i = 0; i < cs.top_matches.length; i++) {
+      var m = cs.top_matches[i];
+      html += '<li>';
+      html += (i === 0 ? '<i class="bi bi-star-fill me-1" style="color:var(--yellow);font-size:.65rem"></i>' : '');
+      html += '<b>' + m.customer_id + '</b>';
+      html += ' <span class="sim-pct">' + Math.round(m.similarity * 100) + '%</span>';
+      html += ' <span style="color:var(--muted);font-size:.7rem">(NACE:' + Math.round(m.nace_score * 100) + '% Emp:' + Math.round(m.employee_score * 100) + '%)</span>';
+      if (m.estimated_number_employees) html += ' <span style="font-size:.68rem;color:var(--muted)">' + Math.round(m.estimated_number_employees).toLocaleString() + ' emp</span>';
+      html += '</li>';
+    }
+    html += '</ul>';
+  }
+  html += '</div>';
+  el.innerHTML = html;
+}
+
 function renderQueryBanner(result) {
   var q = result.query;
+  var cs = result.cold_start_info;
   var eclassTag = q.filter_eclass
     ? '<span class="q-tag">E-Class filter <b>' + q.filter_eclass + '</b></span>'
     : '<span class="q-tag">E-Classes <b>all ' + result.history.unique_eclasses + '</b></span>';
+
+  var proxyTag = '';
+  if (cs && cs.is_cold_start) {
+    proxyTag = '<span class="q-tag" style="border-color:var(--yellow);color:var(--yellow)">Cold Start <b style="color:var(--yellow)">via proxy ' + cs.proxy_customer_id + '</b></span>';
+  }
 
   document.getElementById('query-banner').innerHTML =
     '<div class="query-banner">' +
     '<div class="qb-title"><i class="bi bi-info-circle me-1"></i>Query — what produced these results</div>' +
     '<div>' +
     '<span class="q-tag">Customer <b>' + q.customer_id + '</b></span>' +
+    proxyTag +
     '<span class="q-tag">Top N <b>' + q.top_n + '</b></span>' +
     '<span class="q-tag">Min price <b>EUR ' + q.min_price + '</b></span>' +
     eclassTag +

@@ -27,6 +27,13 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from cold_start import (
+    build_warm_profiles,
+    find_closest_warm_customer,
+    load_cold_customer_features,
+    load_nace_lookup,
+)
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -142,17 +149,73 @@ def run_demo_data(
         plis_path,
         chunk_progress_cb=lambda msg: _progress(2, msg),
     )
+
+    # --- Cold-start detection & proxy resolution ---
+    cold_start_info = None
+    proxy_customer_id = None
     if hist.empty:
-        raise ValueError(
-            f"No purchase history found for customer {customer_id}. "
-            "Use --list-customers to see valid IDs."
+        _progress(2, f"No history for {customer_id} \u2014 activating cold-start matching\u2026")
+        try:
+            cold_features = load_cold_customer_features(customer_id)
+        except ValueError:
+            cold_features = {"customer_id": customer_id, "nace_code": None,
+                            "secondary_nace_code": None,
+                            "estimated_number_employees": None, "task": "unknown"}
+
+        _progress(2, "Building warm-customer profiles for similarity matching\u2026")
+        warm_df = build_warm_profiles(
+            progress_cb=lambda msg: _progress(2, msg),
         )
+        matches = find_closest_warm_customer(
+            cold_features.get("nace_code"),
+            cold_features.get("secondary_nace_code"),
+            cold_features.get("estimated_number_employees"),
+            warm_df,
+            top_k=5,
+        )
+        if not matches or matches[0]["similarity"] <= 0:
+            raise ValueError(
+                f"Customer {customer_id} has no purchase history and no similar "
+                "warm customer could be found. Cannot generate recommendations."
+            )
+
+        proxy_customer_id = matches[0]["customer_id"]
+        nace_desc = load_nace_lookup()
+        cold_nace = cold_features.get("nace_code")
+        proxy_nace = matches[0].get("nace_code")
+        cold_start_info = {
+            "is_cold_start": True,
+            "original_customer_id": customer_id,
+            "proxy_customer_id": proxy_customer_id,
+            "similarity_score": matches[0]["similarity"],
+            "cold_customer_features": cold_features,
+            "cold_nace_description": nace_desc.get(cold_nace, "") if cold_nace else "",
+            "proxy_nace_description": nace_desc.get(proxy_nace, "") if proxy_nace else "",
+            "top_matches": matches,
+        }
+        _progress(2, f"Cold-start: using proxy customer {proxy_customer_id} "
+                     f"(similarity {matches[0]['similarity']:.0%})")
+
+        # Reload history with the proxy customer
+        hist = load_customer_history(
+            proxy_customer_id,
+            plis_path,
+            chunk_progress_cb=lambda msg: _progress(2, msg),
+        )
+        if hist.empty:
+            raise ValueError(
+                f"Proxy customer {proxy_customer_id} also has no history. "
+                "Cannot generate recommendations."
+            )
+
+    effective_customer_id = proxy_customer_id or customer_id
 
     eclass_breakdown = (
         hist.groupby("eclass")["sku"].count().nlargest(10)
         .reset_index().rename(columns={"sku": "count"})
     )
-    _progress(2, f"History: {len(hist):,} rows | {hist['sku'].nunique():,} SKUs | {hist['eclass'].nunique()} E-classes")
+    _progress(2, f"History: {len(hist):,} rows | {hist['sku'].nunique():,} SKUs | {hist['eclass'].nunique()} E-classes"
+               + (f" (via proxy {proxy_customer_id})" if proxy_customer_id else ""))
 
     ref_price = (
         hist.groupby("eclass", as_index=False)["vk_per_item"]
@@ -218,6 +281,7 @@ def run_demo_data(
             "filter_eclass": filter_eclass,
             "min_price": min_price,
         },
+        "cold_start_info": cold_start_info,
         "catalogue_size": int(catalogue_size),
         "history": {
             "transaction_count": int(len(hist)),
