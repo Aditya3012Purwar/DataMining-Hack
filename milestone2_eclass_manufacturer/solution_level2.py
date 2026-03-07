@@ -33,12 +33,12 @@ SAVINGS_RATE = 0.10
 # ============================================================
 print("Loading data...")
 plis = pd.read_csv(
-    BASE_DIR / "plis_training.csv" / "plis_training.csv",
+    BASE_DIR / "plis_training.csv",
     sep='\t', low_memory=False,
     dtype={'eclass': str, 'nace_code': str, 'secondary_nace_code': str}
 )
 customers = pd.read_csv(
-    BASE_DIR / "customer_test.csv" / "customer_test.csv",
+    BASE_DIR / "customer_test.csv",
     sep='\t', dtype={'nace_code': str, 'secondary_nace_code': str}
 )
 
@@ -159,14 +159,14 @@ def predict_warm(buyer_id, buyer_data):
     # (might have low overall rate but high recent activity → likely to continue)
     tier2 = agg[
         (agg['recent_months'] >= 2) &  # bought in 2+ of last 6 months
-        (agg['recent_monthly_spend'] >= 80) &  # decent recent spend
+        (agg['recent_monthly_spend'] >= 50) &  # 80 decent recent spend
         (~agg['cluster'].isin(tier1['cluster']))  # not already in tier 1
     ].copy()
     
     # Tier 3: Consistently recurring with meaningful spend
     tier3 = agg[
         (agg['monthly_rate'] >= 0.3) &  # bought in 30%+ of months
-        (agg['monthly_spend'] >= 50) &  # meaningful spend
+        (agg['monthly_spend'] >= 30) &  # 50 meaningful spend
         (agg['months_since_last'] <= 6) &  # still active
         (~agg['cluster'].isin(set(tier1['cluster']) | set(tier2['cluster'])))
     ].copy()
