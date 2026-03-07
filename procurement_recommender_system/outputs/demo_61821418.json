@@ -1,0 +1,857 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "820-1752333",
+    "set_id": "20240502211517-17998782",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 4.53,
+    "reference_price_eur": 376.8746,
+    "price_advantage_pct": 98.8,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4941,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.949,
+    "final_score": 1.8866,
+    "features_summary": "Farbe: wei\u00df | Breite-breite mm\u2026: 71 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "71"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "4"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ],
+      "Farbe-_pc_gehaeuse_farbe": [
+        "wei\u00df"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "F(fc)r(20)Marke: Raspberry Pi, F(fc)r(20)Modell: 4, Ausf(fc)hrung: Geh\u00e4use, Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 71, Farbe: wei\u00df"
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "820-1752332",
+    "set_id": "20240502211517-13997018",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 4.62,
+    "reference_price_eur": 376.8746,
+    "price_advantage_pct": 98.77,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.358,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.942,
+    "final_score": 1.8724,
+    "features_summary": "Breite-breite mm\u2026: 73.5 | L(e4)nge-laenge mm\u2026: 100.6 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "4"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "F(fc)r(20)Marke: Raspberry Pi, F(fc)r(20)Modell: 4, Ausf(fc)hrung: Geh\u00e4use, Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 71, Farbe: wei\u00df"
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "1085-103428",
+    "set_id": "20240502211517-36432523",
+    "eclass": "27180201",
+    "manufacturer": "ALLNET",
+    "candidate_price_eur": 3.71,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 98.37,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3942,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9421,
+    "final_score": 1.8688,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, H(f6)heneinheit: 1, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz, H(f6)heneinheit: 2"
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "820-100038362",
+    "set_id": "20240502211517-18621360",
+    "eclass": "19010105",
+    "manufacturer": "Joy-It",
+    "candidate_price_eur": 7.83,
+    "reference_price_eur": 376.8746,
+    "price_advantage_pct": 97.92,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2558,
+    "feature_richness": 0.4062,
+    "feature_count": 13,
+    "collab_score": 0.5,
+    "p_buy": 0.9397,
+    "final_score": 1.8599,
+    "features_summary": "\u2014",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "5"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Netzteil"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Ausgangsstrom-strom_a___nur_ausgangsstrom": [
+        "5"
+      ],
+      "Leistung-_ladegeraet_usb_leistung": [
+        "27"
+      ],
+      "USB(2d)C(20)Anzahl-_main_ladegeraet_usb": [
+        "1"
+      ],
+      "Anschluss(20)1-_main_usb_kabel": [
+        "USB C"
+      ],
+      "Farbe-farbe___standard_transparent": [
+        "wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min0(2e)1_max90": [
+        "0.1"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "0.1"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 73.5, L(e4)nge-laenge mm   sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29): 100.6, F(fc)r(20)Marke: Raspberry Pi, F(fc)r(20)Modell: 5, Ausf(fc)hrung: Netzteil"
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "102-2298529-BP",
+    "set_id": "20240502211517-28254068",
+    "eclass": "21100416",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 2.732,
+    "reference_price_eur": 320.2928,
+    "price_advantage_pct": 99.15,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.169,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9335,
+    "final_score": 1.859,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau | Korpusfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "50"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Ausf(fc)hrung-_main_wandverteiler": [
+        "19 Zoll"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "20"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "30"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "50"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 7035 Lichtgrau, Warenzustand: Neu, Frontfarbe: RAL 7035 Lichtgrau, Gesamttiefe-tiefe mm   indikatorvor tende tendemisch tmitte tmittemisch indikatornach indikatoranchmd gesamttiefe: 50, Korpusfarbe: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "128-5C20070",
+    "set_id": "20241207220140-276",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 6.93,
+    "reference_price_eur": 376.8746,
+    "price_advantage_pct": 98.16,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.288,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9375,
+    "final_score": 1.8577,
+    "features_summary": "Breite-breite mm\u2026: 73.5 | L(e4)nge-laenge mm\u2026: 100.6 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "2B"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 73.5, L(e4)nge-laenge mm   sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29): 100.6, F(fc)r(20)Marke: Raspberry Pi, Ausf(fc)hrung: Geh\u00e4use, F(fc)r(20)Modell: 2B"
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "P1801-26.99.0295",
+    "set_id": "20240502211517-25381172",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 2.06,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 99.1,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1974,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9328,
+    "final_score": 1.8572,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 7035 Lichtgrau, Warenzustand: Neu, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: grau, Produktgewicht: 600"
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "102-777398-BP",
+    "set_id": "20240502211517-30270527",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9374,
+    "reference_price_eur": 40.3799,
+    "price_advantage_pct": 90.25,
+    "global_popularity": 1.0,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1365,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9748,
+    "final_score": 1.8546,
+    "features_summary": "Farbe-farbe standard: schwarz | Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen)",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Kunststoff"
+      ],
+      "Volumen-inhalt_l___standard_volumen": [
+        "18"
+      ],
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___nur_kunststoffexakt": [
+        "PP (Polypropylen)"
+      ],
+      "Durchmesser-durchmesser_cm___indikatorvor_indikatornach_danfang_min_20_max_50": [
+        "31"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_allgemein": [
+        "Kunststoff"
+      ],
+      "flammhemmende(20)Eigenschaften-_main_papierkorb": [
+        "nein"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Kunststoff, Volumen-inhalt l   standard volumen: 18, Farbe-farbe   standard: schwarz, Material-material   nur kunststoffexakt: PP (Polypropylen), Durchmesser-durchmesser cm   indikatorvor indikatornach danfang min 20 max 50: 31"
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "4249L-SNA-BR2/35",
+    "set_id": "20240502211517-22996916",
+    "eclass": "19030209",
+    "manufacturer": "Kingston Technology",
+    "candidate_price_eur": 5.59,
+    "reference_price_eur": 181.7182,
+    "price_advantage_pct": 96.92,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.359,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.941,
+    "final_score": 1.853,
+    "features_summary": "Farbe-farbe standard: silber | \u2026: 1 | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___standard": [
+        "silber"
+      ],
+      "Festplattenkapazit(e4)t-_main_3_5_zoll_einbaurahmen": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Festplattengr(f6)(df)e-_main_festplatten_einbaurahmen": [
+        "2.5"
+      ],
+      "Formfaktor-formfaktor___festplatte": [
+        "8,9 cm (3,5\")"
+      ],
+      "Kapazit(e4)t-kapazitaet_gb___indikatorvor_oinametb_oinamegb": [
+        "2500"
+      ]
+    },
+    "feature_cluster_id": 7,
+    "feature_cluster_label": "Farbe-farbe   standard: silber, Festplattenkapazit(e4)t: 1, Warenzustand: Neu, Festplattengr(f6)(df)e: 2.5, Formfaktor-formfaktor   festplatte: 8,9 cm (3,5\")"
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "P1801-26.99.0310",
+    "set_id": "20240502211517-8202354",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 4.5467,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 98.01,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.214,
+    "feature_richness": 0.3125,
+    "feature_count": 10,
+    "collab_score": 0.5,
+    "p_buy": 0.9357,
+    "final_score": 1.8528,
+    "features_summary": "Farbe-farbe\u2026: RAL 9005 Tiefschwarz | Farbe-farbe\u2026: RAL 9005 Tiefschwarz | Farbe-farbe ral: RAL 9005 Tiefschwarz",
+    "features_detail": {
+      "Farbe-farbe___standard_ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Gr(f6)(df)e-_main_patchpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)sonderindikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)b(2d)als(2d)indikator(20)(28)10(2d)2000(29)": [
+        "110"
+      ],
+      "Farbe-farbe___standard_materialien_ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "50"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "490"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   standard ral: RAL 9005 Tiefschwarz, Gr(f6)(df)e: 1, Warenzustand: Neu, Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)sonderindikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)b(2d)als(2d)indikator(20)(28)10(2d)2000(29): 110"
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "128-CJ07191",
+    "set_id": "20240502211517-28123631",
+    "eclass": "19010105",
+    "manufacturer": "Raspberry Pi",
+    "candidate_price_eur": 14.0433,
+    "reference_price_eur": 376.8746,
+    "price_advantage_pct": 96.27,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4154,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9436,
+    "final_score": 1.852,
+    "features_summary": "Breite-breite mm\u2026: 73.5 | L(e4)nge-laenge mm\u2026: 100.6 | F(fc)r(20)Marke: Raspberry Pi",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "5"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Geh\u00e4use"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 73.5, L(e4)nge-laenge mm   sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29): 100.6, F(fc)r(20)Marke: Raspberry Pi, Ausf(fc)hrung: Geh\u00e4use, F(fc)r(20)Modell: 2B"
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "PPW6Z-4000818341",
+    "set_id": "20240502211517-1461549",
+    "eclass": "22529090",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 3.0478,
+    "reference_price_eur": 190.6427,
+    "price_advantage_pct": 98.4,
+    "global_popularity": 0.0018,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.234,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9334,
+    "final_score": 1.8519,
+    "features_summary": "Durchmesser-\u2026: 12 | L(e4)nge-laenge mm\u2026: 1250 | Verpackungseinheit-\u2026: 1",
+    "features_detail": {
+      "Durchmesser-durchmesser_mm___indikatorvor_einheitvor_letztedimension_max70": [
+        "12"
+      ],
+      "L(e4)nge-laenge_mm___indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29)": [
+        "1250"
+      ],
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er_blatt": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 9,
+    "feature_cluster_label": "Durchmesser-durchmesser mm   indikatorvor einheitvor letztedimension max70: 12, L(e4)nge-laenge mm   indikatorvor(2c)(20)indikatornach(2c)(20)l(2c)(20)histl(20)(28)200(2d)2000(29): 1250, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er blatt: 1"
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "337-26.99.0298",
+    "set_id": "20240502211517-36533767",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 2.798,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 98.77,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.165,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9311,
+    "final_score": 1.8508,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Farbe-farbe\u2026: schwarz | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Produktgewicht-_produktgewicht_g": [
+        "231.7"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "schwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, H(f6)heneinheit: 1, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz, H(f6)heneinheit: 2"
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "P8349-5093885",
+    "set_id": "20240502211517-26644133",
+    "eclass": "27180201",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 2.94,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 98.71,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1609,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9313,
+    "final_score": 1.8507,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Farbe-farbe\u2026: schwarz | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "schwarz"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "200"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, Breite: 200, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz"
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "2172-35206",
+    "set_id": "20240502211517-34040474",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 122.7836,
+    "price_advantage_pct": 98.27,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2164,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9333,
+    "final_score": 1.8503,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 30",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "30"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "30"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 11,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 90, Material-material   kunststoffexakt metallallgemein stahlallgemein stahloberflaeche: PP (Polypropylen), Winkel-winkel grad   winkel: 30, Winkel: 30"
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "2172-35205",
+    "set_id": "20240502211517-3316211",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 122.7836,
+    "price_advantage_pct": 98.27,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2164,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9332,
+    "final_score": 1.8503,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 15",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "15"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "90"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "15"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 11,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 90, Material-material   kunststoffexakt metallallgemein stahlallgemein stahloberflaeche: PP (Polypropylen), Winkel-winkel grad   winkel: 30, Winkel: 30"
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "615IT-V944451",
+    "set_id": "20240502211517-25083489",
+    "eclass": "27180201",
+    "manufacturer": "LogiLink",
+    "candidate_price_eur": 5.25,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 97.7,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2476,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9358,
+    "final_score": 1.85,
+    "features_summary": "Farbe-farbe\u2026: grau | Farbe-farbe ral: RAL 7035 Lichtgrau | Produktgewicht: 600",
+    "features_detail": {
+      "Produktgewicht-_produktgewicht_g": [
+        "600"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "grau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "200"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 7035 Lichtgrau, Warenzustand: Neu, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: grau, Produktgewicht: 600"
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "615IT-V944421",
+    "set_id": "20240502211517-36591545",
+    "eclass": "27180201",
+    "manufacturer": "LogiLink",
+    "candidate_price_eur": 5.53,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 97.58,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2476,
+    "feature_richness": 0.25,
+    "feature_count": 8,
+    "collab_score": 0.5,
+    "p_buy": 0.9362,
+    "final_score": 1.8497,
+    "features_summary": "Farbe-farbe\u2026: schwarz | Farbe-farbe ral: RAL 9005 Tiefschwarz | Produktgewicht: 600",
+    "features_detail": {
+      "Produktgewicht-_produktgewicht_g": [
+        "600"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "schwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "200"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ],
+      "H(f6)heneinheit-_main_19(20)Zoll(20)Rangierpanel": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, Breite: 200, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz"
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "2172-3210",
+    "set_id": "20240502211517-40495471",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.36,
+    "reference_price_eur": 122.7836,
+    "price_advantage_pct": 98.08,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2164,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9331,
+    "final_score": 1.8482,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: PP (Polypropylen) | Winkel-winkel grad\u2026: 45",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-_main_ht_boegen": [
+        "45"
+      ],
+      "Material-material___kunststoffexakt_metallallgemein_stahlallgemein_stahloberflaeche": [
+        "PP (Polypropylen)"
+      ]
+    },
+    "feature_cluster_id": 12,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Winkel-winkel grad   winkel: 45, Nennweite-nennweite dn   standard: 110, Winkel: 45, Material-material   kunststoffexakt metallallgemein stahlallgemein stahloberflaeche: PP (Polypropylen)"
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "P1801-26.99.0299",
+    "set_id": "20240502211517-39448210",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 3.38,
+    "reference_price_eur": 228.0874,
+    "price_advantage_pct": 98.52,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.165,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9308,
+    "final_score": 1.8478,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Farbe-farbe\u2026: schwarz | H(f6)heneinheit: 2",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "2"
+      ],
+      "Produktgewicht-_produktgewicht_g": [
+        "401.8"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "schwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "2"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu, H(f6)heneinheit: 1, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: schwarz, H(f6)heneinheit: 2"
+  }
+]

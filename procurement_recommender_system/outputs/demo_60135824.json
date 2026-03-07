@@ -1,0 +1,647 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "P9649-169818-YY",
+    "set_id": "",
+    "eclass": "40020201",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 2.13,
+    "reference_price_eur": 268.84,
+    "price_advantage_pct": 99.21,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4045,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9453,
+    "final_score": 1.8831,
+    "features_summary": "Farbe-Farbe\u2026: verzinkt | Material-material\u2026: Kunststoff | Durchmesser-\u2026: 12",
+    "features_detail": {
+      "Befestigung-_main_absperrpoller": [
+        "Aufd\u00fcbeln"
+      ],
+      "Farbe-Farbe___standard_ral_dbfarben_materialien": [
+        "verzinkt"
+      ],
+      "Form-_main_absperrpoller": [
+        "Vierkantrohr"
+      ],
+      "Funktion-_main_absperrpoller": [
+        "ortsfest"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Kunststoff"
+      ],
+      "Durchmesser-durchmesser_mm___indikatorvor_schrauben_erstedimensionname": [
+        "12"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "Befestigung: Aufd\u00fcbeln, Farbe-Farbe   standard ral dbfarben materialien: verzinkt, Form: Vierkantrohr, Funktion: ortsfest, Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Kunststoff"
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "PARNS-37665",
+    "set_id": "",
+    "eclass": "40020201",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 2.84,
+    "reference_price_eur": 268.84,
+    "price_advantage_pct": 98.94,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4045,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9451,
+    "final_score": 1.8802,
+    "features_summary": "Farbe-Farbe\u2026: verzinkt | Material-material\u2026: Kunststoff | Durchmesser-\u2026: 12",
+    "features_detail": {
+      "Befestigung-_main_absperrpoller": [
+        "Aufd\u00fcbeln"
+      ],
+      "Farbe-Farbe___standard_ral_dbfarben_materialien": [
+        "verzinkt"
+      ],
+      "Form-_main_absperrpoller": [
+        "Vierkantrohr"
+      ],
+      "Funktion-_main_absperrpoller": [
+        "ortsfest"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Kunststoff"
+      ],
+      "Durchmesser-durchmesser_mm___indikatorvor_schrauben_erstedimensionname": [
+        "12"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "Befestigung: Aufd\u00fcbeln, Farbe-Farbe   standard ral dbfarben materialien: verzinkt, Form: Vierkantrohr, Funktion: ortsfest, Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Kunststoff"
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "PWB7N-104685",
+    "set_id": "20240502211517-36527477",
+    "eclass": "40020201",
+    "manufacturer": "GAH ALBERTS",
+    "candidate_price_eur": 8.75,
+    "reference_price_eur": 268.84,
+    "price_advantage_pct": 96.75,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.5076,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9486,
+    "final_score": 1.8663,
+    "features_summary": "Farbe-farbe\u2026: verzinkt | Material-material\u2026: Stahl | Form: Vierkantrohr",
+    "features_detail": {
+      "Farbe-farbe___standard_ral_dbfarben_materialien": [
+        "verzinkt"
+      ],
+      "Form-_main_absperrpoller": [
+        "Vierkantrohr"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Stahl"
+      ],
+      "Verschluss-_main_absperrpoller": [
+        "Dreikant"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Verschluss-_main_schranke": [
+        "Dreikant"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Verschluss: Dreikant, Farbe-farbe   standard ral dbfarben materialien: verzinkt, Form: Vierkantrohr, Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Stahl, Ursprungsland: China"
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "PPE56-5486",
+    "set_id": "",
+    "eclass": "22520101",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 2.21,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.54,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3948,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.943,
+    "final_score": 1.8627,
+    "features_summary": "Farbe-farbe\u2026: rot | Material-material\u2026: Kunststoff | St(e4)rke-\u2026: 8",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "rot"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "10"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "8"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: rot, L(e4)nge-laenge m   ohne indikator min2: 10, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, L(e4)nge-laenge m   ohne indikator: 10, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 8"
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "4012-168337",
+    "set_id": "20240502211517-5536829",
+    "eclass": "22520101",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 2.1185,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.65,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3482,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.941,
+    "final_score": 1.8599,
+    "features_summary": "Farbe-farbe\u2026: rot/wei\u00df | Farbe: rot/wei\u00df | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "25"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "25"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "8"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: rot/wei\u00df, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: rot/wei\u00df, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 8, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "5417B-p4927702",
+    "set_id": "20240502211517-31995377",
+    "eclass": "40020201",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 8.7667,
+    "reference_price_eur": 268.84,
+    "price_advantage_pct": 96.74,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3773,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9419,
+    "final_score": 1.853,
+    "features_summary": "Farbe-farbe\u2026: schwarz | Farbe-farbe standard: schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_ral_dbfarben_materialien": [
+        "schwarz"
+      ],
+      "Form-_main_absperrpoller": [
+        "Vierkantrohr"
+      ],
+      "Funktion-_main_absperrpoller": [
+        "ortsfest"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche": [
+        "Kunststoff"
+      ],
+      "Farbe-farbe___standard": [
+        "schwarz"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Farbe-farbe   standard ral dbfarben materialien: schwarz, Form: Vierkantrohr, Funktion: ortsfest, Material-material   kunststoffallgemein metallallgemein stahloberflaeche: Kunststoff, Farbe-farbe   standard: schwarz"
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "328-65991.0001",
+    "set_id": "20250311100134-39909",
+    "eclass": "22520101",
+    "manufacturer": "STEIN HGS",
+    "candidate_price_eur": 3.33,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 96.3,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4045,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9425,
+    "final_score": 1.8501,
+    "features_summary": "Farbe-farbe\u2026: rot/wei\u00df | Farbe: rot/wei\u00df | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "rot/wei\u00df"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "1"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "8"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: rot/wei\u00df, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: rot/wei\u00df, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 8, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "260W-703244",
+    "set_id": "20240502211517-24397779",
+    "eclass": "22520101",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 2.21,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.54,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2258,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9354,
+    "final_score": 1.8479,
+    "features_summary": "Farbe-farbe\u2026: rot/wei\u00df | Farbe: rot/wei\u00df | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "10"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "10"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "10"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_durchmesser": [
+        "10"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "L(e4)nge-laenge m   ohne indikator min2: 10, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Ursprungsland: China, L(e4)nge-laenge m   standard min1: 10, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 10"
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "6C8MS-734459",
+    "set_id": "20240502211517-29425889",
+    "eclass": "22520101",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 2.5,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.22,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2568,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9359,
+    "final_score": 1.8458,
+    "features_summary": "Farbe-farbe\u2026: gelb/schwarz | Farbe: gelb/schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "25"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "Deutschland"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "25"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "6"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: gelb/schwarz, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: gelb/schwarz, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 6, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "158-900.9142",
+    "set_id": "158-900.9142",
+    "eclass": "22520101",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 3.15,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 96.5,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3248,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9382,
+    "final_score": 1.8435,
+    "features_summary": "Farbe-farbe\u2026: gelb/schwarz | Farbe: gelb/schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "gelb/schwarz"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "6"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: gelb/schwarz, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: gelb/schwarz, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 6, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "894-900.9142",
+    "set_id": "894-900.9142",
+    "eclass": "22520101",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 3.1625,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 96.49,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3248,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9382,
+    "final_score": 1.8434,
+    "features_summary": "Farbe-farbe\u2026: gelb/schwarz | Farbe: gelb/schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "gelb/schwarz"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "6"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: gelb/schwarz, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: gelb/schwarz, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 6, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "P42E8-900.9141",
+    "set_id": "20240502211517-3321142",
+    "eclass": "22520101",
+    "manufacturer": "Moravia",
+    "candidate_price_eur": 2.46,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.27,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2374,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9342,
+    "final_score": 1.8428,
+    "features_summary": "Farbe-farbe\u2026: rot/wei\u00df | Farbe: rot/wei\u00df | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "rot/wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "Deutschland"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "rot/wei\u00df"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "6"
+      ]
+    },
+    "feature_cluster_id": 7,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: rot/wei\u00df, L(e4)nge-laenge m   ohne indikator min2: 10, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Ursprungsland: Deutschland, Farbe: rot/wei\u00df"
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "4012-144109",
+    "set_id": "20240502211517-1840792",
+    "eclass": "22520101",
+    "manufacturer": "P\u00d6SAMO VAUKA",
+    "candidate_price_eur": 2.38,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.36,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.182,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9326,
+    "final_score": 1.8405,
+    "features_summary": "Farbe-farbe\u2026: schwarz | Farbe: schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "schwarz"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "10"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "schwarz"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "10"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "10"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "10"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_durchmesser": [
+        "10"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "L(e4)nge-laenge m   ohne indikator min2: 10, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Ursprungsland: China, L(e4)nge-laenge m   standard min1: 10, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 10"
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "164-54401",
+    "set_id": "164-54401",
+    "eclass": "22520101",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 3.205,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 96.44,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2782,
+    "feature_richness": 0.1875,
+    "feature_count": 6,
+    "collab_score": 0.5,
+    "p_buy": 0.9359,
+    "final_score": 1.8385,
+    "features_summary": "Farbe-farbe\u2026: gelb/schwarz | Farbe: gelb/schwarz | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "25"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "gelb/schwarz"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "1"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "6"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: gelb/schwarz, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: gelb/schwarz, St(e4)rke-materialstaerke mm   indikator ohneindikator max20: 6, L(e4)nge-laenge m   ohne indikator min2: 25"
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "400-1470435",
+    "set_id": "20240502211517-6469572",
+    "eclass": "22520101",
+    "manufacturer": "P\u00d6SAMO VAUKA",
+    "candidate_price_eur": 2.1025,
+    "reference_price_eur": 89.9933,
+    "price_advantage_pct": 97.66,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.1455,
+    "feature_richness": 0.25,
+    "feature_count": 8,
+    "collab_score": 0.5,
+    "p_buy": 0.9299,
+    "final_score": 1.8381,
+    "features_summary": "Farbe-farbe\u2026: wei\u00df | Farbe: wei\u00df | Material-material\u2026: Kunststoff",
+    "features_detail": {
+      "Farbe-farbe___standard_materialien": [
+        "wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min2": [
+        "30"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_stahloberflaeche_ohne_aluminium": [
+        "Kunststoff"
+      ],
+      "Farbe-_main_kunststoffkette": [
+        "wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___standard_min1": [
+        "30"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_ohneindikator_max20": [
+        "4"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "30"
+      ],
+      "St(e4)rke-materialstaerke_mm___indikator_durchmesser": [
+        "4"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "Farbe-farbe   standard materialien: wei\u00df, L(e4)nge-laenge m   ohne indikator min2: 30, Material-material   kunststoffallgemein metallallgemein stahloberflaeche ohne aluminium: Kunststoff, Farbe: wei\u00df, L(e4)nge-laenge m   standard min1: 30"
+  }
+]

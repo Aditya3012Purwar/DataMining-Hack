@@ -1,0 +1,470 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "102-777398-BP",
+    "set_id": "20240502211517-30270527",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9374,
+    "reference_price_eur": 60.8489,
+    "price_advantage_pct": 93.53,
+    "global_popularity": 1.0,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.9609,
+    "final_score": 1.8597,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "102-2106324-BP",
+    "set_id": "20240502211517-4381361",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9166,
+    "reference_price_eur": 60.8489,
+    "price_advantage_pct": 93.56,
+    "global_popularity": 0.6789,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.9436,
+    "final_score": 1.8266,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "P1801-26.99.0310",
+    "set_id": "20240502211517-8202354",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 4.5467,
+    "reference_price_eur": 185.8865,
+    "price_advantage_pct": 97.55,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.3333,
+    "feature_count": 7,
+    "p_buy": 0.903,
+    "final_score": 1.7839,
+    "features_summary": "Farbe-farbe\u2026: schwarz | Farbe-farbe\u2026: schwarz | Gr(f6)(df)e: 1",
+    "features_detail": {
+      "Farbe-farbe___standard_ral": [
+        "schwarz"
+      ],
+      "Gr(f6)(df)e-_main_patchpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)sonderindikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)b(2d)als(2d)indikator(20)(28)10(2d)2000(29)": [
+        "110"
+      ],
+      "Farbe-farbe___standard_materialien_ral": [
+        "schwarz"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "50"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "490"
+      ]
+    }
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "337-26.99.0295",
+    "set_id": "20240502211517-25381172",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 3.0108,
+    "reference_price_eur": 185.8865,
+    "price_advantage_pct": 98.38,
+    "global_popularity": 0.0026,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.1905,
+    "feature_count": 4,
+    "p_buy": 0.8979,
+    "final_score": 1.7812,
+    "features_summary": "Farbe-farbe\u2026: grau | H(f6)heneinheit: 1 | Warenzustand: Neu",
+    "features_detail": {
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "615IT-A063272",
+    "set_id": "102-2298530-BP",
+    "eclass": "27142502",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 3.628,
+    "reference_price_eur": 3896.09,
+    "price_advantage_pct": 99.91,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8909,
+    "final_score": 1.7809,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "615IT-R41797",
+    "set_id": "20240502211517-38991933",
+    "eclass": "21100416",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 8.1371,
+    "reference_price_eur": 183.5009,
+    "price_advantage_pct": 95.57,
+    "global_popularity": 0.0014,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.5714,
+    "feature_count": 12,
+    "p_buy": 0.9106,
+    "final_score": 1.7808,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe ral: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Tiefe-tiefe_ab_mm___tiefe10er_min100_max2000": [
+        "160"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)50(2d)5000(29)": [
+        "152"
+      ],
+      "H(f6)heneinheit-_main_geraeteboden": [
+        "1"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "160"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)1(2d)8000(29)": [
+        "152"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "160"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ]
+    }
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "869-436941",
+    "set_id": "1821-436941",
+    "eclass": "27142502",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 3.6,
+    "reference_price_eur": 3896.09,
+    "price_advantage_pct": 99.91,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7808,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "577-1089945",
+    "set_id": "20240502211517-40954950",
+    "eclass": "27142502",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 4.21,
+    "reference_price_eur": 3896.09,
+    "price_advantage_pct": 99.89,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7806,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "128-5092572",
+    "set_id": "1029-2912008",
+    "eclass": "27142502",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 4.525,
+    "reference_price_eur": 3896.09,
+    "price_advantage_pct": 99.88,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7805,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "273-SHAEL243S",
+    "set_id": "20240502211517-13905838",
+    "eclass": "27059090",
+    "manufacturer": "Sharp",
+    "candidate_price_eur": 3.0,
+    "reference_price_eur": 2598.1567,
+    "price_advantage_pct": 99.88,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7805,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "505-6440700",
+    "set_id": "20240502211517-7144780",
+    "eclass": "22330405",
+    "manufacturer": "keeeper",
+    "candidate_price_eur": 3.5425,
+    "reference_price_eur": 2329.5113,
+    "price_advantage_pct": 99.85,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7802,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "1039H-9019706055",
+    "set_id": "20250107220121-4989",
+    "eclass": "27059090",
+    "manufacturer": "Duracell",
+    "candidate_price_eur": 3.7,
+    "reference_price_eur": 2598.1567,
+    "price_advantage_pct": 99.86,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7802,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "505-6440699",
+    "set_id": "20240502211517-29954074",
+    "eclass": "22330405",
+    "manufacturer": "keeeper",
+    "candidate_price_eur": 3.6225,
+    "reference_price_eur": 2329.5113,
+    "price_advantage_pct": 99.84,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7802,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "2LRDH-118697",
+    "set_id": "2LRDH-118697",
+    "eclass": "27059090",
+    "manufacturer": "Panasonic",
+    "candidate_price_eur": 4.16,
+    "reference_price_eur": 2598.1567,
+    "price_advantage_pct": 99.84,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.78,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "337-26.21.0093",
+    "set_id": "20240619090123-11724",
+    "eclass": "27180201",
+    "manufacturer": "ROLINE",
+    "candidate_price_eur": 3.83,
+    "reference_price_eur": 185.8865,
+    "price_advantage_pct": 97.94,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.2381,
+    "feature_count": 5,
+    "p_buy": 0.8992,
+    "final_score": 1.7799,
+    "features_summary": "Farbe-farbe\u2026: grau | H(f6)heneinheit: 1 | Warenzustand: Neu",
+    "features_detail": {
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Breite-_main_serverschrank": [
+        "400"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "721-01517337",
+    "set_id": "20240228221438-37418845",
+    "eclass": "27143405",
+    "manufacturer": "Bachmann",
+    "candidate_price_eur": 3.07,
+    "reference_price_eur": 1654.8,
+    "price_advantage_pct": 99.81,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7797,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "102-1595417-BP",
+    "set_id": "102-1595417-BP",
+    "eclass": "27143405",
+    "manufacturer": "Basetech",
+    "candidate_price_eur": 3.07,
+    "reference_price_eur": 1654.8,
+    "price_advantage_pct": 99.81,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7797,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "505-6440701",
+    "set_id": "20240502211517-16225586",
+    "eclass": "22330405",
+    "manufacturer": "keeeper",
+    "candidate_price_eur": 5.152,
+    "reference_price_eur": 2329.5113,
+    "price_advantage_pct": 99.78,
+    "global_popularity": 0.002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7797,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "102-1857966-BP",
+    "set_id": "102-1857966-BP",
+    "eclass": "27143405",
+    "manufacturer": "as - Schwabe",
+    "candidate_price_eur": 3.09,
+    "reference_price_eur": 1654.8,
+    "price_advantage_pct": 99.81,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7796,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "108EL-1368130",
+    "set_id": "20240502211517-44070513",
+    "eclass": "27023190",
+    "manufacturer": "Siemens",
+    "candidate_price_eur": 4.16,
+    "reference_price_eur": 2031.58,
+    "price_advantage_pct": 99.8,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8906,
+    "final_score": 1.7794,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  }
+]

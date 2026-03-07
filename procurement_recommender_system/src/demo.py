@@ -44,6 +44,7 @@ OUT_DIR = BASE_DIR / "outputs"
 
 SKU_AGG_PATH = GEN_DIR / "sku_aggregates_from_csv.json"
 SKU_FEAT_PATH = GEN_DIR / "sku_feature_profiles_sample_from_csv.json"
+SETID_FEAT_PATH = GEN_DIR / "setid_feature_profiles_from_csv.json"
 FEAT_SUMMARY_PATH = GEN_DIR / "feature_types_summary_from_csv.json"
 
 
@@ -74,6 +75,291 @@ def _sigmoid(x: np.ndarray) -> np.ndarray:
     return 1.0 / (1.0 + np.exp(-np.clip(x, -30, 30)))
 
 
+def _build_customer_feature_profile(
+    owned_skus: set[str],
+    owned_set_ids: set[str],
+    feat_profiles: dict[str, dict],
+    setid_profiles: dict[str, dict],
+) -> dict[str, set[str]]:
+    """Build an aggregated feature profile from the customer's purchased products.
+
+    Merges features from all owned SKUs/set_ids into a single profile:
+      { key: {val1, val2, ...}, ... }
+    This represents 'what features this customer buys'.
+    """
+    profile: dict[str, set[str]] = {}
+    # From SKU-level profiles
+    for sku in owned_skus:
+        if sku in feat_profiles:
+            for k, vals in feat_profiles[sku].items():
+                profile.setdefault(k, set()).update(vals if isinstance(vals, (list, set)) else [vals])
+    # From set_id-level profiles (richer, consolidated across suppliers)
+    for sid in owned_set_ids:
+        if sid in setid_profiles:
+            for k, vals in setid_profiles[sid].items():
+                profile.setdefault(k, set()).update(vals if isinstance(vals, (list, set)) else [vals])
+    return profile
+
+
+def _feature_similarity(
+    customer_profile: dict[str, set[str]],
+    candidate_profile: dict,
+) -> float:
+    """Compute feature similarity between customer profile and a candidate product.
+
+    Uses a weighted Jaccard-like approach:
+    - For each feature key present in BOTH profiles, compute value overlap
+    - Shared keys with matching values score highest
+    - Having more documented features is a secondary signal
+
+    Returns a score in [0, 1].
+    """
+    if not customer_profile or not candidate_profile:
+        return 0.0
+
+    cand_keys = set(candidate_profile.keys())
+    cust_keys = set(customer_profile.keys())
+
+    shared_keys = cand_keys & cust_keys
+    if not shared_keys:
+        # No overlapping feature keys — use key coverage as weak signal
+        all_keys = cand_keys | cust_keys
+        return 0.1 * len(cand_keys) / max(len(all_keys), 1)
+
+    value_scores = []
+    for key in shared_keys:
+        cust_vals = customer_profile[key]
+        cand_vals = candidate_profile[key]
+        if isinstance(cand_vals, list):
+            cand_vals = set(cand_vals)
+        if isinstance(cust_vals, list):
+            cust_vals = set(cust_vals)
+        # Jaccard on values for this key
+        intersection = len(cust_vals & cand_vals)
+        union = len(cust_vals | cand_vals)
+        if union > 0:
+            value_scores.append(intersection / union)
+
+    # Combine: average value overlap across shared keys, weighted by key coverage
+    avg_value_overlap = sum(value_scores) / len(value_scores) if value_scores else 0.0
+    key_coverage = len(shared_keys) / max(len(cust_keys), 1)
+    return 0.7 * avg_value_overlap + 0.3 * key_coverage
+
+def _build_feature_clusters(
+    records: list[dict],
+    feat_profiles: dict[str, dict],
+    setid_profiles: dict[str, dict],
+) -> tuple[list[dict], list[dict]]:
+    """Group recommendation records into feature-based clusters.
+
+    Each cluster represents a 'type of product' defined by its shared feature
+    keys and dominant values — e.g. "color: blue, material: steel, size: L".
+    This is the 'recommend a set of features' concept from the supervisor.
+
+    Returns (updated_records_with_cluster_id, cluster_summaries).
+    """
+    if not records:
+        return records, []
+
+    # Compute a feature fingerprint for each record (key-sorted set of key=val pairs)
+    fingerprints: list[frozenset] = []
+    for rec in records:
+        fd = rec.get("features_detail", {})
+        pairs: set[str] = set()
+        for k, vals in fd.items():
+            short_k = k.split("-_")[0].replace("_", " ").strip().lower()
+            if isinstance(vals, list):
+                for v in vals[:3]:
+                    pairs.add(f"{short_k}={v}")
+            else:
+                pairs.add(f"{short_k}={vals}")
+        fingerprints.append(frozenset(pairs))
+
+    # Simple greedy clustering: two records are in the same cluster if they share
+    # at least 40% of their feature pairs (Jaccard >= 0.4) AND same eclass.
+    cluster_ids: list[int] = [-1] * len(records)
+    cluster_counter = 0
+    for i in range(len(records)):
+        if cluster_ids[i] >= 0:
+            continue
+        cluster_ids[i] = cluster_counter
+        for j in range(i + 1, len(records)):
+            if cluster_ids[j] >= 0:
+                continue
+            if records[i]["eclass"] != records[j]["eclass"]:
+                continue
+            fp_i, fp_j = fingerprints[i], fingerprints[j]
+            if not fp_i and not fp_j:
+                # Both have no features but same eclass
+                cluster_ids[j] = cluster_counter
+                continue
+            union = len(fp_i | fp_j)
+            if union == 0:
+                continue
+            jaccard = len(fp_i & fp_j) / union
+            if jaccard >= 0.4:
+                cluster_ids[j] = cluster_counter
+        cluster_counter += 1
+
+    # Build cluster summaries
+    from collections import Counter as _Counter
+    cluster_map: dict[int, list[int]] = {}
+    for idx, cid in enumerate(cluster_ids):
+        cluster_map.setdefault(cid, []).append(idx)
+
+    cluster_summaries: list[dict] = []
+    for cid in sorted(cluster_map.keys()):
+        members = cluster_map[cid]
+        eclasses = set()
+        all_feature_pairs: _Counter = _Counter()
+        total_saving = 0.0
+        for idx in members:
+            rec = records[idx]
+            eclasses.add(rec["eclass"])
+            fd = rec.get("features_detail", {})
+            for k, vals in fd.items():
+                short_k = k.split("-_")[0].replace("_", " ").strip()
+                if isinstance(vals, list):
+                    for v in vals[:3]:
+                        all_feature_pairs[f"{short_k}: {v}"] += 1
+                else:
+                    all_feature_pairs[f"{short_k}: {vals}"] += 1
+            ref = rec.get("reference_price_eur") or 0
+            cand = rec.get("candidate_price_eur") or 0
+            total_saving += max(0, ref - cand)
+
+        # Shared features = those that appear in majority of cluster members
+        threshold = max(1, len(members) // 2)
+        shared_features = [feat for feat, cnt in all_feature_pairs.most_common(20) if cnt >= threshold]
+        distinguishing_features = [feat for feat, cnt in all_feature_pairs.most_common(10) if cnt >= threshold]
+
+        cluster_summaries.append({
+            "cluster_id": cid,
+            "size": len(members),
+            "eclass": sorted(eclasses)[0] if eclasses else "",
+            "shared_features": shared_features[:10],
+            "representative_sku": records[members[0]]["sku"],
+            "representative_set_id": records[members[0]].get("set_id"),
+            "avg_score": round(sum(records[idx]["final_score"] for idx in members) / len(members), 4),
+            "total_saving_eur": round(total_saving, 2),
+            "member_ranks": [records[idx]["rank"] for idx in members],
+        })
+
+    # Attach cluster_id to each record
+    updated = []
+    for idx, rec in enumerate(records):
+        rec_copy = dict(rec)
+        rec_copy["feature_cluster_id"] = cluster_ids[idx]
+        # Find this cluster's shared features
+        for cs in cluster_summaries:
+            if cs["cluster_id"] == cluster_ids[idx]:
+                rec_copy["feature_cluster_label"] = ", ".join(cs["shared_features"][:5]) if cs["shared_features"] else rec["eclass"]
+                break
+        updated.append(rec_copy)
+
+    return updated, cluster_summaries
+
+
+# ---------------------------------------------------------------------------
+# Collaborative filtering — co-purchase signal
+# ---------------------------------------------------------------------------
+_COPURCHASE_CACHE: dict[str, dict[str, float]] | None = None
+
+
+def _build_copurchase_matrix(plis_path: Path, progress_cb=None) -> dict[str, dict[str, float]]:
+    """Build a simplified co-purchase model: for each eclass, which other eclasses
+    are commonly bought by the same customers?
+
+    Returns {eclass -> {other_eclass -> affinity_score}}.
+    This is a lightweight collaborative filtering approach: instead of full
+    matrix factorization, we build pairwise eclass affinities from customer
+    co-purchase patterns.  If many customers who buy eclass A also buy eclass B,
+    then B has high affinity with A.
+    """
+    global _COPURCHASE_CACHE
+    if _COPURCHASE_CACHE is not None:
+        return _COPURCHASE_CACHE
+
+    if progress_cb:
+        progress_cb("Building co-purchase matrix from transaction data…")
+
+    # Step 1: Build customer → set[eclass] mapping
+    customer_eclasses: dict[int, set[str]] = {}
+    chunk_num = 0
+    for chunk in pd.read_csv(
+        plis_path,
+        sep="\t",
+        usecols=["legal_entity_id", "eclass"],
+        dtype={"eclass": "string"},
+        chunksize=500_000,
+        low_memory=False,
+    ):
+        chunk_num += 1
+        for cid, ec in zip(chunk["legal_entity_id"].values, chunk["eclass"].values):
+            if pd.notna(cid) and pd.notna(ec) and str(ec).strip():
+                customer_eclasses.setdefault(int(cid), set()).add(str(ec).strip())
+        if progress_cb and chunk_num % 5 == 0:
+            progress_cb(f"Co-purchase scan: {chunk_num * 500_000:,} rows, {len(customer_eclasses):,} customers…")
+
+    if progress_cb:
+        progress_cb(f"Co-purchase: {len(customer_eclasses):,} customers scanned, computing affinities…")
+
+    # Step 2: Count co-occurrences (how many customers buy both eclass A and B)
+    from collections import Counter as _Counter2
+    cooccur: dict[str, _Counter2] = {}
+    eclass_count: _Counter2 = _Counter2()
+
+    for cid, eclasses in customer_eclasses.items():
+        ec_list = sorted(eclasses)
+        for ec in ec_list:
+            eclass_count[ec] += 1
+        # Only process customers with reasonable basket size (2-200 eclasses)
+        if 2 <= len(ec_list) <= 200:
+            for i, ec_a in enumerate(ec_list):
+                cooccur.setdefault(ec_a, _Counter2())
+                for ec_b in ec_list[i + 1:]:
+                    cooccur[ec_a][ec_b] += 1
+                    cooccur.setdefault(ec_b, _Counter2())[ec_a] += 1
+
+    # Step 3: Normalize to affinity scores (Jaccard-like: co-occur / (count_a + count_b - co-occur))
+    affinity: dict[str, dict[str, float]] = {}
+    for ec_a, partners in cooccur.items():
+        affinity[ec_a] = {}
+        count_a = eclass_count[ec_a]
+        for ec_b, co_count in partners.most_common(50):  # Keep top 50 affinities per eclass
+            count_b = eclass_count[ec_b]
+            denom = count_a + count_b - co_count
+            if denom > 0:
+                affinity[ec_a][ec_b] = round(co_count / denom, 4)
+
+    _COPURCHASE_CACHE = affinity
+    if progress_cb:
+        progress_cb(f"Co-purchase matrix: {len(affinity):,} eclasses with affinities")
+    return affinity
+
+
+def _collab_score(
+    candidate_eclass: str,
+    user_eclasses: set[str],
+    copurchase: dict[str, dict[str, float]],
+) -> float:
+    """Compute collaborative filtering score for a candidate.
+
+    How strongly is the candidate's eclass associated with the eclasses
+    this customer already buys?  Returns max affinity across user's eclasses.
+    For same-eclass items, returns a moderate baseline (0.5) since
+    co-purchase within the same category is expected.
+    """
+    if candidate_eclass in user_eclasses:
+        return 0.5  # Baseline for same-eclass — these are expected purchases
+    best = 0.0
+    for user_ec in user_eclasses:
+        af = copurchase.get(user_ec, {}).get(candidate_eclass, 0.0)
+        if af > best:
+            best = af
+    return best
+
+
 # ---------------------------------------------------------------------------
 # Load customer history from real CSV (fast: reads only matching rows via chunks)
 # ---------------------------------------------------------------------------
@@ -87,8 +373,8 @@ def load_customer_history(
     for chunk in pd.read_csv(
         plis_path,
         sep="\t",
-        usecols=["legal_entity_id", "sku", "eclass", "manufacturer", "vk_per_item", "quantityvalue", "orderdate"],
-        dtype={"sku": "string", "eclass": "string", "manufacturer": "string", "vk_per_item": "float64", "quantityvalue": "float64"},
+        usecols=["legal_entity_id", "set_id", "sku", "eclass", "manufacturer", "vk_per_item", "quantityvalue", "orderdate"],
+        dtype={"set_id": "string", "sku": "string", "eclass": "string", "manufacturer": "string", "vk_per_item": "float64", "quantityvalue": "float64"},
         parse_dates=["orderdate"],
         chunksize=300_000,
         low_memory=False,
@@ -132,6 +418,7 @@ def run_demo_data(
     sku_agg: list[dict] = _load_json(SKU_AGG_PATH)
     sku_df = pd.DataFrame(sku_agg)
     sku_df["sku"] = sku_df["sku"].astype("string")
+    sku_df["set_id"] = sku_df["set_id"].astype("string") if "set_id" in sku_df.columns else pd.Series("", index=sku_df.index, dtype="string")
     sku_df["eclass"] = sku_df["eclass"].astype("string")
     sku_df["manufacturer"] = sku_df["manufacturer"].astype("string")
     catalogue_size = len(sku_df)
@@ -140,6 +427,11 @@ def run_demo_data(
     feat_profiles: dict[str, dict] = {}
     if SKU_FEAT_PATH.exists():
         feat_profiles = _load_json(SKU_FEAT_PATH)
+
+    setid_profiles: dict[str, dict] = {}
+    if SETID_FEAT_PATH.exists():
+        setid_profiles = _load_json(SETID_FEAT_PATH)
+    _progress(1, f"Feature profiles: {len(feat_profiles):,} SKUs, {len(setid_profiles):,} set_ids")
 
     # 2. Load customer history
     _progress(2, f"Fetching purchase history for customer {customer_id}…")
@@ -223,6 +515,7 @@ def run_demo_data(
         .rename(columns={"vk_per_item": "reference_price"})
     )
     owned_skus = set(hist["sku"].dropna().unique())
+    owned_set_ids = set(hist["set_id"].dropna().unique()) if "set_id" in hist.columns else set()
     user_eclass = set(hist["eclass"].dropna().unique())
     user_manufacturers = set(hist["manufacturer"].dropna().unique())
 
@@ -231,11 +524,33 @@ def run_demo_data(
         if not user_eclass:
             raise ValueError(f"Customer {customer_id} has no history for e-class {filter_eclass}.")
 
-    # 3. Candidate generation
-    _progress(3, f"Generating candidates from {len(user_eclass)} E-class(es)…")
-    pool = sku_df[sku_df["eclass"].isin(user_eclass)].copy()
+    # 3. Candidate generation — include user's eclasses + co-purchase related eclasses
+    _progress(3, "Building co-purchase matrix for collaborative filtering…")
+    copurchase = _build_copurchase_matrix(
+        plis_path,
+        progress_cb=lambda msg: _progress(3, msg),
+    )
+
+    # Find related eclasses: high co-purchase affinity with user's eclasses
+    related_eclasses: set[str] = set()
+    for uec in user_eclass:
+        for related_ec, affinity in copurchase.get(uec, {}).items():
+            if related_ec not in user_eclass and affinity >= 0.05:
+                related_eclasses.add(related_ec)
+    all_eclasses = user_eclass | related_eclasses
+
+    _progress(3, f"Generating candidates from {len(user_eclass)} user E-class(es) + {len(related_eclasses)} co-purchase related…")
+    pool = sku_df[sku_df["eclass"].isin(all_eclasses)].copy()
     pool = pool[~pool["sku"].isin(owned_skus)].copy()
+    # NOTE: We intentionally do NOT exclude candidates whose set_id the customer
+    # already owns.  The same product from a *different* (cheaper) supplier is a
+    # valid recommendation — "you buy this notebook from Store A for €50, but
+    # Store B sells it for €30".  Dedup in the output (step 4) ensures no
+    # duplicate set_ids appear in the final list, keeping only the cheapest SKU
+    # per product.
     pool = pool.merge(ref_price, on="eclass", how="left")
+    # For cross-category candidates (from co-purchase), use their own avg_price as ref
+    pool["reference_price"] = pool["reference_price"].fillna(pool["avg_price"])
     pool["manufacturer_familiarity"] = pool["manufacturer"].isin(user_manufacturers).astype(float)
     max_pop = float(pool["purchase_count"].max()) if not pool.empty else 1.0
     pool["global_popularity"] = pool["purchase_count"] / max(max_pop, 1)
@@ -243,31 +558,81 @@ def run_demo_data(
     candidate_count = len(pool)
     _progress(3, f"{candidate_count:,} candidates after filtering")
 
-    # 4. Scoring — no artificial cap on price_advantage so real savings are shown
-    _progress(4, "Scoring candidates…")
+    # 4. Scoring — feature-similarity + collaborative filtering
+    _progress(4, "Building customer feature profile & scoring candidates…")
     ref = pool["reference_price"].clip(lower=0.01)
     pool["price_advantage"] = ((ref - pool["avg_price"]) / ref).clip(lower=0.0)
+
+    # Build customer's aggregated feature profile from their purchases
+    customer_feat_profile = _build_customer_feature_profile(
+        owned_skus, owned_set_ids, feat_profiles, setid_profiles,
+    )
+    _progress(4, f"Customer feature profile: {len(customer_feat_profile)} feature keys from purchases")
+
+    # Feature similarity: compare candidate features against customer's feature profile
+    def _get_candidate_features(row):
+        """Get best available feature profile for a candidate (set_id > sku)."""
+        sid = str(row["set_id"]) if pd.notna(row.get("set_id")) else ""
+        sku = str(row["sku"])
+        if sid and sid in setid_profiles:
+            return setid_profiles[sid]
+        return feat_profiles.get(sku, {})
+
+    pool["_cand_features"] = pool.apply(_get_candidate_features, axis=1)
+    pool["feature_similarity"] = pool["_cand_features"].apply(
+        lambda cp: _feature_similarity(customer_feat_profile, cp)
+    )
+    pool["feature_count"] = pool["_cand_features"].apply(lambda cp: len(cp))
+    max_feat = float(pool["feature_count"].max()) if not pool.empty else 1.0
+    pool["feature_richness"] = pool["feature_count"] / max(max_feat, 1)
+
+    # Collaborative filtering: co-purchase affinity between this candidate's
+    # eclass and the eclasses this customer already buys
+    _progress(4, "Computing collaborative filtering scores…")
+    pool["collab_score"] = pool["eclass"].apply(
+        lambda ec: _collab_score(ec, user_eclass, copurchase)
+    )
 
     linear = (
         1.2 * pool["global_popularity"]
         + 0.8 * pool["manufacturer_familiarity"]
         + 1.5 * pool["price_advantage"]
+        + 1.0 * pool["feature_similarity"]
+        + 0.3 * pool["feature_richness"]
+        + 0.6 * pool["collab_score"]
         - 0.2
     )
     pool["p_buy"] = _sigmoid(linear.to_numpy())
     pool["final_score"] = pool["p_buy"] * (1.0 + pool["price_advantage"])
     pool = pool.sort_values("final_score", ascending=False)
-    _progress(4, f"Scored {candidate_count:,} candidates")
+
+    # Deduplicate by set_id: keep only the best-scoring SKU per product
+    if "set_id" in pool.columns:
+        has_set_id = pool["set_id"].notna() & (pool["set_id"] != "")
+        deduped_with = pool[has_set_id].drop_duplicates(subset="set_id", keep="first")
+        without_set_id = pool[~has_set_id]
+        pool = pd.concat([deduped_with, without_set_id], ignore_index=True)
+        pool = pool.sort_values("final_score", ascending=False)
+    _progress(4, f"Scored {candidate_count:,} candidates ({len(pool):,} unique products after set_id dedup)")
 
     # 5. Enrich with features
     _progress(5, "Enriching top candidates with product features…")
     top = pool.head(top_n).reset_index(drop=True)
     top["rank"] = top.index + 1
     top["features_summary"] = top["sku"].apply(lambda s: _summarise_features(s, feat_profiles))
+    # Use the best available feature profile (set_id-level preferred)
+    top["features_detail"] = top["_cand_features"]
 
     out_records = _build_output_records(top)
+
+    # 6. Feature-cluster grouping — group recommendations by shared features
+    _progress(5, "Building feature-cluster groups…")
+    out_records, cluster_summaries = _build_feature_clusters(
+        out_records, feat_profiles, setid_profiles,
+    )
+
     total_saving = float((top["reference_price"] - top["avg_price"]).clip(lower=0).sum())
-    _progress(5, f"Done — {len(out_records)} recommendations generated")
+    _progress(5, f"Done — {len(out_records)} recommendations in {len(cluster_summaries)} feature clusters")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / f"demo_{customer_id}.json"
@@ -294,8 +659,12 @@ def run_demo_data(
             ],
         },
         "candidate_count": int(candidate_count),
+        "customer_feature_profile_keys": sorted(customer_feat_profile.keys())[:50],
+        "customer_feature_profile_key_count": len(customer_feat_profile),
         "recommendations": out_records,
+        "feature_clusters": cluster_summaries,
         "total_estimated_saving_eur": round(total_saving, 2),
+        "scoring_formula": "P(buy) = sigmoid(1.2*popularity + 0.8*brand_fam + 1.5*price_adv + 1.0*feat_sim + 0.3*feat_rich + 0.6*collab - 0.2); score = P(buy) * (1 + price_adv)",
     }
 
 
@@ -406,14 +775,22 @@ def _build_output_records(df: pd.DataFrame) -> list[dict]:
             "rank": int(row["rank"]),
             "customer_id": int(row["legal_entity_id"]) if "legal_entity_id" in df.columns else None,
             "sku": str(row["sku"]),
+            "set_id": str(row["set_id"]) if "set_id" in df.columns and pd.notna(row.get("set_id")) else None,
             "eclass": str(row["eclass"]),
             "manufacturer": str(row["manufacturer"]),
             "candidate_price_eur": round(float(row["avg_price"]), 4),
             "reference_price_eur": round(float(row["reference_price"]), 4) if not pd.isna(row["reference_price"]) else None,
             "price_advantage_pct": round(float(row["price_advantage"]) * 100, 2),
+            "global_popularity": round(float(row["global_popularity"]), 4) if "global_popularity" in df.columns else None,
+            "manufacturer_familiarity": round(float(row["manufacturer_familiarity"]), 4) if "manufacturer_familiarity" in df.columns else None,
+            "feature_similarity": round(float(row["feature_similarity"]), 4) if "feature_similarity" in df.columns else None,
+            "feature_richness": round(float(row["feature_richness"]), 4) if "feature_richness" in df.columns else None,
+            "feature_count": int(row["feature_count"]) if "feature_count" in df.columns else 0,
+            "collab_score": round(float(row["collab_score"]), 4) if "collab_score" in df.columns else None,
             "p_buy": round(float(row["p_buy"]), 4),
             "final_score": round(float(row["final_score"]), 4),
             "features_summary": row["features_summary"],
+            "features_detail": row["features_detail"] if "features_detail" in df.columns else {},
         })
     return out
 

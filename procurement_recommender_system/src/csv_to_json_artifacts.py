@@ -52,9 +52,10 @@ def _group_feature_key(key: str) -> str:
 
 
 def generate_transaction_aggregates(plis_path: Path) -> tuple[pd.DataFrame, pd.DataFrame, list[dict]]:
-    usecols = ["orderdate", "legal_entity_id", "sku", "eclass", "manufacturer", "quantityvalue", "vk_per_item"]
+    usecols = ["orderdate", "legal_entity_id", "set_id", "sku", "eclass", "manufacturer", "quantityvalue", "vk_per_item"]
     dtypes = {
         "legal_entity_id": "Int64",
+        "set_id": "string",
         "sku": "string",
         "eclass": "string",
         "manufacturer": "string",
@@ -76,6 +77,7 @@ def generate_transaction_aggregates(plis_path: Path) -> tuple[pd.DataFrame, pd.D
         chunksize=300_000,
         low_memory=False,
     ):
+        chunk["set_id"] = _normalize_series(chunk["set_id"])
         chunk["sku"] = _normalize_series(chunk["sku"])
         chunk["eclass"] = _normalize_series(chunk["eclass"])
         chunk["manufacturer"] = _normalize_series(chunk["manufacturer"])
@@ -87,7 +89,7 @@ def generate_transaction_aggregates(plis_path: Path) -> tuple[pd.DataFrame, pd.D
         chunk["price_x_count"] = chunk["vk_per_item"]
 
         sku_partial = (
-            chunk.groupby(["sku", "eclass", "manufacturer"], as_index=False, dropna=False)
+            chunk.groupby(["sku", "set_id", "eclass", "manufacturer"], as_index=False, dropna=False)
             .agg(
                 purchase_count=("sku", "size"),
                 price_sum=("price_x_count", "sum"),
@@ -119,7 +121,7 @@ def generate_transaction_aggregates(plis_path: Path) -> tuple[pd.DataFrame, pd.D
 
     sku_agg = pd.concat(sku_parts, ignore_index=True)
     sku_agg = (
-        sku_agg.groupby(["sku", "eclass", "manufacturer"], as_index=False, dropna=False)
+        sku_agg.groupby(["sku", "set_id", "eclass", "manufacturer"], as_index=False, dropna=False)
         .agg(
             purchase_count=("purchase_count", "sum"),
             price_sum=("price_sum", "sum"),
@@ -129,7 +131,7 @@ def generate_transaction_aggregates(plis_path: Path) -> tuple[pd.DataFrame, pd.D
         .sort_values("purchase_count", ascending=False)
     )
     sku_agg["avg_price"] = sku_agg["price_sum"] / sku_agg["purchase_count"].clip(lower=1)
-    sku_agg = sku_agg[["sku", "eclass", "manufacturer", "avg_price", "purchase_count", "total_quantity", "last_seen_date"]]
+    sku_agg = sku_agg[["sku", "set_id", "eclass", "manufacturer", "avg_price", "purchase_count", "total_quantity", "last_seen_date"]]
 
     eclass_manufacturer_agg = pd.concat(em_parts, ignore_index=True)
     eclass_manufacturer_agg = (
@@ -210,9 +212,19 @@ def generate_feature_summaries_and_profiles(
         chunk["sku"] = _normalize_series(chunk["sku"])
         chunk["key"] = _normalize_series(chunk["key"])
         chunk["fvalue"] = _normalize_series(chunk["fvalue"])
+        if "fvalue_set" in chunk.columns:
+            chunk["fvalue_set"] = _normalize_series(chunk["fvalue_set"])
+        else:
+            chunk["fvalue_set"] = chunk["fvalue"]
+        # Prefer fvalue_set (curated/consolidated), fall back to fvalue
+        chunk["effective_value"] = chunk["fvalue_set"].where(
+            chunk["fvalue_set"] != "", chunk["fvalue"]
+        )
 
         non_empty_key = chunk["key"] != ""
-        chunk_k = chunk.loc[non_empty_key, ["sku", "key", "fvalue"]]
+        chunk_k = chunk.loc[non_empty_key, ["sku", "key", "effective_value"]].rename(
+            columns={"effective_value": "fvalue"}
+        )
         if chunk_k.empty:
             continue
 
@@ -292,6 +304,30 @@ def generate_feature_summaries_and_profiles(
     return summary, compact_profiles
 
 
+def build_setid_feature_profiles(
+    sku_profiles: dict[str, dict[str, list[str]]],
+    sku_to_setid: dict[str, str],
+) -> dict[str, dict[str, list[str]]]:
+    """Consolidate SKU-level feature profiles into set_id-level profiles.
+
+    For each set_id, merge features from all its constituent SKUs.
+    This gives richer feature coverage per product (as per meeting notes:
+    one supplier may provide weight, another may not; merging fills gaps).
+    """
+    setid_profiles: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
+    for sku, profile in sku_profiles.items():
+        sid = sku_to_setid.get(sku, "")
+        if not sid:
+            continue
+        for key, values in profile.items():
+            setid_profiles[sid][key].update(values)
+
+    compact: dict[str, dict[str, list[str]]] = {}
+    for sid, features in setid_profiles.items():
+        compact[sid] = {k: sorted(list(v))[:10] for k, v in features.items()}
+    return compact
+
+
 def _df_to_records(df: pd.DataFrame) -> list[dict[str, Any]]:
     out = df.copy()
     if "last_seen_date" in out.columns:
@@ -305,7 +341,7 @@ def _write_json(path: Path, payload: Any) -> None:
         json.dump(payload, f, indent=2)
 
 
-def build_json_artifacts(fast_mode: bool = True, max_skus: int = 10_000) -> None:
+def build_json_artifacts(fast_mode: bool = True, max_skus: int = 50_000) -> None:
     paths = _load_source_paths(SOURCE_CONFIG_PATH)
 
     sku_agg_df, eclass_manu_df, customer_agg = generate_transaction_aggregates(paths["plis_training_csv"])
@@ -313,11 +349,23 @@ def build_json_artifacts(fast_mode: bool = True, max_skus: int = 10_000) -> None
         paths["features_per_sku_csv"], max_skus=max_skus, fast_mode=fast_mode
     )
 
+    # Build sku→set_id mapping from transaction aggregates
+    sku_to_setid: dict[str, str] = {}
+    for _, row in sku_agg_df.iterrows():
+        sku = str(row["sku"]) if pd.notna(row["sku"]) else ""
+        sid = str(row["set_id"]) if pd.notna(row["set_id"]) else ""
+        if sku and sid:
+            sku_to_setid[sku] = sid
+
+    # Consolidate SKU features into set_id-level profiles
+    setid_feature_profiles = build_setid_feature_profiles(sku_feature_profiles, sku_to_setid)
+
     _write_json(OUTPUT_DIR / "sku_aggregates_from_csv.json", _df_to_records(sku_agg_df))
     _write_json(OUTPUT_DIR / "customer_aggregates_from_csv.json", customer_agg)
     _write_json(OUTPUT_DIR / "eclass_manufacturer_aggregates_from_csv.json", _df_to_records(eclass_manu_df))
     _write_json(OUTPUT_DIR / "feature_types_summary_from_csv.json", feature_summary)
     _write_json(OUTPUT_DIR / "sku_feature_profiles_sample_from_csv.json", sku_feature_profiles)
+    _write_json(OUTPUT_DIR / "setid_feature_profiles_from_csv.json", setid_feature_profiles)
 
     metadata = {
         "source_paths": {k: str(v) for k, v in paths.items()},
@@ -328,11 +376,14 @@ def build_json_artifacts(fast_mode: bool = True, max_skus: int = 10_000) -> None
             "eclass_manufacturer_aggregates_from_csv.json",
             "feature_types_summary_from_csv.json",
             "sku_feature_profiles_sample_from_csv.json",
+            "setid_feature_profiles_from_csv.json",
         ],
         "notes": [
             "All JSON files were generated from the real CSVs by path reference only.",
             "No files outside procurement_recommender_system were modified.",
             "feature_types_summary_from_csv.json contains unique feature keys from the full features CSV.",
+            "fvalue_set is preferred over fvalue as the curated/consolidated value.",
+            "setid_feature_profiles merges features from all SKUs sharing a set_id.",
         ],
     }
     _write_json(OUTPUT_DIR / "generation_metadata.json", metadata)
@@ -341,7 +392,7 @@ def build_json_artifacts(fast_mode: bool = True, max_skus: int = 10_000) -> None
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate JSON artifacts from challenge CSV files.")
     parser.add_argument("--mode", choices=["fast", "full"], default="fast", help="fast: speed-optimized, full: exact per-key unique fvalue counts")
-    parser.add_argument("--max-skus", type=int, default=10000, help="Maximum number of SKU feature profiles to persist")
+    parser.add_argument("--max-skus", type=int, default=50000, help="Maximum number of SKU feature profiles to persist")
     args = parser.parse_args()
 
     build_json_artifacts(fast_mode=args.mode == "fast", max_skus=args.max_skus)

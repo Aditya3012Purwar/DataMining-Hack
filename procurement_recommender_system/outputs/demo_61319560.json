@@ -1,0 +1,656 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "102-2106324-BP",
+    "set_id": "20240502211517-4381361",
+    "eclass": "29120102",
+    "manufacturer": "HAN",
+    "candidate_price_eur": 3.9166,
+    "reference_price_eur": 49.2204,
+    "price_advantage_pct": 92.04,
+    "global_popularity": 0.8963,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.9551,
+    "final_score": 1.8341,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "615-C883161",
+    "set_id": "20240502211517-22607624",
+    "eclass": "21100416",
+    "manufacturer": "Schneider Electric",
+    "candidate_price_eur": 13.5,
+    "reference_price_eur": 377.5618,
+    "price_advantage_pct": 96.42,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.8636,
+    "feature_count": 19,
+    "p_buy": 0.9226,
+    "final_score": 1.8123,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "164"
+      ],
+      "Schutzart-schutzart_ip___ip_xx": [
+        "66"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)10(2d)1500(29)": [
+        "164"
+      ],
+      "H(f6)he-hoehe_mm___sonderindikatorvor_hende_hendemisch_indikatornach_indikatornachmehrd": [
+        "192"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_bt": [
+        "87"
+      ],
+      "H(f6)he-hoehe_mm___nur_indikatorvor": [
+        "192"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "87"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "164"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "192"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "87"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)sonderindikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)b(2d)als(2d)indikator(20)(28)10(2d)2000(29)": [
+        "164"
+      ],
+      "Farbe-farbe___standard_materialien_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "87"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Ausf(fc)hrung-_main_wandverteiler": [
+        "Leergeh\u00e4use"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "192"
+      ]
+    }
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "4502-02P2745",
+    "set_id": "20240502211517-1088245",
+    "eclass": "21100416",
+    "manufacturer": "Schneider Electric",
+    "candidate_price_eur": 15.72,
+    "reference_price_eur": 377.5618,
+    "price_advantage_pct": 95.84,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.9545,
+    "feature_count": 21,
+    "p_buy": 0.9252,
+    "final_score": 1.8119,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe standard: grau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "121"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "192"
+      ],
+      "Schutzart-schutzart_ip___ip_xx": [
+        "66"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)10(2d)1500(29)": [
+        "121"
+      ],
+      "H(f6)he-hoehe_mm___sonderindikatorvor_hende_hendemisch_indikatornach_indikatornachmehrd": [
+        "87"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_bt": [
+        "121"
+      ],
+      "H(f6)he-hoehe_mm___nur_indikatorvor": [
+        "87"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "121"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "87"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "121"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)sonderindikator(2d)vor(2d)wert(2c)(20)3d(2c)(20)2d(2c)(20)b(2d)als(2d)indikator(20)(28)10(2d)2000(29)": [
+        "121"
+      ],
+      "Farbe-farbe___standard_materialien_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Breite-breite_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "100"
+      ],
+      "Farbe-farbe___standard": [
+        "grau"
+      ],
+      "H(f6)he-hoehe_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "80"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "121"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "Lichtgrau"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "87"
+      ]
+    }
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "615-C883181",
+    "set_id": "20240502211517-44545676",
+    "eclass": "21100416",
+    "manufacturer": "Schneider Electric",
+    "candidate_price_eur": 16.715,
+    "reference_price_eur": 377.5618,
+    "price_advantage_pct": 95.57,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.9091,
+    "feature_count": 20,
+    "p_buy": 0.9234,
+    "final_score": 1.8058,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe standard: grau | Frontfarbe: Lichtgrau",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "164"
+      ],
+      "Schutzart-schutzart_ip___ip_xx": [
+        "66"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)10(2d)1500(29)": [
+        "164"
+      ],
+      "H(f6)he-hoehe_mm___sonderindikatorvor_hende_hendemisch_indikatornach_indikatornachmehrd": [
+        "193"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_bt": [
+        "105"
+      ],
+      "H(f6)he-hoehe_mm___nur_indikatorvor": [
+        "193"
+      ],
+      "Material-material___nur_allgemein": [
+        "Kunststoff"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "105"
+      ],
+      "Breite-breite_mm_alt___sonderindikatorvor(2c)(20)indikatornach(2c)(20)indikatornachmehrd(2c)(20)ohneeinheit(2c)(20)b(2c)(20)banfang(2c)(20)banfangmisch(2c)(20)bmitte(2c)(20)bmittemisch(20)(28)1(2d)2000(29)": [
+        "164"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit": [
+        "193"
+      ],
+      "Tiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatornachmd_ohneeinheit_min10": [
+        "105"
+      ],
+      "Breite-breite_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "100"
+      ],
+      "Farbe-farbe___standard": [
+        "grau"
+      ],
+      "Tiefe-tiefe_ab_mm___10(2d)100erschritte(20)(28)10(2d)5000(29)": [
+        "100"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "105"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "Lichtgrau"
+      ],
+      "Ausf(fc)hrung-_main_wandverteiler": [
+        "Leergeh\u00e4use"
+      ],
+      "H(f6)he-hoehe_mm___indikatorvor_hende_hendemisch_hanfang_hanfangmisch_hmitte_hmittemisch_indikatornach_indikatornachmehrd_h_ohneeinheit_min5": [
+        "193"
+      ]
+    }
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "615IT-R41797",
+    "set_id": "20240502211517-38991933",
+    "eclass": "21100416",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 8.1371,
+    "reference_price_eur": 377.5618,
+    "price_advantage_pct": 97.84,
+    "global_popularity": 0.0018,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.5455,
+    "feature_count": 12,
+    "p_buy": 0.9123,
+    "final_score": 1.805,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe ral: RAL 7035 Lichtgrau | Frontfarbe: RAL 7035 Lichtgrau",
+    "features_detail": {
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Tiefe-tiefe_ab_mm___tiefe10er_min100_max2000": [
+        "160"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)50(2d)5000(29)": [
+        "152"
+      ],
+      "H(f6)heneinheit-_main_geraeteboden": [
+        "1"
+      ],
+      "Tiefe-tiefe_mm___nur_indikatorvor": [
+        "160"
+      ],
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(20)(28)1(2d)8000(29)": [
+        "152"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ],
+      "Frontfarbe-_schrank_farbe_front": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "Gesamttiefe-tiefe_mm___indikatorvor_tende_tendemisch_tmitte_tmittemisch_indikatornach_indikatoranchmd_gesamttiefe": [
+        "160"
+      ],
+      "Korpusfarbe-_schrank_farbe_korpus": [
+        "RAL 7035 Lichtgrau"
+      ]
+    }
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "956-1152320015",
+    "set_id": "20240502211517-15114693",
+    "eclass": "27143404",
+    "manufacturer": "Brennenstuhl",
+    "candidate_price_eur": 4.5779,
+    "reference_price_eur": 221.5267,
+    "price_advantage_pct": 97.93,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.2727,
+    "feature_count": 6,
+    "p_buy": 0.9008,
+    "final_score": 1.783,
+    "features_summary": "Farbe-farbe\u2026: wei\u00df | Warenzustand: Neu | Kabell(e4)nge-\u2026: 1.5",
+    "features_detail": {
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Kabell(e4)nge-laenge_m___kabellaenge": [
+        "1.5"
+      ],
+      "Farbe-farbe___standard_exoten_materialien": [
+        "wei\u00df"
+      ],
+      "Kabell(e4)nge-laenge_m___kabellaenge(20)(28)1(2d)25(29)": [
+        "1.5"
+      ],
+      "Steckpl(e4)tze-steckdosenleiste_schuko_anzahl___schuko(20)(28)2(2d)60(29)": [
+        "3"
+      ],
+      "Steckpl(e4)tze-steckdosenleiste_schuko_anzahl___schuko(20)(28)1(2d)5(29)": [
+        "3"
+      ]
+    }
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "615IT-R211311",
+    "set_id": "20240502211517-34633638",
+    "eclass": "22520102",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 5.8233,
+    "reference_price_eur": 321.975,
+    "price_advantage_pct": 98.19,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.2273,
+    "feature_count": 5,
+    "p_buy": 0.8991,
+    "final_score": 1.782,
+    "features_summary": "Farbe-farbe\u2026: RAL 9005 Tiefschwarz | Farbe-farbe ral: RAL 9005 Tiefschwarz | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___standard_ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "P1782-347358",
+    "set_id": "20240502211517-340189",
+    "eclass": "22520102",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 6.97,
+    "reference_price_eur": 321.975,
+    "price_advantage_pct": 97.84,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.2727,
+    "feature_count": 6,
+    "p_buy": 0.9006,
+    "final_score": 1.7818,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | Farbe-farbe ral: RAL 7035 Lichtgrau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Gr(f6)(df)e-_main_patchpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    }
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "505-6450325",
+    "set_id": "20240502211517-25238577",
+    "eclass": "29060190",
+    "manufacturer": "Assheuer + Pott",
+    "candidate_price_eur": 4.45,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.93,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.781,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "9243-36032",
+    "set_id": "20240502211517-12180252",
+    "eclass": "29060190",
+    "manufacturer": "Assheuer + Pott",
+    "candidate_price_eur": 7.115,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.89,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8909,
+    "final_score": 1.7807,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "2813-383-1577",
+    "set_id": "20240502211517-14892519",
+    "eclass": "29060190",
+    "manufacturer": "Assheuer + Pott",
+    "candidate_price_eur": 6.34,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.9,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7807,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "3391-226606566",
+    "set_id": "3391-226606566",
+    "eclass": "29060190",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 7.485,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.88,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7805,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "5MKLB-36063",
+    "set_id": "2102-APS-36063",
+    "eclass": "29060190",
+    "manufacturer": "Assheuer + Pott",
+    "candidate_price_eur": 8.04,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.87,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7804,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "6UL55-10049329_0",
+    "set_id": "20250604090150-12131",
+    "eclass": "29060190",
+    "manufacturer": "Relaxdays",
+    "candidate_price_eur": 8.41,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.87,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7803,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "3391-226606568",
+    "set_id": "20240502211517-26195651",
+    "eclass": "29060190",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 9.09,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.86,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8908,
+    "final_score": 1.7803,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "PYMYB-490250800",
+    "set_id": "20240502211517-37310541",
+    "eclass": "29060190",
+    "manufacturer": "Alfi",
+    "candidate_price_eur": 8.79,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.86,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7802,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "3391-227773690",
+    "set_id": "20240502211517-10762331",
+    "eclass": "29060190",
+    "manufacturer": "Unbekannt",
+    "candidate_price_eur": 10.16,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.84,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.78,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "615-A048681",
+    "set_id": "20240502211517-13005924",
+    "eclass": "29060190",
+    "manufacturer": "MATO Interpr\u00e4sent",
+    "candidate_price_eur": 10.55,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.84,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7799,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "2813-403-8703",
+    "set_id": "20250212100130-23618",
+    "eclass": "29060190",
+    "manufacturer": "Saro",
+    "candidate_price_eur": 10.78,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.83,
+    "global_popularity": 0.0003,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7799,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "9216-30128255",
+    "set_id": "20240502211517-13898489",
+    "eclass": "29060190",
+    "manufacturer": "Westmark",
+    "candidate_price_eur": 11.165,
+    "reference_price_eur": 6408.62,
+    "price_advantage_pct": 99.83,
+    "global_popularity": 0.0005,
+    "manufacturer_familiarity": 1.0,
+    "feature_richness": 0.0,
+    "feature_count": 0,
+    "p_buy": 0.8907,
+    "final_score": 1.7799,
+    "features_summary": "\u2014",
+    "features_detail": {}
+  }
+]
