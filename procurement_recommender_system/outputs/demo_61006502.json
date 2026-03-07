@@ -1,0 +1,716 @@
+[
+  {
+    "rank": 1,
+    "customer_id": null,
+    "sku": "6012C-87568816",
+    "set_id": "20240502211517-20374947",
+    "eclass": "27371902",
+    "manufacturer": "Siemens",
+    "candidate_price_eur": 3.616,
+    "reference_price_eur": 346.81,
+    "price_advantage_pct": 98.96,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9571,
+    "final_score": 1.9041,
+    "features_summary": "\u2014",
+    "features_detail": {
+      "Abdeckung(20)f(fc)r-_main_abdeckung_siemens": [
+        "Plombier"
+      ],
+      "Farbe-farbe___komplex3_bmecatfeature_exoten_materialien": [
+        "gelb"
+      ]
+    },
+    "feature_cluster_id": 0,
+    "feature_cluster_label": "Abdeckung(20)f(fc)r: Plombier, Farbe-farbe   komplex3 bmecatfeature exoten materialien: gelb"
+  },
+  {
+    "rank": 2,
+    "customer_id": null,
+    "sku": "642-691650GR.W",
+    "set_id": "20240502211517-1579291",
+    "eclass": "27182590",
+    "manufacturer": "EFB-Elektronik",
+    "candidate_price_eur": 5.44,
+    "reference_price_eur": 210.519,
+    "price_advantage_pct": 97.42,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9557,
+    "final_score": 1.8867,
+    "features_summary": "Warenzustand: Neu",
+    "features_detail": {
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 1,
+    "feature_cluster_label": "Warenzustand: Neu"
+  },
+  {
+    "rank": 3,
+    "customer_id": null,
+    "sku": "1498-9000470257",
+    "set_id": "20240627210126-9466",
+    "eclass": "21043090",
+    "manufacturer": "N\u00f6lle Profi Brush",
+    "candidate_price_eur": 2.0182,
+    "reference_price_eur": 74.2577,
+    "price_advantage_pct": 97.28,
+    "global_popularity": 0.0026,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9557,
+    "final_score": 1.8855,
+    "features_summary": "Durchmesser: 140",
+    "features_detail": {
+      "Durchmesser-_main_abfluss_saugglocke": [
+        "140"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Durchmesser: 140"
+  },
+  {
+    "rank": 4,
+    "customer_id": null,
+    "sku": "1955B-2000302015",
+    "set_id": "20240502211517-39065729",
+    "eclass": "21043090",
+    "manufacturer": "Promat",
+    "candidate_price_eur": 2.1578,
+    "reference_price_eur": 74.2577,
+    "price_advantage_pct": 97.09,
+    "global_popularity": 0.0008,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9555,
+    "final_score": 1.8833,
+    "features_summary": "Durchmesser: 140",
+    "features_detail": {
+      "Durchmesser-_main_abfluss_saugglocke": [
+        "140"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Durchmesser: 140"
+  },
+  {
+    "rank": 5,
+    "customer_id": null,
+    "sku": "4065-70072526",
+    "set_id": "20240502211517-11767369",
+    "eclass": "27300490",
+    "manufacturer": "IMI Norgren",
+    "candidate_price_eur": 18.36,
+    "reference_price_eur": 624.1333,
+    "price_advantage_pct": 97.06,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9555,
+    "final_score": 1.8828,
+    "features_summary": "Anschlussart-\u2026: Gewinde",
+    "features_detail": {
+      "Anschlussart-wegeventil_anschlussart___allgemein": [
+        "Gewinde"
+      ]
+    },
+    "feature_cluster_id": 3,
+    "feature_cluster_label": "Anschlussart-wegeventil anschlussart   allgemein: Gewinde"
+  },
+  {
+    "rank": 6,
+    "customer_id": null,
+    "sku": "4012-653130",
+    "set_id": "20251104220140-3781",
+    "eclass": "30010301",
+    "manufacturer": "Emtez",
+    "candidate_price_eur": 3.89,
+    "reference_price_eur": 123.306,
+    "price_advantage_pct": 96.85,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7011,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9561,
+    "final_score": 1.8821,
+    "features_summary": "Durchmesser-\u2026: 8 | L(e4)nge-laenge cm\u2026: 120 | \u2026: 125",
+    "features_detail": {
+      "Aufnahmekapazit(e4)t-bindemittel_aufnahmekapazitaet___aufnahmekapazitaet": [
+        "125"
+      ],
+      "Durchmesser-durchmesser_cm___indikatorvor_danfang_danfangmisch_erstedimension_letztedimension_max25": [
+        "8"
+      ],
+      "L(e4)nge-laenge_cm___zweite_dimension_st_bmecat_min40": [
+        "120"
+      ]
+    },
+    "feature_cluster_id": 4,
+    "feature_cluster_label": "Aufnahmekapazit(e4)t-bindemittel aufnahmekapazitaet   aufnahmekapazitaet: 125, Durchmesser-durchmesser cm   indikatorvor danfang danfangmisch erstedimension letztedimension max25: 8, L(e4)nge-laenge cm   zweite dimension st bmecat min40: 120"
+  },
+  {
+    "rank": 7,
+    "customer_id": null,
+    "sku": "820-100038362",
+    "set_id": "20240502211517-18621360",
+    "eclass": "19010105",
+    "manufacturer": "Joy-It",
+    "candidate_price_eur": 7.83,
+    "reference_price_eur": 458.259,
+    "price_advantage_pct": 98.29,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3941,
+    "feature_richness": 0.4062,
+    "feature_count": 13,
+    "collab_score": 0.5,
+    "p_buy": 0.9474,
+    "final_score": 1.8786,
+    "features_summary": "\u2014",
+    "features_detail": {
+      "Breite-breite_mm___indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29)": [
+        "73.5"
+      ],
+      "L(e4)nge-laenge_mm___sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29)": [
+        "100.6"
+      ],
+      "F(fc)r(20)Marke-_main_einplatinencomputer_gehaeuse": [
+        "Raspberry Pi"
+      ],
+      "F(fc)r(20)Modell-_main_einplatinencomputer_gehaeuse": [
+        "5"
+      ],
+      "Ausf(fc)hrung-_main_einplatinencomputer_zubehoer": [
+        "Netzteil"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "Ausgangsstrom-strom_a___nur_ausgangsstrom": [
+        "5"
+      ],
+      "Leistung-_ladegeraet_usb_leistung": [
+        "27"
+      ],
+      "USB(2d)C(20)Anzahl-_main_ladegeraet_usb": [
+        "1"
+      ],
+      "Anschluss(20)1-_main_usb_kabel": [
+        "USB C"
+      ],
+      "Farbe-farbe___standard_transparent": [
+        "wei\u00df"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator_min0(2e)1_max90": [
+        "0.1"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "0.1"
+      ]
+    },
+    "feature_cluster_id": 5,
+    "feature_cluster_label": "Breite-breite mm   indikator(2d)vor(2d)wert(2c)(20)3d(20)(28)10(2d)10000(29): 73.5, L(e4)nge-laenge mm   sonderindikatorvor(2c)(20)lbanfang(20)(28)10(2d)1000(29): 100.6, F(fc)r(20)Marke: Raspberry Pi, F(fc)r(20)Modell: 5, Ausf(fc)hrung: Netzteil"
+  },
+  {
+    "rank": 8,
+    "customer_id": null,
+    "sku": "284WZ-128085",
+    "set_id": "20240826090128-9921",
+    "eclass": "21043090",
+    "manufacturer": "D\u00f6nges",
+    "candidate_price_eur": 2.6488,
+    "reference_price_eur": 74.2577,
+    "price_advantage_pct": 96.43,
+    "global_popularity": 0.0033,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9552,
+    "final_score": 1.8764,
+    "features_summary": "Durchmesser: 140",
+    "features_detail": {
+      "Durchmesser-_main_abfluss_saugglocke": [
+        "140"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Durchmesser: 140"
+  },
+  {
+    "rank": 9,
+    "customer_id": null,
+    "sku": "1085-103428",
+    "set_id": "20240502211517-36432523",
+    "eclass": "27180201",
+    "manufacturer": "ALLNET",
+    "candidate_price_eur": 3.71,
+    "reference_price_eur": 327.1221,
+    "price_advantage_pct": 98.87,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4094,
+    "feature_richness": 0.0625,
+    "feature_count": 2,
+    "collab_score": 0.5,
+    "p_buy": 0.9433,
+    "final_score": 1.8759,
+    "features_summary": "Farbe-farbe ral: RAL 9005 Tiefschwarz | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 9005 Tiefschwarz"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 6,
+    "feature_cluster_label": "Farbe-farbe   ral: RAL 9005 Tiefschwarz, Warenzustand: Neu"
+  },
+  {
+    "rank": 10,
+    "customer_id": null,
+    "sku": "P8349-5092783",
+    "set_id": "20240502211517-8553433",
+    "eclass": "27180201",
+    "manufacturer": "DIGITUS",
+    "candidate_price_eur": 6.1,
+    "reference_price_eur": 327.1221,
+    "price_advantage_pct": 98.14,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3767,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9435,
+    "final_score": 1.8693,
+    "features_summary": "Material-material\u2026: Stahl | Ausf(fc)hrung: Befestigungssatz | Verpackungseinheit-\u2026: 50",
+    "features_detail": {
+      "Ausf(fc)hrung-_main_19_zoll_befestigungssatz": [
+        "Befestigungssatz"
+      ],
+      "Verpackungseinheit-verpackungseinheit___min_1_tag_inhalt_pg_ve_st_menge_er": [
+        "50"
+      ],
+      "Gewinde(2d)(d8)-gewinde_m___max200": [
+        "6"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "China"
+      ],
+      "F(fc)r(20)Schraubenma(df)-_main_unterlegscheibe_ohne_norm": [
+        "6"
+      ],
+      "Material-material___schrauben": [
+        "Stahl"
+      ],
+      "Oberfl(e4)che-metalloberflaeche___stahl_verzinkt_chromatiert": [
+        "galvanisch verzinkt"
+      ]
+    },
+    "feature_cluster_id": 7,
+    "feature_cluster_label": "Ausf(fc)hrung: Befestigungssatz, Verpackungseinheit-verpackungseinheit   min 1 tag inhalt pg ve st menge er: 50, Gewinde(2d)(d8)-gewinde m   max200: 6, Ursprungsland: China, F(fc)r(20)Schraubenma(df): 6"
+  },
+  {
+    "rank": 11,
+    "customer_id": null,
+    "sku": "4588-T595605",
+    "set_id": "20240502211517-40388522",
+    "eclass": "21043090",
+    "manufacturer": "CORNAT",
+    "candidate_price_eur": 3.176,
+    "reference_price_eur": 74.2577,
+    "price_advantage_pct": 95.72,
+    "global_popularity": 0.001,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9546,
+    "final_score": 1.8685,
+    "features_summary": "Durchmesser: 140",
+    "features_detail": {
+      "Durchmesser-_main_abfluss_saugglocke": [
+        "140"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Durchmesser: 140"
+  },
+  {
+    "rank": 12,
+    "customer_id": null,
+    "sku": "252-147052",
+    "set_id": "20240502211517-29079538",
+    "eclass": "27182590",
+    "manufacturer": "Good Connections",
+    "candidate_price_eur": 2.39,
+    "reference_price_eur": 210.519,
+    "price_advantage_pct": 98.86,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3321,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9396,
+    "final_score": 1.8684,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Warenzustand: Neu, Farbe-farbe   ral: RAL 7035 Lichtgrau, Farbe-farbe   standard ral: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 13,
+    "customer_id": null,
+    "sku": "P1801-26.99.0295",
+    "set_id": "20240502211517-25381172",
+    "eclass": "27180201",
+    "manufacturer": "VALUE",
+    "candidate_price_eur": 2.06,
+    "reference_price_eur": 327.1221,
+    "price_advantage_pct": 99.37,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2593,
+    "feature_richness": 0.1562,
+    "feature_count": 5,
+    "collab_score": 0.5,
+    "p_buy": 0.9368,
+    "final_score": 1.8678,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | Farbe-farbe\u2026: grau | H(f6)heneinheit: 1",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Farbe-farbe___komplex1_bmecatfeature_exoten_materialien_ohnefarblos_verzinkt": [
+        "grau"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ],
+      "H(f6)heneinheit-_main_serverschrank": [
+        "1"
+      ]
+    },
+    "feature_cluster_id": 9,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Farbe-farbe   ral: RAL 7035 Lichtgrau, Farbe-farbe   komplex1 bmecatfeature exoten materialien ohnefarblos verzinkt: grau, Warenzustand: Neu"
+  },
+  {
+    "rank": 14,
+    "customer_id": null,
+    "sku": "262A-30221499",
+    "set_id": "20240502211517-30168257",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 2.71,
+    "reference_price_eur": 456.1203,
+    "price_advantage_pct": 99.41,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2355,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9366,
+    "final_score": 1.8676,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: Kunststoff | Nennweite-nennweite\u2026: 110",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite(20)Abzweig-_main_ht_abzweig": [
+        "50"
+      ],
+      "Nennweite(20)Rohr-_main_ht_abzweig": [
+        "110"
+      ],
+      "Winkel-_main_ht_abzweig": [
+        "45"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_metallselten": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 110, Winkel-winkel grad   winkel: 45, Nennweite(20)Rohr: 110, Winkel: 45"
+  },
+  {
+    "rank": 15,
+    "customer_id": null,
+    "sku": "4012-1515527",
+    "set_id": "20240612210125-33237",
+    "eclass": "21043090",
+    "manufacturer": "W. Kirchhoff GmbH",
+    "candidate_price_eur": 3.27,
+    "reference_price_eur": 74.2577,
+    "price_advantage_pct": 95.6,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.7005,
+    "feature_richness": 0.0312,
+    "feature_count": 1,
+    "collab_score": 0.5,
+    "p_buy": 0.9545,
+    "final_score": 1.867,
+    "features_summary": "Durchmesser: 140",
+    "features_detail": {
+      "Durchmesser-_main_abfluss_saugglocke": [
+        "140"
+      ]
+    },
+    "feature_cluster_id": 2,
+    "feature_cluster_label": "Durchmesser: 140"
+  },
+  {
+    "rank": 16,
+    "customer_id": null,
+    "sku": "767-LG-5421",
+    "set_id": "20240502211517-13997948",
+    "eclass": "27182590",
+    "manufacturer": "LogiLink",
+    "candidate_price_eur": 2.8,
+    "reference_price_eur": 210.519,
+    "price_advantage_pct": 98.67,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3321,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.9394,
+    "final_score": 1.8663,
+    "features_summary": "Farbe-farbe ral: RAL 7035 Lichtgrau | H(f6)heneinheit: 1 | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_blindplatte": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Warenzustand: Neu, Farbe-farbe   ral: RAL 7035 Lichtgrau, Farbe-farbe   standard ral: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 17,
+    "customer_id": null,
+    "sku": "2172-61051",
+    "set_id": "20240502211517-7965559",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 3.7,
+    "reference_price_eur": 456.1203,
+    "price_advantage_pct": 99.19,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2355,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9364,
+    "final_score": 1.8652,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: Kunststoff | Nennweite-nennweite\u2026: 110",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite(20)Abzweig-_main_ht_abzweig": [
+        "90"
+      ],
+      "Nennweite(20)Rohr-_main_ht_abzweig": [
+        "110"
+      ],
+      "Winkel-_main_ht_abzweig": [
+        "45"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_metallselten": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 110, Winkel-winkel grad   winkel: 45, Nennweite(20)Rohr: 110, Winkel: 45"
+  },
+  {
+    "rank": 18,
+    "customer_id": null,
+    "sku": "P1782-479980",
+    "set_id": "20240502211517-23045568",
+    "eclass": "27182590",
+    "manufacturer": "Good Connections",
+    "candidate_price_eur": 4.3,
+    "reference_price_eur": 210.519,
+    "price_advantage_pct": 97.96,
+    "global_popularity": 0.0002,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.3905,
+    "feature_richness": 0.0938,
+    "feature_count": 3,
+    "collab_score": 0.5,
+    "p_buy": 0.942,
+    "final_score": 1.8648,
+    "features_summary": "Farbe-farbe\u2026: RAL 7035 Lichtgrau | H(f6)heneinheit: 1 | Warenzustand: Neu",
+    "features_detail": {
+      "Farbe-farbe___standard_ral": [
+        "RAL 7035 Lichtgrau"
+      ],
+      "H(f6)heneinheit-_main_19_zoll_rangierpanel": [
+        "1"
+      ],
+      "Warenzustand-_it_wiederaufbereitet_meta": [
+        "Neu"
+      ]
+    },
+    "feature_cluster_id": 8,
+    "feature_cluster_label": "H(f6)heneinheit: 1, Warenzustand: Neu, Farbe-farbe   ral: RAL 7035 Lichtgrau, Farbe-farbe   standard ral: RAL 7035 Lichtgrau"
+  },
+  {
+    "rank": 19,
+    "customer_id": null,
+    "sku": "262A-30221512",
+    "set_id": "20240502211517-42980257",
+    "eclass": "36419090",
+    "manufacturer": "Ostendorf Kunststoffe",
+    "candidate_price_eur": 3.855,
+    "reference_price_eur": 456.1203,
+    "price_advantage_pct": 99.15,
+    "global_popularity": 0.0004,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.2355,
+    "feature_richness": 0.2188,
+    "feature_count": 7,
+    "collab_score": 0.5,
+    "p_buy": 0.9364,
+    "final_score": 1.8648,
+    "features_summary": "Material-material\u2026: Kunststoff | Material-material\u2026: Kunststoff | Nennweite-nennweite\u2026: 110",
+    "features_detail": {
+      "Material-material___kunststoffallgemein_metallallgemein": [
+        "Kunststoff"
+      ],
+      "Nennweite-nennweite_dn___standard": [
+        "110"
+      ],
+      "Winkel-winkel_grad___winkel": [
+        "45"
+      ],
+      "Nennweite(20)Abzweig-_main_ht_abzweig": [
+        "110"
+      ],
+      "Nennweite(20)Rohr-_main_ht_abzweig": [
+        "110"
+      ],
+      "Winkel-_main_ht_abzweig": [
+        "45"
+      ],
+      "Material-material___kunststoffallgemein_metallallgemein_metallselten": [
+        "Kunststoff"
+      ]
+    },
+    "feature_cluster_id": 10,
+    "feature_cluster_label": "Material-material   kunststoffallgemein metallallgemein: Kunststoff, Nennweite-nennweite dn   standard: 110, Winkel-winkel grad   winkel: 45, Nennweite(20)Rohr: 110, Winkel: 45"
+  },
+  {
+    "rank": 20,
+    "customer_id": null,
+    "sku": "4012-653124",
+    "set_id": "20240502211517-35682527",
+    "eclass": "30010301",
+    "manufacturer": "Emtez",
+    "candidate_price_eur": 3.8667,
+    "reference_price_eur": 123.306,
+    "price_advantage_pct": 96.86,
+    "global_popularity": 0.0006,
+    "manufacturer_familiarity": 1.0,
+    "feature_similarity": 0.4467,
+    "feature_richness": 0.2812,
+    "feature_count": 9,
+    "collab_score": 0.5,
+    "p_buy": 0.9471,
+    "final_score": 1.8645,
+    "features_summary": "Anwendung-\u2026: \u00d6l | Durchmesser-\u2026: 8 | L(e4)nge-laenge cm\u2026: 120",
+    "features_detail": {
+      "Anwendung-bindemittel_anwendung___exakt_lb_farbe": [
+        "\u00d6l"
+      ],
+      "Aufnahmekapazit(e4)t-bindemittel_aufnahmekapazitaet___aufnahmekapazitaet": [
+        "125"
+      ],
+      "Durchmesser-durchmesser_cm___indikatorvor_danfang_danfangmisch_erstedimension_letztedimension_max25": [
+        "8"
+      ],
+      "L(e4)nge-laenge_cm___zweite_dimension_st_bmecat_min40": [
+        "120"
+      ],
+      "Anwendung-bindemittel_anwendung___exakt_lb": [
+        "\u00d6l"
+      ],
+      "Ausf(fc)hrung-bindemittel_ausfuehrung___artikelnr_name_bmecat_lb": [
+        "Schl\u00e4ngel"
+      ],
+      "Ursprungsland-_ursprungsland": [
+        "Frankreich"
+      ],
+      "Einsatzbereich-_main_saugschlauch": [
+        "Chemikalien"
+      ],
+      "L(e4)nge-laenge_m___ohne_indikator": [
+        "1.2"
+      ]
+    },
+    "feature_cluster_id": 11,
+    "feature_cluster_label": "Anwendung-bindemittel anwendung   exakt lb farbe: \u00d6l, Aufnahmekapazit(e4)t-bindemittel aufnahmekapazitaet   aufnahmekapazitaet: 125, Durchmesser-durchmesser cm   indikatorvor danfang danfangmisch erstedimension letztedimension max25: 8, L(e4)nge-laenge cm   zweite dimension st bmecat min40: 120, Anwendung-bindemittel anwendung   exakt lb: \u00d6l"
+  }
+]
