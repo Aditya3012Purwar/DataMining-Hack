@@ -1,0 +1,16 @@
+[
+  {
+    "source_sku": "PAINT_A",
+    "target_sku": "PAINT_C",
+    "same_eclass": true,
+    "similarity_score": 0.91,
+    "price_delta": -4.0
+  },
+  {
+    "source_sku": "BRUSH_A",
+    "target_sku": "BRUSH_B",
+    "same_eclass": true,
+    "similarity_score": 0.88,
+    "price_delta": -3.0
+  }
+]

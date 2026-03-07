@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SubstitutionEdge",
+  "type": "object",
+  "required": [
+    "source_sku",
+    "target_sku",
+    "same_eclass",
+    "similarity_score",
+    "price_delta"
+  ],
+  "properties": {
+    "source_sku": {"type": "string"},
+    "target_sku": {"type": "string"},
+    "same_eclass": {"type": "boolean"},
+    "similarity_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "price_delta": {"type": "number"}
+  }
+}

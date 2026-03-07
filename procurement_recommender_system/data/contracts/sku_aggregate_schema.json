@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SkuAggregate",
+  "type": "object",
+  "required": [
+    "sku",
+    "eclass",
+    "manufacturer",
+    "avg_price",
+    "purchase_count"
+  ],
+  "properties": {
+    "sku": {"type": "string"},
+    "eclass": {"type": "string"},
+    "manufacturer": {"type": "string"},
+    "avg_price": {"type": "number", "minimum": 0},
+    "purchase_count": {"type": "integer", "minimum": 0},
+    "last_seen_date": {"type": "string", "format": "date"}
+  }
+}

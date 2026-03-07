@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procurement Recommender</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+:root {
+  --bg:#0d1117; --sidebar:#161b22; --card:#1c2128; --border:#30363d;
+  --text:#e6edf3; --muted:#8b949e; --blue:#58a6ff; --green:#3fb950;
+  --yellow:#e3b341; --purple:#d2a8ff; --red:#f78166;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0;height:100vh;overflow:hidden;font-size:14px}
+
+.top-bar{display:flex;align-items:center;justify-content:space-between;background:var(--sidebar);border-bottom:1px solid var(--border);padding:0 1.25rem;height:52px;flex-shrink:0}
+.top-bar .brand{font-weight:700;font-size:1rem;color:var(--blue);display:flex;align-items:center;gap:8px}
+.top-bar .right{display:flex;align-items:center;gap:10px}
+.badge-pill{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:.72rem;color:var(--muted)}
+
+.app-body{display:flex;height:calc(100vh - 52px);overflow:hidden}
+
+#sidebar{width:270px;min-width:270px;background:var(--sidebar);border-right:1px solid var(--border);padding:1.1rem;overflow-y:auto;display:flex;flex-direction:column}
+.sb-section{margin-bottom:1.1rem}
+.sb-label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;display:block}
+.sb-input{width:100%;background:var(--card)!important;border:1px solid var(--border)!important;color:var(--text)!important;font-size:.83rem;border-radius:6px;padding:6px 10px;outline:none}
+.sb-input:focus{border-color:var(--blue)!important;box-shadow:0 0 0 3px rgba(88,166,255,.15)}
+.sb-range{width:100%;accent-color:var(--blue)}
+.sb-hint{font-size:.71rem;color:var(--muted);margin-top:3px}
+
+.run-btn{width:100%;background:var(--blue);border:none;color:#0d1117;font-weight:700;padding:9px;border-radius:8px;cursor:pointer;font-size:.9rem;transition:transform .1s,opacity .15s;margin-top:4px}
+.run-btn:hover:not(:disabled){opacity:.88;transform:translateY(-1px)}
+.run-btn:disabled{opacity:.45;cursor:default}
+
+.formula-box{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:8px 10px;margin-top:1rem;font-size:.72rem;color:var(--muted);line-height:1.6}
+.formula-box code{color:var(--purple);font-size:.74rem}
+
+#main{flex:1;overflow-y:auto;padding:1.25rem}
+
+.step-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:1rem}
+.step-card{background:var(--sidebar);border:1px solid var(--border);border-radius:8px;padding:14px}
+.step-num{font-size:1.5rem;font-weight:800;color:var(--blue)}
+.step-title{font-weight:600;font-size:.88rem;margin:4px 0 3px}
+.step-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+.prog-step{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border-radius:8px;border:1px solid var(--border);background:var(--sidebar);margin-bottom:8px;transition:border-color .3s,background .3s}
+.prog-step.active{border-color:var(--blue);background:rgba(88,166,255,.07)}
+.prog-step.done{border-color:var(--green);background:rgba(63,185,80,.05)}
+.prog-icon{font-size:1.05rem;width:22px;text-align:center;margin-top:1px}
+.prog-label{font-size:.87rem;font-weight:500}
+.prog-detail{font-size:.74rem;color:var(--muted);margin-top:2px}
+.spin{display:inline-block;width:16px;height:16px;border:2px solid rgba(88,166,255,.25);border-top-color:var(--blue);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.warn-box{background:rgba(227,179,65,.08);border:1px solid rgba(227,179,65,.3);border-radius:6px;padding:8px 12px;margin-bottom:12px;font-size:.8rem;color:var(--yellow)}
+
+.query-banner{background:rgba(88,166,255,.07);border:1px solid rgba(88,166,255,.22);border-radius:8px;padding:10px 14px;margin-bottom:1.1rem}
+.qb-title{font-size:.72rem;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.q-tag{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2px 9px;font-size:.75rem;color:var(--muted);margin:2px 3px 2px 0}
+.q-tag b{color:var(--text);font-weight:600}
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.kpi-ico{font-size:1.3rem}
+.kpi-val{font-size:1.45rem;font-weight:800;line-height:1.1;margin-top:2px}
+.kpi-lbl{font-size:.72rem;color:var(--muted);margin-top:3px}
+
+.chart-grid-2{display:grid;grid-template-columns:60% 40%;gap:10px;margin-bottom:10px}
+.chart-grid-2b{display:grid;grid-template-columns:42% 58%;gap:10px;margin-bottom:10px}
+.chart-panel{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px}
+.chart-title{font-size:.68rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+
+.tbl-wrap{overflow-x:auto}
+table.rec-tbl{width:100%;border-collapse:collapse;font-size:.8rem}
+table.rec-tbl th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;padding:7px 10px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+table.rec-tbl th:hover{color:var(--blue)}
+table.rec-tbl td{padding:7px 10px;border-bottom:1px solid rgba(48,54,61,.45);vertical-align:middle}
+table.rec-tbl tr:hover td{background:rgba(88,166,255,.035)}
+.pill{display:inline-block;padding:1px 7px;border-radius:20px;font-size:.7rem;font-weight:600}
+.pill-hi{background:rgba(63,185,80,.15);color:var(--green)}
+.pill-md{background:rgba(227,179,65,.15);color:var(--yellow)}
+.pill-lo{background:rgba(139,148,158,.1);color:var(--muted)}
+.score-bar{display:flex;align-items:center;gap:5px}
+.score-track{background:var(--border);border-radius:3px;height:4px;width:50px;flex-shrink:0}
+.score-fill{background:var(--blue);border-radius:3px;height:4px}
+
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.dl-btn{background:transparent;border:1px solid var(--border);color:var(--blue);font-size:.75rem;border-radius:6px;padding:4px 10px;cursor:pointer}
+.dl-btn:hover{background:rgba(88,166,255,.1)}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+.modal-content{background:var(--card);border:1px solid var(--border);color:var(--text)}
+.modal-header{border-bottom:1px solid var(--border)}
+.modal-body h6{color:var(--blue);margin-top:1rem}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="top-bar">
+  <div class="brand"><i class="bi bi-box-seam-fill"></i> Procurement Recommender</div>
+  <div class="right">
+    <span class="badge-pill" id="catalogue-badge">Checking...</span>
+    <button class="badge-pill" style="cursor:pointer;border:none" data-bs-toggle="modal" data-bs-target="#helpModal">
+      <i class="bi bi-question-circle me-1"></i> How it works
+    </button>
+  </div>
+</div>
+
+<div class="app-body">
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <div class="sb-section">
+    <span class="sb-label">Customer</span>
+    <select class="sb-input" id="customer-select" style="margin-bottom:6px">
+      <option value="">Select a customer...</option>
+    </select>
+    <input type="number" class="sb-input" id="customer-input" placeholder="Or enter ID manually">
+  </div>
+
+  <div class="sb-section">
+    <span class="sb-label">Top N results &nbsp;<b id="top-n-val" style="color:var(--blue)">20</b></span>
+    <input type="range" class="sb-range" id="top-n" min="5" max="50" value="20"
+      oninput="document.getElementById('top-n-val').textContent=this.value">
+  </div>
+
+  <div class="sb-section">
+    <span class="sb-label">Min item price (EUR)</span>
+    <input type="number" class="sb-input" id="min-price" value="2.0" step="0.5" min="0">
+    <div class="sb-hint">Filters out bundle fragments and returns</div>
+  </div>
+
+  <div class="sb-section">
+    <span class="sb-label">E-Class filter (optional)</span>
+    <input type="text" class="sb-input" id="filter-eclass" placeholder="e.g. 29120102">
+    <div class="sb-hint">Leave empty to search all E-classes</div>
+  </div>
+
+  <button class="run-btn" id="run-btn" onclick="submitQuery()">
+    <i class="bi bi-lightning-charge-fill me-1"></i> Generate Recommendations
+  </button>
+
+  <div class="formula-box">
+    <div style="margin-bottom:4px"><b style="color:var(--text)">Ranking formula</b></div>
+    <code>score = P(buy) x (1 + savings%)</code><br>
+    P(buy) = popularity + brand familiarity + price advantage<br>
+    Savings = (ref_price - candidate_price) / ref_price<br>
+    <span style="font-style:italic">ref_price = this buyer's own avg price per E-class</span>
+  </div>
+</div>
+
+<!-- Main -->
+<div id="main">
+
+  <!-- WELCOME STATE -->
+  <div id="state-welcome">
+    <h5 class="fw-bold mb-1">Welcome</h5>
+    <p style="color:var(--muted);margin-bottom:1rem;font-size:.85rem">
+      Find cheaper procurement alternatives from a 2.7M-item catalogue for any buyer,
+      ranked by purchase likelihood x price savings.
+    </p>
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Load Customer History</div>
+        <div class="step-desc">Reads this buyer's real transactions from the 18M-row CSV. Builds their reference price per E-class — what <em>they specifically</em> normally pay.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Generate Candidates</div>
+        <div class="step-desc">Filters 2.7M pre-aggregated SKUs to items in the same E-classes the buyer already uses, excluding what they already own.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Score &amp; Rank</div>
+        <div class="step-desc">Each candidate gets <code style="color:var(--purple)">score = P(buy) x (1 + savings%)</code> — favouring items that are both likely to be bought AND cheaper.</div>
+      </div>
+    </div>
+    <div style="background:var(--sidebar);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:.8rem;color:var(--muted)">
+      <i class="bi bi-arrow-left me-1" style="color:var(--blue)"></i>
+      Select a <b style="color:var(--text)">Customer ID</b> in the sidebar and click <b style="color:var(--text)">Generate Recommendations</b>.
+    </div>
+  </div>
+
+  <!-- LOADING STATE -->
+  <div id="state-loading" style="display:none">
+    <h5 class="fw-bold mb-1">Running Pipeline...</h5>
+    <p style="color:var(--muted);font-size:.82rem;margin-bottom:.5rem">
+      Scanning real transaction data.
+      <span id="elapsed-display" style="color:var(--blue);font-weight:600"></span>
+    </p>
+    <div id="slow-warning" class="warn-box" style="display:none">
+      <i class="bi bi-hourglass-split me-1"></i>
+      <b>Still running — this is normal.</b>
+      The engine scans 18 million rows to find this customer's transactions.
+      Average wait: <b>1-3 minutes</b>. Please keep this tab open.
+    </div>
+    <div style="max-width:520px">
+      <div class="prog-step" id="ps-1"><div class="prog-icon" id="pi-1">&#9675;</div><div><div class="prog-label">Loading SKU Catalogue</div><div class="prog-detail" id="pd-1">2.7M pre-aggregated SKUs from JSON</div></div></div>
+      <div class="prog-step" id="ps-2"><div class="prog-icon" id="pi-2">&#9675;</div><div><div class="prog-label">Loading Customer History</div><div class="prog-detail" id="pd-2">Scanning 18M transaction rows...</div></div></div>
+      <div class="prog-step" id="ps-3"><div class="prog-icon" id="pi-3">&#9675;</div><div><div class="prog-label">Generating Candidates</div><div class="prog-detail" id="pd-3">Same E-class, not previously purchased</div></div></div>
+      <div class="prog-step" id="ps-4"><div class="prog-icon" id="pi-4">&#9675;</div><div><div class="prog-label">Scoring Candidates</div><div class="prog-detail" id="pd-4">P(buy) x (1 + price advantage)</div></div></div>
+      <div class="prog-step" id="ps-5"><div class="prog-icon" id="pi-5">&#9675;</div><div><div class="prog-label">Enriching with Product Features</div><div class="prog-detail" id="pd-5">Color, size, material, dimensions...</div></div></div>
+    </div>
+  </div>
+
+  <!-- RESULTS STATE -->
+  <div id="state-results" style="display:none">
+    <div id="query-banner"></div>
+    <div class="kpi-row" id="kpi-row"></div>
+    <div class="chart-grid-2">
+      <div class="chart-panel">
+        <div class="chart-title"><i class="bi bi-bar-chart-horizontal me-1"></i>Top Recommendations by Final Score</div>
+        <div id="chart-bar" style="height:310px"></div>
+      </div>
+      <div class="chart-panel">
+        <div class="chart-title"><i class="bi bi-diagram-2 me-1"></i>Price vs Buy Probability (bubble = savings %)</div>
+        <div id="chart-scatter" style="height:310px"></div>
+      </div>
+    </div>
+    <div class="chart-grid-2b">
+      <div class="chart-panel">
+        <div class="chart-title"><i class="bi bi-pie-chart me-1"></i>Buyer's E-Class Mix (top 10)</div>
+        <div id="chart-pie" style="height:260px"></div>
+      </div>
+      <div class="chart-panel">
+        <div class="chart-title"><i class="bi bi-currency-euro me-1"></i>Savings per Recommendation (EUR vs reference)</div>
+        <div id="chart-savings" style="height:260px"></div>
+      </div>
+    </div>
+    <div class="chart-panel">
+      <div class="panel-header">
+        <div class="chart-title mb-0"><i class="bi bi-table me-1"></i>Recommendations Table</div>
+        <button class="dl-btn" onclick="downloadJSON()"><i class="bi bi-download me-1"></i>Download JSON</button>
+      </div>
+      <div class="tbl-wrap">
+        <table class="rec-tbl" id="rec-tbl">
+          <thead><tr>
+            <th onclick="sortBy(0)"># <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(1)">SKU <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(2)">E-Class <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(3)">Manufacturer <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(4)">Cand. EUR <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(5)">Ref. EUR <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(6)">Saved % <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(7)">P(buy) <i class="bi bi-chevron-expand"></i></th>
+            <th onclick="sortBy(8)">Score <i class="bi bi-chevron-expand"></i></th>
+            <th>Features</th>
+          </tr></thead>
+          <tbody id="rec-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+</div><!-- /app-body -->
+
+<!-- Help modal -->
+<div class="modal fade" id="helpModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">How the Recommendation Engine Works</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size:.85rem;color:var(--muted)">
+        <h6>Two-stage recommender system</h6>
+        <p>With 2.7M SKUs and 18M transactions, this uses a <b style="color:var(--text)">candidate generation + ranking</b> pipeline — the same architecture as Amazon/Netflix.</p>
+        <h6>Stage 1 — Candidate Generation</h6>
+        <p>The buyer's E-class purchase history filters the catalogue to same-category, not-yet-purchased items. Shrinks millions to a manageable pool.</p>
+        <h6>Stage 2 — Ranking</h6>
+        <p><code style="color:var(--purple)">final_score = P(buy) x (1 + price_advantage)</code><br>
+        P(buy) combines: global popularity + manufacturer familiarity + price advantage</p>
+        <h6>What "Saved %" means</h6>
+        <p>Saved % = (ref_price - candidate_price) / ref_price<br>
+        The <b>reference price</b> is <em>this buyer's own average paid price</em> for the same E-class — not a global average.</p>
+        <h6>Column meanings</h6>
+        <ul>
+          <li><b>Cand. EUR</b> — average market price of the alternative item</li>
+          <li><b>Ref. EUR</b> — what this buyer currently pays on average for this E-class</li>
+          <li><b>Saved %</b> — actual price difference vs buyer's own reference</li>
+          <li><b>P(buy)</b> — estimated purchase probability (0-1)</li>
+          <li><b>Score</b> — combined rank: higher = more likely AND cheaper</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+<script>
+/* ================================================================
+   Globals
+================================================================ */
+var lastResult = null;
+var sortColIdx = 0;
+var sortAsc = true;
+var pollTimer = null;
+var elapsedTimer = null;
+var elapsedSecs = 0;
+
+var LAYOUT = {
+  paper_bgcolor: 'transparent',
+  plot_bgcolor: 'transparent',
+  font: { color: '#e6edf3', size: 11 },
+  margin: { t: 6, b: 40, l: 10, r: 10 },
+  xaxis: { gridcolor: '#30363d', zerolinecolor: '#30363d' },
+  yaxis: { gridcolor: '#30363d', zerolinecolor: '#30363d' },
+  legend: { bgcolor: 'transparent', font: { color: '#8b949e', size: 10 } }
+};
+var PLOTCFG = { responsive: true, displayModeBar: false };
+var COLORS = ['#58a6ff','#3fb950','#d2a8ff','#e3b341','#f78166','#79c0ff','#56d364','#bc8cff','#ffa657','#ff7b72'];
+
+/* ================================================================
+   Init
+================================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  loadCustomers();
+  checkStatus();
+
+  document.getElementById('customer-select').addEventListener('change', function() {
+    if (this.value) document.getElementById('customer-input').value = '';
+  });
+  document.getElementById('customer-input').addEventListener('input', function() {
+    if (this.value) document.getElementById('customer-select').value = '';
+  });
+});
+
+function checkStatus() {
+  fetch('/api/status')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var badge = document.getElementById('catalogue-badge');
+      if (d.artifacts_ready) {
+        badge.textContent = 'Catalogue ready';
+        badge.style.color = 'var(--green)';
+      } else {
+        badge.textContent = 'Run preprocessing first';
+        badge.style.color = 'var(--red)';
+      }
+    })
+    .catch(function() {});
+}
+
+function loadCustomers() {
+  fetch('/api/customers')
+    .then(function(r) { return r.json(); })
+    .then(function(customers) {
+      var sel = document.getElementById('customer-select');
+      customers.forEach(function(c) {
+        var opt = document.createElement('option');
+        opt.value = c.customer_id;
+        opt.textContent = c.customer_id + (c.transaction_count ? '  -  ' + c.transaction_count.toLocaleString() + ' txns' : '');
+        sel.appendChild(opt);
+      });
+    })
+    .catch(function() {});
+}
+
+/* ================================================================
+   Submit
+================================================================ */
+function submitQuery() {
+  var customerId = document.getElementById('customer-input').value
+    || document.getElementById('customer-select').value;
+
+  if (!customerId) {
+    alert('Please select or enter a Customer ID first.');
+    return;
+  }
+
+  // Reset progress steps
+  for (var i = 1; i <= 5; i++) { resetStep(i); }
+
+  // Show loading state
+  showState('loading');
+  document.getElementById('run-btn').disabled = true;
+  document.getElementById('slow-warning').style.display = 'none';
+
+  // Clear old timers
+  if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  if (elapsedTimer) { clearInterval(elapsedTimer); elapsedTimer = null; }
+
+  // Start elapsed timer
+  elapsedSecs = 0;
+  document.getElementById('elapsed-display').textContent = '';
+  elapsedTimer = setInterval(function() {
+    elapsedSecs += 1;
+    document.getElementById('elapsed-display').textContent = '(' + elapsedSecs + 's elapsed)';
+    if (elapsedSecs === 30) {
+      document.getElementById('slow-warning').style.display = '';
+    }
+  }, 1000);
+
+  // POST to start the job
+  var body = JSON.stringify({
+    customer_id: parseInt(customerId, 10),
+    top_n: parseInt(document.getElementById('top-n').value, 10),
+    min_price: parseFloat(document.getElementById('min-price').value),
+    filter_eclass: document.getElementById('filter-eclass').value.trim() || null
+  });
+
+  fetch('/api/recommend', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: body
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data.error) { showError(data.error); return; }
+    var jobId = data.job_id;
+    pollTimer = setInterval(function() { pollJob(jobId); }, 1200);
+  })
+  .catch(function(e) {
+    showError('Failed to start: ' + e.message);
+  });
+}
+
+/* ================================================================
+   Poll job
+================================================================ */
+function pollJob(jobId) {
+  fetch('/api/job/' + jobId)
+    .then(function(r) { return r.json(); })
+    .then(function(job) {
+      var progress = job.progress || [];
+      for (var i = 0; i < progress.length; i++) {
+        var ev = progress[i];
+        if (ev.step) { updateStep(ev.step, ev.message); }
+      }
+      if (job.status === 'done') {
+        clearInterval(pollTimer); pollTimer = null;
+        clearInterval(elapsedTimer); elapsedTimer = null;
+        document.getElementById('run-btn').disabled = false;
+        for (var s = 1; s <= 5; s++) { markDone(s); }
+        setTimeout(function() { renderResults(job.result); }, 350);
+      } else if (job.status === 'error') {
+        clearInterval(pollTimer); pollTimer = null;
+        clearInterval(elapsedTimer); elapsedTimer = null;
+        document.getElementById('run-btn').disabled = false;
+        showError(job.error);
+      }
+    })
+    .catch(function(e) {
+      console.error('Poll error:', e);
+    });
+}
+
+/* ================================================================
+   Progress steps
+================================================================ */
+function resetStep(n) {
+  document.getElementById('ps-' + n).className = 'prog-step';
+  document.getElementById('pi-' + n).innerHTML = '&#9675;';
+}
+
+function updateStep(n, msg) {
+  for (var i = 1; i < n; i++) { markDone(i); }
+  var el = document.getElementById('ps-' + n);
+  el.className = 'prog-step active';
+  document.getElementById('pi-' + n).innerHTML = '<div class="spin"></div>';
+  if (msg) { document.getElementById('pd-' + n).textContent = msg; }
+}
+
+function markDone(n) {
+  var el = document.getElementById('ps-' + n);
+  if (el.className.indexOf('done') !== -1) { return; }
+  el.className = 'prog-step done';
+  document.getElementById('pi-' + n).innerHTML = '<span style="color:var(--green)">&#10003;</span>';
+}
+
+/* ================================================================
+   Render results
+================================================================ */
+function renderResults(result) {
+  lastResult = result;
+  showState('results');
+  renderQueryBanner(result);
+  renderKPIs(result);
+  renderBarChart(result.recommendations);
+  renderScatterChart(result.recommendations);
+  renderPieChart(result.history.top_eclasses);
+  renderSavingsChart(result.recommendations);
+  renderTable(result.recommendations);
+}
+
+function renderQueryBanner(result) {
+  var q = result.query;
+  var eclassTag = q.filter_eclass
+    ? '<span class="q-tag">E-Class filter <b>' + q.filter_eclass + '</b></span>'
+    : '<span class="q-tag">E-Classes <b>all ' + result.history.unique_eclasses + '</b></span>';
+
+  document.getElementById('query-banner').innerHTML =
+    '<div class="query-banner">' +
+    '<div class="qb-title"><i class="bi bi-info-circle me-1"></i>Query — what produced these results</div>' +
+    '<div>' +
+    '<span class="q-tag">Customer <b>' + q.customer_id + '</b></span>' +
+    '<span class="q-tag">Top N <b>' + q.top_n + '</b></span>' +
+    '<span class="q-tag">Min price <b>EUR ' + q.min_price + '</b></span>' +
+    eclassTag +
+    '<span class="q-tag">History <b>' + result.history.transaction_count.toLocaleString() + ' txns</b></span>' +
+    '<span class="q-tag">Unique SKUs bought <b>' + result.history.unique_skus.toLocaleString() + '</b></span>' +
+    '<span class="q-tag">Candidates evaluated <b>' + result.candidate_count.toLocaleString() + '</b></span>' +
+    '<span class="q-tag">Avg price paid <b>EUR ' + result.history.avg_price_paid_eur + '</b></span>' +
+    '</div></div>';
+}
+
+function renderKPIs(result) {
+  var kpis = [
+    { ico: '&#128230;', val: result.catalogue_size.toLocaleString(), lbl: 'SKUs in Catalogue', col: 'var(--blue)' },
+    { ico: '&#127919;', val: result.candidate_count.toLocaleString(), lbl: 'Candidates Evaluated', col: 'var(--purple)' },
+    { ico: '&#9989;', val: result.recommendations.length.toString(), lbl: 'Recommendations', col: 'var(--green)' },
+    { ico: '&#128176;', val: 'EUR ' + result.total_estimated_saving_eur.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }), lbl: 'Est. Total Saving', col: 'var(--yellow)' }
+  ];
+  var html = '';
+  for (var i = 0; i < kpis.length; i++) {
+    var k = kpis[i];
+    html += '<div class="kpi"><div class="kpi-ico">' + k.ico + '</div><div class="kpi-val" style="color:' + k.col + '">' + k.val + '</div><div class="kpi-lbl">' + k.lbl + '</div></div>';
+  }
+  document.getElementById('kpi-row').innerHTML = html;
+}
+
+function renderBarChart(recs) {
+  var top = recs.slice(0, 20).reverse();
+  var trace = {
+    type: 'bar',
+    orientation: 'h',
+    x: top.map(function(r) { return r.final_score; }),
+    y: top.map(function(r) { return r.sku.length > 20 ? r.sku.slice(0, 20) + '...' : r.sku; }),
+    text: top.map(function(r) { return r.sku + '<br>Score: ' + r.final_score.toFixed(4) + '<br>Saved: ' + r.price_advantage_pct.toFixed(1) + '%<br>P(buy): ' + r.p_buy.toFixed(3); }),
+    hoverinfo: 'text',
+    marker: {
+      color: top.map(function(r) { return r.price_advantage_pct; }),
+      colorscale: [[0,'#1f3a5f'],[0.4,'#1f6feb'],[0.7,'#388bfd'],[1,'#58a6ff']],
+      showscale: true,
+      colorbar: { title: 'Saved %', titlefont: { color: '#8b949e', size: 9 }, tickfont: { color: '#8b949e', size: 9 }, len: 0.7, thickness: 9 }
+    }
+  };
+  var layout = Object.assign({}, LAYOUT, {
+    margin: { t: 6, b: 30, l: 130, r: 70 },
+    xaxis: Object.assign({}, LAYOUT.xaxis, { title: { text: 'Final Score', font: { size: 10, color: '#8b949e' } } }),
+    yaxis: Object.assign({}, LAYOUT.yaxis, { tickfont: { size: 9 } })
+  });
+  Plotly.newPlot('chart-bar', [trace], layout, PLOTCFG);
+}
+
+function renderScatterChart(recs) {
+  var trace = {
+    type: 'scatter',
+    mode: 'markers',
+    x: recs.map(function(r) { return r.candidate_price_eur; }),
+    y: recs.map(function(r) { return r.p_buy; }),
+    text: recs.map(function(r) {
+      return r.sku + '<br>Manufacturer: ' + r.manufacturer + '<br>Price: EUR ' + r.candidate_price_eur.toFixed(2) + '<br>Saved: ' + r.price_advantage_pct.toFixed(1) + '%<br>P(buy): ' + r.p_buy.toFixed(3) + '<br>Score: ' + r.final_score.toFixed(4);
+    }),
+    hoverinfo: 'text',
+    marker: {
+      size: recs.map(function(r) { return Math.max(7, Math.min(r.price_advantage_pct * 0.18 + 6, 22)); }),
+      color: recs.map(function(r) { return r.final_score; }),
+      colorscale: [[0,'#1f3a5f'],[0.5,'#388bfd'],[1,'#3fb950']],
+      showscale: true,
+      colorbar: { title: 'Score', titlefont: { color: '#8b949e', size: 9 }, tickfont: { color: '#8b949e', size: 9 }, len: 0.65, thickness: 9 },
+      opacity: 0.82,
+      line: { color: 'rgba(255,255,255,0.08)', width: 1 }
+    }
+  };
+  var layout = Object.assign({}, LAYOUT, {
+    margin: { t: 6, b: 45, l: 50, r: 60 },
+    xaxis: Object.assign({}, LAYOUT.xaxis, { title: { text: 'Candidate Price (EUR)', font: { size: 10, color: '#8b949e' } } }),
+    yaxis: Object.assign({}, LAYOUT.yaxis, { title: { text: 'P(buy)', font: { size: 10, color: '#8b949e' } }, range: [0, 1.05] })
+  });
+  Plotly.newPlot('chart-scatter', [trace], layout, PLOTCFG);
+}
+
+function renderPieChart(topEclasses) {
+  var trace = {
+    type: 'pie',
+    labels: topEclasses.map(function(e) { return 'E:' + e.eclass; }),
+    values: topEclasses.map(function(e) { return e.count; }),
+    text: topEclasses.map(function(e) { return 'E-Class ' + e.eclass + ': ' + e.count.toLocaleString() + ' txns'; }),
+    hoverinfo: 'text+percent',
+    hole: 0.48,
+    textinfo: 'percent',
+    textfont: { size: 10 },
+    marker: { colors: COLORS, line: { color: '#0d1117', width: 2 } }
+  };
+  var layout = Object.assign({}, LAYOUT, {
+    margin: { t: 6, b: 6, l: 6, r: 6 },
+    showlegend: true,
+    legend: { font: { size: 9, color: '#8b949e' }, bgcolor: 'transparent' }
+  });
+  Plotly.newPlot('chart-pie', [trace], layout, PLOTCFG);
+}
+
+function renderSavingsChart(recs) {
+  var savings = recs.map(function(r) { return Math.max(0, (r.reference_price_eur || 0) - r.candidate_price_eur); });
+  var trace = {
+    type: 'bar',
+    x: recs.map(function(r, i) { return '#' + (i + 1); }),
+    y: savings,
+    text: recs.map(function(r, i) {
+      return '#' + (i + 1) + ' ' + r.sku + '<br>Candidate: EUR ' + r.candidate_price_eur.toFixed(2) + '<br>Saving: EUR ' + savings[i].toFixed(2) + ' (' + r.price_advantage_pct.toFixed(1) + '% cheaper)';
+    }),
+    hoverinfo: 'text',
+    marker: {
+      color: recs.map(function(r) { return r.price_advantage_pct; }),
+      colorscale: [[0,'#1f3a5f'],[0.5,'#1f6feb'],[1,'#3fb950']]
+    }
+  };
+  var layout = Object.assign({}, LAYOUT, {
+    margin: { t: 6, b: 40, l: 50, r: 10 },
+    xaxis: Object.assign({}, LAYOUT.xaxis, { title: { text: 'Recommendation rank', font: { size: 10, color: '#8b949e' } } }),
+    yaxis: Object.assign({}, LAYOUT.yaxis, { title: { text: 'Saving per item (EUR)', font: { size: 10, color: '#8b949e' } } }),
+    bargap: 0.18
+  });
+  Plotly.newPlot('chart-savings', [trace], layout, PLOTCFG);
+}
+
+function renderTable(recs) {
+  var html = '';
+  for (var i = 0; i < recs.length; i++) {
+    var r = recs[i];
+    var pct = r.price_advantage_pct;
+    var pillCls = pct >= 60 ? 'pill-hi' : pct >= 20 ? 'pill-md' : 'pill-lo';
+    var w = Math.round(Math.min(r.final_score / 2.5, 1) * 50);
+    var refStr = r.reference_price_eur !== null ? 'EUR ' + r.reference_price_eur.toFixed(2) : '<span style="color:var(--muted)">-</span>';
+    var feat = (!r.features_summary || r.features_summary === '-') ? '<span style="color:var(--muted)">-</span>' : '<span style="color:var(--muted);font-size:.73rem">' + r.features_summary + '</span>';
+    html += '<tr>';
+    html += '<td><b style="color:var(--blue)">' + r.rank + '</b></td>';
+    html += '<td><code style="font-size:.77rem;color:var(--text)">' + r.sku + '</code></td>';
+    html += '<td><span style="color:var(--purple);font-size:.78rem">' + r.eclass + '</span></td>';
+    html += '<td style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + r.manufacturer + '">' + r.manufacturer + '</td>';
+    html += '<td><b>EUR ' + r.candidate_price_eur.toFixed(2) + '</b></td>';
+    html += '<td>' + refStr + '</td>';
+    html += '<td><span class="pill ' + pillCls + '">' + pct.toFixed(1) + '%</span></td>';
+    html += '<td style="color:var(--muted)">' + r.p_buy.toFixed(3) + '</td>';
+    html += '<td><div class="score-bar"><div class="score-track"><div class="score-fill" style="width:' + w + 'px"></div></div><span style="font-size:.77rem">' + r.final_score.toFixed(4) + '</span></div></td>';
+    html += '<td>' + feat + '</td>';
+    html += '</tr>';
+  }
+  document.getElementById('rec-tbody').innerHTML = html;
+}
+
+/* ================================================================
+   Sort table
+================================================================ */
+function sortBy(col) {
+  if (!lastResult) { return; }
+  var keys = ['rank','sku','eclass','manufacturer','candidate_price_eur','reference_price_eur','price_advantage_pct','p_buy','final_score'];
+  var recs = lastResult.recommendations.slice();
+  var key = keys[col];
+  if (sortColIdx === col) {
+    sortAsc = !sortAsc;
+  } else {
+    sortColIdx = col;
+    sortAsc = true;
+  }
+  recs.sort(function(a, b) {
+    if (a[key] === null) { return 1; }
+    if (b[key] === null) { return -1; }
+    if (sortAsc) { return a[key] > b[key] ? 1 : -1; }
+    return a[key] < b[key] ? 1 : -1;
+  });
+  renderTable(recs);
+}
+
+/* ================================================================
+   Download JSON
+================================================================ */
+function downloadJSON() {
+  if (!lastResult) { return; }
+  var blob = new Blob([JSON.stringify(lastResult, null, 2)], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'recs_' + lastResult.query.customer_id + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/* ================================================================
+   State management
+================================================================ */
+function showState(s) {
+  var states = ['welcome', 'loading', 'results'];
+  for (var i = 0; i < states.length; i++) {
+    var el = document.getElementById('state-' + states[i]);
+    el.style.display = states[i] === s ? '' : 'none';
+  }
+}
+
+function showError(msg) {
+  showState('welcome');
+  document.getElementById('run-btn').disabled = false;
+  if (elapsedTimer) { clearInterval(elapsedTimer); elapsedTimer = null; }
+  alert('Error: ' + msg);
+}
+</script>
+</body>
+</html>

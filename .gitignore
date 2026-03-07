@@ -2,6 +2,7 @@
 *.csv
 *.csv.gz
 *.zip
+*.json
 
 # Python
 __pycache__/
@@ -35,6 +36,11 @@ Thumbs.db
 !milestone1_eclass/submission.csv
 !milestone2_eclass_manufacturer/submission.csv
 !milestone3_feature_clusters/submission.csv
-!milestone3_feature_clusters/cluster_mapping.csv
+
+# Keep small JSON config/schema/example files in procurement system
+!procurement_recommender_system/config/*.json
+!procurement_recommender_system/data/contracts/*.json
+!procurement_recommender_system/data/examples/*.json
+!procurement_recommender_system/outputs/*.json
 
 archive/

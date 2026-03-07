@@ -1,0 +1,18 @@
+[
+  {
+    "customer_id": "C1",
+    "sku": "PAINT_C",
+    "p_buy": 0.70,
+    "price_advantage": 0.22,
+    "final_score": 0.85,
+    "rank": 1
+  },
+  {
+    "customer_id": "C1",
+    "sku": "BRUSH_B",
+    "p_buy": 0.40,
+    "price_advantage": 0.30,
+    "final_score": 0.52,
+    "rank": 2
+  }
+]

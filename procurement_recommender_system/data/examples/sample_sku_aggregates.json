@@ -1,0 +1,26 @@
+[
+  {
+    "sku": "PAINT_A",
+    "eclass": "PAINT",
+    "manufacturer": "M1",
+    "avg_price": 18.0,
+    "purchase_count": 23000,
+    "last_seen_date": "2026-03-01"
+  },
+  {
+    "sku": "PAINT_C",
+    "eclass": "PAINT",
+    "manufacturer": "M4",
+    "avg_price": 14.0,
+    "purchase_count": 18000,
+    "last_seen_date": "2026-03-02"
+  },
+  {
+    "sku": "BRUSH_B",
+    "eclass": "BRUSH",
+    "manufacturer": "M2",
+    "avg_price": 7.0,
+    "purchase_count": 15000,
+    "last_seen_date": "2026-03-02"
+  }
+]

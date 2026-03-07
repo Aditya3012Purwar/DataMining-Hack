@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recommendation",
+  "type": "object",
+  "required": [
+    "customer_id",
+    "sku",
+    "p_buy",
+    "price_advantage",
+    "final_score"
+  ],
+  "properties": {
+    "customer_id": {"type": "string"},
+    "sku": {"type": "string"},
+    "p_buy": {"type": "number", "minimum": 0, "maximum": 1},
+    "price_advantage": {"type": "number"},
+    "final_score": {"type": "number"},
+    "rank": {"type": "integer", "minimum": 1}
+  }
+}

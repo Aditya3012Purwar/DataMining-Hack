@@ -1,0 +1,21 @@
+{
+  "user_features": [
+    "purchase_frequency",
+    "days_since_last_purchase",
+    "avg_paid_price",
+    "preferred_manufacturer_share"
+  ],
+  "item_features": [
+    "eclass",
+    "manufacturer",
+    "price",
+    "discount_pct",
+    "global_popularity"
+  ],
+  "interaction_features": [
+    "price_vs_user_avg",
+    "price_vs_last_purchase",
+    "manufacturer_familiarity",
+    "category_match"
+  ]
+}
