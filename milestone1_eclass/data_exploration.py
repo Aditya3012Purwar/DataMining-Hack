@@ -16,25 +16,25 @@ def load_all_data():
     print("Loading datasets...")
     
     plis = pd.read_csv(
-        BASE_DIR / "plis_training.csv" / "plis_training.csv",
+        BASE_DIR / "plis_training.csv",
         sep='\t', low_memory=False,
         dtype={'eclass': str, 'nace_code': str, 'secondary_nace_code': str}
     )
     plis['orderdate'] = pd.to_datetime(plis['orderdate'])
     
     customers = pd.read_csv(
-        BASE_DIR / "customer_test.csv" / "customer_test.csv",
+        BASE_DIR / "customer_test.csv",
         sep='\t',
         dtype={'nace_code': str, 'secondary_nace_code': str}
     )
     
     nace = pd.read_csv(
-        BASE_DIR / "nace_codes.csv" / "nace_codes.csv",
+        BASE_DIR / "nace_codes.csv",
         sep='\t', dtype={'nace_code': str}
     )
     
     features = pd.read_csv(
-        BASE_DIR / "features_per_sku.csv" / "features_per_sku.csv",
+        BASE_DIR / "features_per_sku.csv",
         sep='\t', low_memory=False
     )
     

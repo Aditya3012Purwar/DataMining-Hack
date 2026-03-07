@@ -4,12 +4,13 @@ Milestone 1 — Core Demand Prediction at E-Class Level
 Predict recurring procurement needs at the E-Class (product category) level.
 Submission: buyer_id, predicted_id (eclass_id)
 
-Strategy:
-- Warm-start buyers: Identify recurring eclass categories from their purchase history.
-  Use frequency, recency, monetary value, and consistency across time windows.
-  Apply economic threshold: only include if expected benefit > expected fee.
+Strategy (validated via temporal split: train < 2024-07, validate >= 2024-07):
+- Warm-start buyers: Score each (buyer, eclass) pair using monetary-weighted
+  recurrence scoring. Include items with 2+ quarters of history and positive
+  estimated net benefit. No hard cap — let the economics decide.
+  Achieves ~90% hit rate on validation with ~250 items/buyer.
 - Cold-start buyers: Find similar buyers by NACE code + company size,
-  aggregate their recurring patterns, and recommend the most popular categories.
+  aggregate their recurring patterns, recommend high-penetration categories.
 """
 
 import pandas as pd
@@ -19,39 +20,43 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ============================================================
-# CONFIG
+# CONFIG (optimized via validate_and_optimize.py sweep)
 # ============================================================
 BASE_DIR = Path(__file__).resolve().parent.parent / "Challenge2"
 OUTPUT_DIR = Path(__file__).resolve().parent
 
-# Economic parameters (approximate — scoring is black-box)
-# Fee per element per month; savings ~ sqrt(price) * frequency
-# We tune a threshold that balances inclusion vs exclusion
-MONTHLY_FEE = 5.0           # assumed fee per core demand element per month
-PREDICTION_HORIZON = 12     # months
+MONTHLY_FEE = 3.0
+PREDICTION_HORIZON = 12
 ANNUAL_FEE_PER_ELEMENT = MONTHLY_FEE * PREDICTION_HORIZON
+SAVINGS_MULTIPLIER = 3.0
 
-# Minimum recurrence score to include in portfolio
-WARM_THRESHOLD = 0.35
-COLD_MAX_ITEMS = 15  # max items to recommend for cold start buyers
+# Recurrence score weights (monetary-focused — validated as best)
+W_FREQ = 0.20
+W_CONSISTENCY = 0.25
+W_MONETARY = 0.35
+W_RECENCY = 0.20
+
+WARM_THRESHOLD = 0.50
+MIN_QUARTERS = 2
+COLD_MAX_ITEMS = 500
 
 # ============================================================
 # LOAD DATA
 # ============================================================
 print("Loading data...")
 plis = pd.read_csv(
-    BASE_DIR / "plis_training.csv" / "plis_training.csv",
+    BASE_DIR / "plis_training.csv",
     sep='\t',
     low_memory=False,
     dtype={'eclass': str, 'nace_code': str, 'secondary_nace_code': str}
 )
 customers = pd.read_csv(
-    BASE_DIR / "customer_test.csv" / "customer_test.csv",
+    BASE_DIR / "customer_test.csv",
     sep='\t',
     dtype={'nace_code': str, 'secondary_nace_code': str}
 )
 nace = pd.read_csv(
-    BASE_DIR / "nace_codes.csv" / "nace_codes.csv",
+    BASE_DIR / "nace_codes.csv",
     sep='\t',
     dtype={'nace_code': str}
 )
@@ -71,55 +76,46 @@ print(f"Test buyers: {len(customers)} ({(customers['task']=='cold start').sum()}
 def compute_recurrence_scores(buyer_data):
     """
     For a given buyer's transaction data, compute a recurrence score per eclass.
-    
-    Score combines:
-    - frequency: how many orders contain this eclass
-    - consistency: how many distinct quarters it appears in
-    - monetary: total spend (quantity * price)
-    - recency: when was the last purchase
+    Uses monetary-weighted scoring validated via temporal split.
     """
     buyer_data = buyer_data.copy()
     buyer_data['total_value'] = buyer_data['quantityvalue'].fillna(0) * buyer_data['vk_per_item'].fillna(0)
     buyer_data['quarter'] = buyer_data['orderdate'].dt.to_period('Q')
     buyer_data['year'] = buyer_data['orderdate'].dt.year
-    
+
     max_date = buyer_data['orderdate'].max()
     total_quarters = buyer_data['quarter'].nunique()
-    
+
     if total_quarters == 0:
         return pd.DataFrame()
-    
+
     agg = buyer_data.groupby('eclass').agg(
-        order_count=('set_id', 'nunique'),          # distinct orders
-        line_count=('sku', 'count'),                 # total line items
-        total_spend=('total_value', 'sum'),           # total monetary value
-        total_qty=('quantityvalue', 'sum'),           # total quantity
-        quarters_active=('quarter', 'nunique'),       # quarters with purchases
+        order_count=('set_id', 'nunique'),
+        total_spend=('total_value', 'sum'),
+        quarters_active=('quarter', 'nunique'),
+        n_years=('year', 'nunique'),
         last_purchase=('orderdate', 'max'),
         avg_price=('vk_per_item', 'mean'),
     ).reset_index()
-    
-    # Normalize metrics
-    agg['frequency_score'] = np.log1p(agg['order_count']) / np.log1p(agg['order_count'].max()) if agg['order_count'].max() > 0 else 0
-    agg['consistency_score'] = agg['quarters_active'] / max(total_quarters, 1)
-    agg['monetary_score'] = np.log1p(agg['total_spend']) / np.log1p(agg['total_spend'].max()) if agg['total_spend'].max() > 0 else 0
+
     agg['recency_days'] = (max_date - agg['last_purchase']).dt.days
-    agg['recency_score'] = 1 - (agg['recency_days'] / max(agg['recency_days'].max(), 1))
-    
-    # Combined recurrence score (weighted)
+
+    freq_norm = np.log1p(agg['order_count']) / np.log1p(agg['order_count'].max()) if agg['order_count'].max() > 0 else 0
+    consistency = agg['quarters_active'] / max(total_quarters, 1)
+    monetary_norm = np.log1p(agg['total_spend']) / np.log1p(agg['total_spend'].max()) if agg['total_spend'].max() > 0 else 0
+    recency_score = 1 - (agg['recency_days'] / max(agg['recency_days'].max(), 1))
+
     agg['recurrence_score'] = (
-        0.30 * agg['frequency_score'] +
-        0.35 * agg['consistency_score'] +
-        0.20 * agg['monetary_score'] +
-        0.15 * agg['recency_score']
+        W_FREQ * freq_norm +
+        W_CONSISTENCY * consistency +
+        W_MONETARY * monetary_norm +
+        W_RECENCY * recency_score
     )
-    
-    # Economic benefit estimation
-    # Savings ~ sqrt(avg_price) * annual_frequency_estimate
-    annual_freq_estimate = agg['order_count'] * (12 / max(total_quarters * 3, 1))  # annualize
-    agg['estimated_annual_savings'] = np.sqrt(agg['avg_price'].clip(lower=0.01)) * annual_freq_estimate * 0.5
+
+    annual_freq_estimate = agg['order_count'] * (12 / max(total_quarters * 3, 1))
+    agg['estimated_annual_savings'] = np.sqrt(agg['avg_price'].clip(lower=0.01)) * annual_freq_estimate * SAVINGS_MULTIPLIER
     agg['net_benefit'] = agg['estimated_annual_savings'] - ANNUAL_FEE_PER_ELEMENT
-    
+
     return agg
 
 
@@ -128,23 +124,15 @@ def get_warm_predictions(buyer_id, buyer_data):
     scores = compute_recurrence_scores(buyer_data)
     if scores.empty:
         return []
-    
-    # Select items with positive net benefit AND sufficient recurrence
+
     candidates = scores[
-        (scores['recurrence_score'] >= WARM_THRESHOLD) |
-        (scores['net_benefit'] > 0)
+        (scores['recurrence_score'] >= WARM_THRESHOLD) &
+        (scores['net_benefit'] > 0) &
+        (scores['quarters_active'] >= MIN_QUARTERS)
     ].copy()
-    
-    # If too few, relax threshold
-    if len(candidates) < 3:
-        candidates = scores.nlargest(min(5, len(scores)), 'recurrence_score')
-    
-    # Sort by combined score and net benefit
-    candidates = candidates.sort_values('recurrence_score', ascending=False)
-    
-    # Cap at reasonable portfolio size
-    candidates = candidates.head(50)
-    
+
+    candidates = candidates.sort_values('estimated_annual_savings', ascending=False)
+
     return candidates['eclass'].tolist()
 
 
@@ -248,15 +236,13 @@ def get_cold_predictions(target_customer, all_training_data):
     # Average frequency per buyer
     eclass_stats['avg_freq'] = eclass_stats['total_orders'] / max(n_similar, 1)
     
-    # Score: penetration * frequency * monetary importance
     eclass_stats['cold_score'] = (
         eclass_stats['penetration'] * 0.5 +
         np.log1p(eclass_stats['avg_freq']) / np.log1p(eclass_stats['avg_freq'].max()) * 0.3 +
         np.log1p(eclass_stats['total_spend']) / np.log1p(eclass_stats['total_spend'].max()) * 0.2
     )
-    
-    # Filter: need at least 20% penetration among similar buyers
-    candidates = eclass_stats[eclass_stats['penetration'] >= 0.20]
+
+    candidates = eclass_stats[eclass_stats['penetration'] >= 0.05]
     candidates = candidates.sort_values('cold_score', ascending=False)
     
     # Be conservative for cold start
