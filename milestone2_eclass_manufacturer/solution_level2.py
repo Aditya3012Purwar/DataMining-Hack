@@ -54,7 +54,7 @@ plis['manufacturer_orig'] = plis['manufacturer'].fillna('UNKNOWN').astype(str).s
 
 # Cluster key in scorer format — CRITICAL: eclass must have .0 float suffix
 # The scorer builds ground truth with float eclass (e.g., "27050401.0|Lenovo")
-plis['cluster'] = plis['eclass'] + '.0|' + plis['manufacturer_orig']
+plis['cluster'] = plis['eclass'] + '|' + plis['manufacturer_orig']
 
 # Spend per line item
 plis['spend'] = plis['quantityvalue'].fillna(0) * plis['vk_per_item'].fillna(0)
